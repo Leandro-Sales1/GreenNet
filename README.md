@@ -1,2 +1,2 @@
 # ChallengeSchneider
-Challenge da parceria da FIAP com a Schineider Eletric
+Challenge da parceria da FIAP com a Schneider Eletric
