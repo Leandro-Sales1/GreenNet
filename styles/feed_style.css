@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+    --cor_principal: #FCFFFA;
+    --cor_banner: #3DCD58;
+    --cor_botao: #4CDE17;
+    --cor_fundo_menu: #2F2F2F;
+    --cor_fonte_principal: #000000;
+    --cor_fonte_menu: #FCEEFA;
+    --cor_fundo_post: #E3FFE0;
+    --fonte_principal:'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--cor_principal);
+    font-family: var(--fonte_principal);
+    color: var(--cor_fonte_principal);
+    width: 100vw;
+    overflow-x: hidden;
+}
+.banner_top{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    background-color: var(--cor_banner);
+    position: relative;
+    justify-content: space-between;
+}
+.banner_titulo{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+.botao_menu_hamburguer{
+    width: 48px;
+    height: 48px;
+    background-image: url(/img/Menu.svg);
+    background-repeat: no-repeat;
+    display: block;
+}
+.menu_rotulo{
+    padding: 0.5rem;
+}
+.botao_menu:checked ~ .menu_rotulo > .botao_menu_hamburguer{
+    background-image: url(/img/Menu_Aberto.svg);
+}
+.botao_menu:checked ~ .menu_rotulo{
+    background: var(--cor_fundo_menu);
+    
+   }
+.elementos_menu{
+    display: flex;
+    align-items: center;
+}
+.lista_menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -9%;
+    width: 65vw;
+    list-style-type: none;
+}
+
+.botao_menu:checked~.lista_menu{
+    display: block;
+}
+.lista_titulo,.lista_elemento{
+    padding: 1rem;
+    background-color: var(--cor_fundo_menu);
+}
+.lista_elemento{
+    font-size: 16px;
+}
+.lista_titulo{
+    color: var(--cor_fonte_menu)
+}
+.lista_elemento_link{
+    background: var(--cor_fonte_menu);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+#menu{
+    display: none;
+}
+.esq{
+    margin-right: 10px;
+}
+.imagem_perfil{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 90px;
+    
+}
+.post{
+    background-color: var(--cor_fundo_post);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img_post{
+    height: 80px;
+    width: auto;
+    object-fit: cover;
+}
+.post_header{
+    display: flex;
+    justify-content: space-around;
+
+}
+.foto_perfil_post{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 90px;
+}
+.bi-star{
+    font-size: 1.5rem;
+    color:black;
+}
+.bi-star-fill{
+    font-size: 1.5rem;
+    color:#FFEB35;
+}
+
+
+@media (min-width: 768px){
+.lista_menu{
+    left: -5%;
+}    
+}
+
+
+@media (min-width: 1200px){
+.lista_menu{
+    left: -2%;
+}    
+}
