@@ -38,7 +38,7 @@ body{
 .botao_menu_hamburguer{
     width: 48px;
     height: 48px;
-    background-image: url(/img/Menu.svg);
+    background-image: url(../img/Menu.svg);
     background-repeat: no-repeat;
     display: block;
 }
@@ -46,7 +46,7 @@ body{
     padding: 0.5rem;
 }
 .botao_menu:checked ~ .menu_rotulo > .botao_menu_hamburguer{
-    background-image: url(/img/Menu_Aberto.svg);
+    background-image: url(../img/Menu_Aberto.svg);
 }
 .botao_menu:checked ~ .menu_rotulo{
     background: var(--cor_fundo_menu);
@@ -167,3 +167,5 @@ body{
     pointer-events: none;  
     opacity: 0.2;
 }
+
+
