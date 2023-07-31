@@ -21,13 +21,27 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+header{
+    flex-direction: row;
+    background-color: var(--cor_banner);
+
+}
+main{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .banner_top{
     display: flex;
     align-items: center;
     height: 4rem;
-    background-color: var(--cor_banner);
     position: relative;
     justify-content: space-between;
+
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .banner_titulo{
     font-size: 25px;

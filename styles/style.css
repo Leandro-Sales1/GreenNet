@@ -16,6 +16,10 @@ body{
     color: var(--cor_fonte_principal);
     overflow-x: hidden;
 }
+
+
+
+
 .banner_top{
     display: flex;
     justify-content: center;
@@ -70,7 +74,7 @@ body{
 
 /* Sobre o Projeto*/
 
-#container-sobre-o-projeto{
+#container-tamanho{
     max-width: 960px;
     
 }
