@@ -3,12 +3,15 @@
 :root{
     --cor_principal: #FCFFFA;
     --cor_banner: #3DCD58;
+    --cor_banner_opacity: #3dcd5765;
     --cor_botao: #4CDE17;
     --cor_fundo_menu: #2F2F2F;
     --cor_fonte_principal: #000000;
     --cor_fonte_menu: #FCEEFA;
     --cor_fundo_post: #E3FFE0;
     --fonte_principal:'Inter', sans-serif;
+    --option_error: #cf1212;
+    --option_error_opacity: #cf12127a;
 }
 
 body{
@@ -137,4 +140,30 @@ body{
 .lista_menu{
     left: -2%;
 }    
+}
+
+/* Games */
+.option{
+    padding: 5px;
+    border: 1px solid #3f3f3f4f;
+    border-radius: 5px;
+}
+.option:hover{
+    background-color: var(--cor_banner_opacity);
+    border-color: var(--cor_banner);
+    transition-duration: 1s;
+}
+.option.option_success{
+    background-color: var(--cor_banner_opacity);
+    border-color: var(--cor_banner);
+}
+
+.option.option_error{
+    background-color: var(--option_error_opacity);
+    border-color: var(--option_error);
+}
+
+.option.disable_hover{
+    pointer-events: none;  
+    opacity: 0.2;
 }
