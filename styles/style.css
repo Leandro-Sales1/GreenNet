@@ -27,6 +27,7 @@ body{
     height: 4rem;
     background-color: var(--cor_banner);
 }
+
 .login_img{
     height: 150px;
     width: 150px;
@@ -102,4 +103,19 @@ body{
 
 #integrante{
     background-color: #C2BCC7;
+}
+
+
+/*Perfil do Armando*/
+.imagem_de_fundo_1{
+    background-image: url(../img/arvore.jpg);
+    background-repeat: no-repeat;
+    display: block;
+    object-fit: cover;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#nome_perfil{
+    color: white;
 }
