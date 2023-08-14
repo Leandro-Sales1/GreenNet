@@ -1,0 +1,1 @@
+/*type= "text/javascript" src="js/codigo.js"*/
