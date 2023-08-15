@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/feed_style.css">
+    <script type="text/javascript" src="../js/edicao.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -31,7 +33,7 @@
     <div class="imagem_de_fundo_1 pt-3">
         <div class="d-flex flex-column align-items-center justify-content-center">
             <div>
-                <img src="../img/homem-indiano.jpg" class="rounded-circle" alt="imagem do perfil" style="max-width: 200px; border: 1px solid black;">
+                <img src="../img/homem-indiano.jpg" class="rounded-circle" alt="imagem do perfil" style="max-width: 100px; border: 1px solid black;">
             </div>
             <div>
               <h1 id="nome_perfil">Armando Silva</h1>
@@ -39,18 +41,22 @@
         </div>
     </div>
     <main class="px-3  py-3">
-        <div class="row justify-content-around"> 
-            <div class="col"><b>27 anos</b><span class="text-muted">(ele/dele)</span></div>
-            <div class="col text-success d-flex flex-end">Streak: 150 dias</div>
-        </div>
-        <div><b>Suporte de TI, 5 anos de Schneider</b></div>
-        <div><b>Interessado em Jogos e Programacão</b></div>
+        <div><b>Idade:<span id="idade_nova"> 27 anos</span></b></div>
+        <div><b>Pronomes:<span id="pronome_novo">Ele/Dele</span></b></div>
+        <div><b>Função:<span id="funcao_nova">Suporte de TI</span></b></div>
+        <div><b>Tempo de Schneider: <span id="tempo_novo">5 anos</span></b></div>
+        <div><b>Interesses: <span id="interesses_novos">Programação e Jogos</span></b></div>
         <div>
-            <b>Descricao:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ducimus recusandae doloribus quam ad necessitatibus accusantium laudantium cum officiis eligendi. Sed reiciendis nisi accusantium earum sapiente modi natus dolorem fugiat numquam laboriosam, facere placeat fugit.
+            <b>Descricao:</b> 
+            <span id="descricao_nova">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo at veniam, obcaecati libero numquam commodi ad! Unde recusandae ut molestias, distinctio ducimus accusamus ipsa, similique excepturi doloremque nobis eum dolor numquam voluptatum vitae laudantium quisquam incidunt aut magni deserunt! Reiciendis!</span>
         </div>
-        
+        <label for="text"></label>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <a href="../pages/alterar_perfil_usuario.html">
+                <button type ="button" class="btn btn-success btn-lg mt-3" style="background-color: var(--cor_botao); border: 0em;" onclick="atualizar()"> Editar ✒️ </button>
+            </a>
+        </div>
     </main>
-
 </body>
 
 </html>
