@@ -28,6 +28,11 @@ body{
     background-color: var(--cor_banner);
 }
 
+.topbar{
+    background-color: var(--cor_banner);
+}
+
+
 .login_img{
     height: 150px;
     width: 150px;
