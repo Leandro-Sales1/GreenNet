@@ -216,4 +216,27 @@ main{
     opacity: 0.2;
 }
 
-
+.game_area{
+    padding: 0%;
+    margin: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game_title{
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    background-color: #e4e4e46b;
+    border-radius: 10px;
+}
+.game_area.desc{
+    background-image: url(../img/EcoEducation.png);
+}
+.game_area.title{
+    background-image: url(../img/Logic.png);
+}
