@@ -22,6 +22,7 @@ body{
     overflow-x: hidden;
 }
 header{
+    display: flex;
     flex-direction: row;
     background-color: var(--cor_banner);
 
@@ -46,7 +47,7 @@ main{
 .banner_titulo{
     font-size: 25px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 4rem;
     text-align: center;
 }
 .botao_menu_hamburguer{
@@ -144,16 +145,49 @@ main{
 
 
 @media (min-width: 768px){
-.lista_menu{
+    .banner_titulo{
+        margin: 0 16.25rem;
+    }
+    .lista_menu{
     left: -5%;
-}    
+    }    
 }
 
 
 @media (min-width: 1200px){
-.lista_menu{
-    left: -2%;
-}    
+    .banner_titulo{
+        margin: 0 2rem;
+    }
+    .botao_menu_hamburguer,.menu_rotulo{
+        display: none;
+    }
+    .elementos_menu{
+        display: block;
+        align-items: center;
+    }
+    .lista_menu{
+        display: inline-flex;
+        position: unset;
+        width: auto;
+        list-style-type: none;
+    }
+    .lista_elemento{
+        padding: 1rem 2rem 0 0;
+        background-color: var(--cor_banner);
+        font-size: 25px;
+        display: inline-flex;
+    }
+    .lista_elemento_link{
+        font-family: var(--fonte_principal);
+        background: var(--cor_fonte_principal);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .lista_elemento_link:hover{
+        -webkit-text-fill-color: var(--cor_fonte_principal);
+    }
+    
 }
 
 /* Games */
