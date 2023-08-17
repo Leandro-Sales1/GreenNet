@@ -142,16 +142,10 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-<<<<<<< HEAD
 
 /*Perfil da Bianca*/
 .imagem_de_fundo_4{
     background-image: url(../img/Bandeira_LGBT.jpg);
-=======
-/*Perfil da Bianca*/
-.imagem_de_fundo_4{
-    background-image: url(../img/Bandeira\ LGBT.jpg);
->>>>>>> f5c33aa5ba14d56417560bc285e493075ed6619c
     background-repeat: no-repeat;
     display: block;
     object-fit: cover;
@@ -159,10 +153,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> f5c33aa5ba14d56417560bc285e493075ed6619c
 #nome_perfil{
     color: white;
 }
