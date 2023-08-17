@@ -1,34 +1,4 @@
-function atualizar(){
-    var nome_novo = document.querySelector("#nome_novo");
-    nome_novo.textContent = localStorage.getItem("valueText0")
-
-    var idade_nova = document.querySelector("#idade_nova");
-    idade_nova.textContent = localStorage.getItem("valueText");
-
-    var pronome_novo = document.querySelector("#pronome_novo");
-    pronome_novo.textContent = localStorage.getItem("valueText1");
-    
-    var cidade_nova = document.querySelector("#cidade_nova");
-    cidade_nova.textContent = localStorage.getItem("valueText2");
-    
-    var funcao_nova = document.querySelector("#funcao_nova");
-    funcao_nova.textContent = localStorage.getItem("valueText3");
-    
-    var tempo_novo = document.querySelector("#tempo_novo");
-    tempo_novo.textContent = localStorage.getItem("valueText4");
-    
-    var interesses_novos = document.querySelector("#interesses_novos");
-    interesses_novos.textContent = localStorage.getItem("valueText5");
-    
-    var descricao_nova = document.querySelector("#descricao_nova");
-    descricao_nova.textContent = localStorage.getItem("valueText6");
-    
-}
-
 function salvar(){
-    var nome_perfil = document.querySelector("#nome_perfil").value;
-    localStorage.setItem("valueText0", nome_perfil)
-
     var idade = document.querySelector("#idade").value;
     localStorage.setItem("valueText", idade)
 
@@ -50,4 +20,26 @@ function salvar(){
     var descricao = document.querySelector("#descricao").value;
     localStorage.setItem("valueText6", descricao)
 
+}
+function atualizar(){
+    var idade_nova = document.querySelector("#idade_nova");
+    idade_nova.textContent = localStorage.getItem("valueText");
+
+    var pronome_novo = document.querySelector("#pronome_novo");
+    pronome_novo.textContent = localStorage.getItem("valueText1");
+    
+    var cidade_nova = document.querySelector("#cidade_nova");
+    cidade_nova.textContent = localStorage.getItem("valueText2");
+    
+    var funcao_nova = document.querySelector("#funcao_nova");
+    funcao_nova.textContent = localStorage.getItem("valueText3");
+    
+    var tempo_novo = document.querySelector("#tempo_novo");
+    tempo_novo.textContent = localStorage.getItem("valueText4");
+    
+    var interesses_novos = document.querySelector("#interesses_novos");
+    interesses_novos.textContent = localStorage.getItem("valueText5");
+    
+    var descricao_nova = document.querySelector("#descricao_nova");
+    descricao_nova.textContent = localStorage.getItem("valueText6");  
 }
