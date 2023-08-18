@@ -131,7 +131,10 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-
+b, span {
+    font-size: 25px;
+    color: black;
+}
 /*Perfil do Paulo*/
 .imagem_de_fundo_3{
     background-image: url(../img/reserve-na-biblioteca-com-livro-aberto.jpg);
