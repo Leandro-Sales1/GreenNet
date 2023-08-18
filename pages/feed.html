@@ -15,128 +15,102 @@
 </head>
 
 <body>
-    <header>
-        <section class="banner_top">
-            <div class="elementos_menu esq">
-                <input type="checkbox" id="menu" class="botao_menu">
-                <label for="menu" class="menu_rotulo">
-                    <span class="botao_menu_hamburguer"></span>
-                </label>
-                <ul class="lista_menu">
-                    <li class="lista_elemento"><a href="../pages/feed.html" class="lista_elemento_link">Feed</a></li>
-                    <li class="lista_elemento"><a href="../pages/games.html" class="lista_elemento_link">Game</a></li>
-                    <li class="lista_elemento"><a href="https://youtu.be/8-0rjtGzKoQ" class="lista_elemento_link"
-                            target="_blank">Vídeo Pitch</a></li>
-                    <li class="lista_elemento"><a href="../pages/sobre_o_projeto.html" class="lista_elemento_link">Sobre
-                            o Projeto</a></li>
-                </ul>
-            </div>
-            <div>
-                <h1 class="banner_titulo ">GreenNet</h1>
-            </div>
-            <div class="pe-3">
-                <a href="../pages/perfil_usuario.html">
-                    <img src="../img/perfil_armando.jpg" alt="imagem do perfil" class="imagem_perfil">
-                </a>
-            </div>
-        </section>
-    </header>
-    <main>
-        <!--Acordeon-->
-        <div id="carouselExampleCaptions" class="carousel slide px-3" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../img/slide_1.jpg" class="d-block w-100" style="max-height:400px; object-fit: cover;">
-                    <div class="carousel-caption d-md-block">
-                        <h5>Venha ser voluntário no Instituto Schneider</h5>
-                        <p><a href="https://volunteerin.se.com/#/" target="_blank"> Programa VolunteerIn </a></p>
-                    </div>
+
+    <!--Header: Navbar-->
+    <div style="background-color:#3DCD58;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto" style="max-width: 870px;">
+            <div class="container-fluid" style="background-color:#3DCD58; min-height: 75px; margin-bottom: -1rem; margin-top: -1rem;">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-3" style="font-size: 22px;">
+                            <a class="nav-link active" aria-current="page" href="../pages/feed.html">Feed</a>
+                        </li>
+                        <li class="nav-item px-3" style="font-size: 22px;">
+                            <a class="nav-link" href="../pages/games.html">Game</a>
+                        </li>
+                        <li class="nav-item px-3" style="font-size: 22px;">
+                            <a class="nav-link" href="../pages/games.html">Vídeo Pitch</a>
+                        </li>
+                        <li class="nav-item px-3" style="font-size: 22px;">
+                            <a class="nav-link" href="../pages/games.html">Sobre o Projeto</a>
+                        </li>
+    
+                    </ul>
                 </div>
-                <div class="carousel-item">
-                    <img src="../img/slide_2.jpg" class="d-block w-100" style="max-height:400px; object-fit: cover;">
-                    <div class="carousel-caption d-md-block">
-                        <h5>Envie seu projeto!</h5>
-                        <p>Verifique se seu projeto tem elegibilidade para receber verba da Schneider!</p>
-                        <p><a href="https://fondation-schneider-electric.optimytool.com/en/">Schneider Foundation</a>
-                        </p>
-                    </div>
+
+                    <h1 class="d-lg-none" style="font-size: 25px; font-weight: 700;">GreenNet</h1>
+                    <h1 class="banner_titulo d-none d-lg-block">GreenNet</h1>
+
+                <div class="pe-3">
+                    <a href="../pages/perfil_usuario.html">
+                        <img src="../img/perfil_armando.jpg" alt="imagem do perfil" class="imagem_perfil">
+                    </a>
                 </div>
-                <div class="carousel-item">
-                    <img src="../img/slide_3.jpg" class="d-block w-100" style="max-height:400px; object-fit: cover;">
-                    <div class="carousel-caption d-md-block">
-                        <h5>Treinamento em Empreendedorismo</h5>
-                        <p><a href="https://www.se.com/br/pt/download/document/SE_Foundation_EN/?searchSource=guided">Confira
-                                os requisitos</a></p>
-                    </div>
-                </div>
+    
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        </nav>
+    </div>
+
+    <!--Acordeon-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
-
-
-
-        <!--Novo Post-->
-        <div class="col-md-10 col-lg-8 mx-auto">
-            <div class="card mx-3 mt-3" style="background-color: #E3FFE0">
-                <div class="card-body">
-
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Nova Postagem</label>
-                    </div>
-
-
-                    <div class="d-flex flex-align-row justify-content-around">
-                        <div class="d-flex align-itens-center">
-                            <span class="material-symbols-outlined">
-                                video_library
-                            </span>
-                            <span class="px-2">
-                                Vídeo
-                            </span>
-                        </div>
-                        <div class="d-flex align-itens-center">
-                            <span class="material-symbols-outlined">
-                                image
-                            </span>
-                            <span class="px-2">
-                                Foto
-                            </span>
-                        </div>
-                        <div class="d-flex align-itens-center">
-                            <span class="material-symbols-outlined">
-                                send
-                            </span>
-                            <span class="px-2">
-                                Enviar
-                            </span>
-                        </div>
-
-                    </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/slide_1.jpg" class="d-block w-100" style="max-height:400px; object-fit: cover;">
+                <div class="carousel-caption d-md-block">
+                    <h5>Venha ser voluntário no Instituto Schneider</h5>
+                    <p><a href="https://volunteerin.se.com/#/" target="_blank"> Programa VolunteerIn </a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/slide_2.jpg" class="d-block w-100" style="max-height:400px; object-fit: cover;">
+                <div class="carousel-caption d-md-block">
+                    <h5>Envie seu projeto!</h5>
+                    <p>Verifique se seu projeto tem elegibilidade para receber verba da Schneider!</p>
+                    <p><a href="https://fondation-schneider-electric.optimytool.com/en/">Schneider
+                            Foundation</a>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/slide_3.jpg" class="d-block w-100" style="max-height:400px; object-fit: cover;">
+                <div class="carousel-caption d-md-block">
+                    <h5>Treinamento em Empreendedorismo</h5>
+                    <p><a href="https://www.se.com/br/pt/download/document/SE_Foundation_EN/?searchSource=guided">Confira
+                            os requisitos</a></p>
                 </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
 
-        <!--Ranking dos Funcionarios-->
-        <div class="card mt-3 mx-3" style="max-width: 400px;">
+    <!--Container: Ranking, Feed, Recompensas-->
+    <div class="d-flex flex-align-row justify-content-center align-items-start mx-2">
+
+        <!--Ranking dos Funcionarios Externo-->
+        <div class="card mt-5 mx-5 d-none d-lg-block" style="max-width: 400px;">
             <div class="card-body">
                 <h4 class="card-title text-center pb-2">⭐Ranking Semanal⭐ </h4>
 
@@ -154,7 +128,7 @@
                                 <div>Maria Luiza</div>
                             </div>
                             <div class="px-3" style="margin-left: auto;">
-                                #1
+                                <b>#1</b>
                             </div>
                         </div>
                     </li>
@@ -170,14 +144,14 @@
                                 <div>Bianca Salazar</div>
                             </div>
                             <div class="px-3" style="margin-left: auto;">
-                                #2
+                                <b>#2</b>
                             </div>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <!--Terceiro Lugar-->
                         <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div> 
+                            <div>
                                 <a href="../pages/profile_paulo.html">
                                     <img src="../img/perfil_paulo2.jpg" alt="Foto do Paulo" class="foto_perfil_post">
                                 </a>
@@ -186,7 +160,7 @@
                                 <div>Paulo Silveira</div>
                             </div>
                             <div class="px-3" style="margin-left: auto;">
-                                #3
+                                <b>#3</b>
                             </div>
                         </div>
                     </li>
@@ -197,8 +171,750 @@
             </div>
         </div>
 
+        <!--Main Container: Feed-->
+        <div style="max-width: 960px;">
+
+
+            <!--Novo Post-->
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="card mx-3 mt-3" style="background-color: #E3FFE0">
+                    <div class="card-body">
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Nova Postagem</label>
+                        </div>
+                        <div class="d-flex flex-align-row justify-content-around">
+                            <div class="d-flex align-itens-center">
+                                <span class="material-symbols-outlined">
+                                    video_library
+                                </span>
+                                <span class="px-2">
+                                    Vídeo
+                                </span>
+                            </div>
+                            <div class="d-flex align-itens-center">
+                                <span class="material-symbols-outlined">
+                                    image
+                                </span>
+                                <span class="px-2">
+                                    Foto
+                                </span>
+                            </div>
+
+                            <div class="d-flex align-itens-center">
+                                <span class="material-symbols-outlined">
+                                    send
+                                </span>
+                                <span class="px-2">
+                                    Enviar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Container Ranking -->
+
+            <div class="row row-cols-1 row-cols-md-2">
+                <!--Ranking dos Funcionarios-->
+
+                <div class="col mx">
+                    <div class="card mt-3 mx-3 d-lg-none">
+                        <div class="card-body px-4">
+                            <h4 class="card-title text-center pb-2">⭐Ranking Semanal⭐ </h4>
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+
+                                    <!--Primeiro Lugar-->
+                                    <div
+                                        class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div>
+                                            <a href="../pages/profile_maria_luiza.html">
+                                                <img src="../img/perfil_maria.jpg" alt="Foto da Maria"
+                                                    class="foto_perfil_post">
+                                            </a>
+                                        </div>
+                                        <div class="px-3">
+                                            <div>Maria Luiza</div>
+                                        </div>
+                                        <div class="px-3" style="margin-left: auto;">
+                                            #1
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <!--Segundo Lugar-->
+                                    <div
+                                        class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div>
+                                            <a href="../pages/profile_bianca_salazar.html">
+                                                <img src="../img/perfil_bianca.jpg" alt="Foto do Armando"
+                                                    class="foto_perfil_post">
+                                            </a>
+                                        </div>
+                                        <div class="px-3">
+                                            <div>Bianca Salazar</div>
+                                        </div>
+                                        <div class="px-3" style="margin-left: auto;">
+                                            #2
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <!--Terceiro Lugar-->
+                                    <div
+                                        class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div>
+                                            <a href="../pages/profile_paulo.html">
+                                                <img src="../img/perfil_paulo2.jpg" alt="Foto do Paulo"
+                                                    class="foto_perfil_post">
+                                            </a>
+                                        </div>
+                                        <div class="px-3">
+                                            <div>Paulo Silveira</div>
+                                        </div>
+                                        <div class="px-3" style="margin-left: auto;">
+                                            #3
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <img src="../img/ranking.png" class="card-img"
+                                        style="max-height: 360px; object-fit: cover;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Premiações da Semana-->
+
+                <div class="col">
+                    <div class="card mt-3 mx-3 d-lg-none">
+                        <div class="card-body px-4">
+                            <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                <div>
+                                    <h4 class="card-title py-3">Premiações 💸</h4>
+                                </div>
+                                <div style="margin-left: auto;">
+                                    <img src="../img/happy_icon.png" class="card-img"
+                                        style="max-height: 50px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
+                                <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
+                                <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
+                            </ul>
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!--Alinhamento dos Posts-->
+            <div class="col-md-10 col-lg-12 mx-auto">
+                <!--Primeiro Post-->
+                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                    <div class="card-header" style="background-color:#E3FFE0">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <a href="../pages/profile_paulo.html">
+                                    <img src="../img/perfil_paulo2.jpg" alt="Foto do Paulo" class="foto_perfil_post">
+                                </a>
+                            </div>
+                            <div class="px-3">
+                                <div>Paulo Silveira</div>
+                            </div>
+                            <div class="px-3" style="margin-left: auto;">
+                                28/04 às 15:20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos</h5>
+                        <img src="../img/gato.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
+                        <p class="card-text mt-2">
+                            Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais cheios de
+                            conservantes,
+                            você
+                            pode fazer seus próprios biscoitos de carne para gatos. Use carne moída orgânica, como carne
+                            de
+                            frango ou carne de peru. Misture com um pouco de farinha de trigo integral e água para
+                            formar
+                            uma
+                            massa. Modele pequenos biscoitos e asse no forno até que fiquem crocantes. Certifique-se de
+                            que
+                            a
+                            carne esteja completamente cozida antes de oferecer ao seu gato.
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                share
+                            </span>
+                            <span class="ps-2">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                mode_comment
+                            </span>
+                            <span class="ps-2">
+                                Comentar
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            <span class="ps-2">
+                                Curtir
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Segundo Post-->
+                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                    <div class="card-header" style="background-color:#E3FFE0">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <a href="../pages/profile_maria_luiza.html">
+                                    <img src="../img/perfil_maria.jpg" alt="Foto da Maria" class="foto_perfil_post">
+                                </a>
+                            </div>
+                            <div class="px-3">
+                                <div>Maria Luiza</div>
+                            </div>
+                            <div class="px-3" style="margin-left: auto;">
+                                24/07 às 19:30
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Essa semana comecei a tomar banhos mais ecológicos</h5>
+                        <p class="card-text">
+                            Aqui temos 3 dicas que me ajudaram muito: <br>
+                            1. <i>Reduza o tempo de banho: </i>Diminuir o tempo que você passa no chuveiro é uma das
+                            formas
+                            mais
+                            simples e eficazes de economizar água. Tente encurtar seus banhos, limitando o tempo de
+                            banho a
+                            cinco minutos ou menos. Isso reduzirá significativamente o consumo de água. <br>
+                            2. <i>Instale um redutor de vazão ou chuveiro econômico: </i>Utilize dispositivos como
+                            redutores
+                            de
+                            vazão ou chuveiros de baixo fluxo para limitar a quantidade de água que sai do chuveiro.
+                            Esses
+                            equipamentos ajudam a reduzir o consumo de água durante o banho sem comprometer o seu
+                            conforto.
+                            <br>
+                            3. <i>Reaproveite a água: </i>Ao tomar banho, você pode coletar a água que escorre enquanto
+                            espera
+                            que a temperatura se ajuste. Coloque um balde ou recipiente no chão do chuveiro para
+                            recolher
+                            essa
+                            água e use-a posteriormente para regar plantas, lavar o chão ou dar descarga no vaso
+                            sanitário.
+                            É
+                            uma forma inteligente de aproveitar a água que seria desperdiçada.
+                        </p>
+                        <img src="../img/bath.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
+                    </div>
+
+                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                share
+                            </span>
+                            <span class="ps-2">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                mode_comment
+                            </span>
+                            <span class="ps-2">
+                                Comentar
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            <span class="ps-2">
+                                Curtir
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Terceiro Post-->
+                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                    <div class="card-header" style="background-color:#E3FFE0">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <a href="../pages/profile_armando.html">
+                                    <img src="../img/perfil_armando.jpg" alt="Foto da Maria" class="foto_perfil_post">
+                                </a>
+                            </div>
+                            <div class="px-3">
+                                <div>Armando Silva</div>
+                            </div>
+                            <div class="px-3" style="margin-left: auto;">
+                                21/04 às 15:20
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Aqui uma receita de doce que aproveita casca de banana!</h5>
+                        <p class="card-text">
+                            A casca de banana pode ser aproveitada de maneira criativa na cozinha, inclusive para fazer
+                            doces
+                            deliciosos. Aqui está uma receita simples de doce de casca de banana que você pode
+                            experimentar:<br>
+                            <b>Ingredientes:</b>
+                        <ul>
+                            <li>Casca de 4 bananas maduras</li>
+                            <li>1 xícara de açúcar</li>
+                            <li>Suco de 1 limão</li>
+                            <li>1 xícara de água</li>
+                            <li>Canela em pau (opcional)</li>
+                        </ul>
+                        <img src="../img/casca_banana.jpg" class="card-img"
+                            style="max-height: 200px; object-fit: cover;">
+                        <b>Instruções</b>
+                        <ol>
+                            <li>Lave bem as cascas de banana e remova qualquer sujeira ou resíduo. Corte as cascas em
+                                pedaços
+                                pequenos.</li>
+                            <li>Em uma panela, adicione as cascas de banana cortadas, o açúcar, o suco de limão e a
+                                água. Se
+                                desejar, adicione um pedaço de canela em pau para dar um sabor extra.</li>
+                            <li>Leve a panela ao fogo médio e deixe ferver. Em seguida, reduza o fogo para médio-baixo e
+                                cozinhe
+                                por
+                                cerca de 30 a 40 minutos, mexendo de vez em quando. As cascas de banana devem ficar
+                                macias e
+                                a
+                                calda
+                                deve engrossar.</li>
+                            <li>Retire a canela em pau, se utilizada, e deixe o doce de casca de banana esfriar um
+                                pouco.
+                                Transfira o doce para um liquidificador ou processador de alimentos e bata até obter uma
+                                consistência de purê. Se preferir, você pode deixar alguns pedaços maiores para uma
+                                textura
+                                mais
+                                rústica.</li>
+                            <li>Volte o doce à panela e leve ao fogo baixo por mais alguns minutos, mexendo sempre, para
+                                dar
+                                o
+                                ponto
+                                final.</li>
+                            <li>Desligue o fogo e deixe o doce esfriar completamente antes de transferir para um pote de
+                                vidro
+                                com
+                                tampa. Armazene na geladeira.</li>
+                            <li>O doce de casca de banana pode ser consumido puro, como acompanhamento para pães,
+                                torradas
+                                ou
+                                até
+                                mesmo como recheio de bolos e tortas. É uma forma criativa de aproveitar as cascas de
+                                banana,
+                                reduzindo o desperdício alimentar.</li>
+                        </ol>
+                        <img src="../img/doce_de_banana.jpg" class="card-img"
+                            style="max-height: 200px; object-fit: cover;">
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                share
+                            </span>
+                            <span class="ps-2">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                mode_comment
+                            </span>
+                            <span class="ps-2">
+                                Comentar
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            <span class="ps-2">
+                                Curtir
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Quarto Post-->
+                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                    <div class="card-header" style="background-color:#E3FFE0">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <a href="../pages/profile_maria_luiza.html">
+                                    <img src="../img/perfil_maria.jpg" alt="Foto da Maria" class="foto_perfil_post">
+                                </a>
+                            </div>
+                            <div class="px-3">
+                                <div>Maria Silva</div>
+                            </div>
+                            <div class="px-3" style="margin-left: auto;">
+                                20/04 às 12:30
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Meu ponto de vista sobre casas inteligentes</h5>
+                        <img src="../img/smart_house.jpg" class="card-img"
+                            style="max-height: 200px; object-fit: cover;">
+                        <p class="card-text mt-2">
+                            O custo de uma casa inteligente ecológica pode variar significativamente, dependendo de
+                            diversos
+                            fatores, como o tamanho da casa, o nível de automação desejado, os recursos de eficiência
+                            energética
+                            implementados e a região onde a construção ocorre. Além disso, o preço também pode ser
+                            influenciado
+                            pelos materiais de construção escolhidos, a contratação de profissionais especializados e as
+                            tecnologias específicas incorporadas ao projeto.
+                            Em geral, uma casa inteligente ecológica pode envolver investimentos adicionais em
+                            comparação
+                            com
+                            uma construção convencional devido às tecnologias e soluções sustentáveis empregadas. É
+                            possível
+                            que
+                            os custos iniciais sejam mais altos, mas podem ser compensados ao longo do tempo por meio da
+                            redução
+                            de despesas com energia e água.
+                            Embora seja difícil fornecer um valor exato, estima-se que o custo de uma casa inteligente
+                            ecológica
+                            possa variar de algumas dezenas de milhares de dólares até centenas de milhares de dólares,
+                            dependendo do escopo do projeto. É recomendado consultar profissionais da área, como
+                            arquitetos,
+                            construtores e especialistas em automação residencial, para obter estimativas mais precisas
+                            com
+                            base
+                            nas suas necessidades e localização geográfica.
+                            Lembre-se de considerar o retorno do investimento a longo prazo, bem como os benefícios
+                            ambientais e
+                            econômicos que uma casa inteligente ecológica pode proporcionar. Além disso, existem
+                            incentivos
+                            fiscais e programas de financiamento sustentável disponíveis em algumas regiões, que podem
+                            ajudar a
+                            reduzir os custos e tornar a construção mais acessível.
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                share
+                            </span>
+                            <span class="ps-2">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                mode_comment
+                            </span>
+                            <span class="ps-2">
+                                Comentar
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            <span class="ps-2">
+                                Curtir
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Quinto Post-->
+                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                    <div class="card-header" style="background-color:#E3FFE0">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <a href="../pages/profile_bianca_salazar.html">
+                                    <img src="../img/perfil_bianca.jpg" alt="Foto do Armando" class="foto_perfil_post">
+                                </a>
+                            </div>
+                            <div class="px-3">
+                                <div>Bianca Salazar</div>
+                            </div>
+                            <div class="px-3" style="margin-left: auto;">
+                                20/04 às 11:15
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Sustentabilidade no Cinema</h5>
+                        <p class="card-text">
+
+                            A sustentabilidade no cinema refere-se à adoção de práticas ecológicas e socialmente
+                            responsáveis em
+                            todas as etapas da produção cinematográfica, desde a pré-produção até a pós-produção e
+                            distribuição.
+                            Isso envolve minimizar o impacto ambiental da produção, promover a conscientização sobre
+                            questões
+                            sociais e ambientais por meio das narrativas, e inspirar mudanças positivas na indústria do
+                            entretenimento e na sociedade em geral. Aqui estão algumas maneiras pelas quais a
+                            sustentabilidade
+                            pode ser incorporada ao cinema:<br>
+                        <ol>
+                            <li>Práticas de produção ecológicas: As produções podem adotar medidas para reduzir o
+                                consumo de
+                                energia, água e recursos naturais, bem como minimizar a geração de resíduos. Isso inclui
+                                o
+                                uso
+                                de
+                                fontes de energia renovável, redução do uso de plásticos descartáveis, reciclagem e
+                                reutilização
+                                de
+                                materiais, e escolha de locações que tenham menor impacto ambiental.</li>
+                            <li>Transporte consciente: A minimização das emissões de carbono relacionadas ao transporte
+                                é
+                                fundamental. As equipes de produção podem optar por veículos elétricos ou híbridos e
+                                incentivar
+                                o
+                                uso de transportes públicos sempre que possível.</li>
+                            <li>Alimentação sustentável: Durante as filmagens, escolher alimentos orgânicos e locais
+                                para a
+                                equipe
+                                pode ajudar a reduzir a pegada de carbono e apoiar a agricultura sustentável.</li>
+                            <li>Cenografia e figurino: A reutilização de adereços, cenários e figurinos pode reduzir a
+                                necessidade
+                                de produção de novos materiais, diminuindo o desperdício e o consumo de recursos.</li>
+                            <li>Conscientização nas narrativas: Filmes podem abordar temas relacionados à
+                                sustentabilidade,
+                                como
+                                mudanças climáticas, conservação da natureza, justiça social e direitos humanos. Essas
+                                narrativas
+                                podem aumentar a conscientização do público sobre questões críticas e inspirar ação.
+                            </li>
+                            <li>Distribuição e exibição sustentável: A distribuição digital de filmes tem um menor
+                                impacto
+                                ambiental
+                                em comparação com as cópias físicas. Além disso, teatros e festivais de cinema podem
+                                adotar
+                                práticas
+                                mais sustentáveis, como a redução do uso de papel para ingressos e materiais
+                                promocionais.
+                            </li>
+                            <li>Conscientização e responsabilidade social: Filmes e equipes de produção podem colaborar
+                                com
+                                organizações sem fins lucrativos e instituições de caridade que trabalham em prol da
+                                sustentabilidade e da justiça social. Isso pode envolver doações, parcerias e campanhas
+                                de
+                                conscientização.</li>
+                            <li>Educação e engajamento: Os cineastas podem usar seu trabalho para educar o público sobre
+                                questões
+                                ambientais e sociais, incentivando a reflexão e a ação. Isso pode ser feito por meio de
+                                documentários, filmes educativos e histórias envolventes.</li>
+                        </ol>
+                        A indústria cinematográfica tem um papel importante na disseminação de mensagens e valores, e
+                        pode
+                        desempenhar um papel significativo na promoção da sustentabilidade e na conscientização sobre
+                        questões globais. À medida que a conscientização sobre a importância da sustentabilidade
+                        continua a
+                        crescer, espera-se que mais cineastas e equipes de produção adotem práticas ecológicas e
+                        socialmente
+                        responsáveis em suas obras.
+
+                        </p>
+                        <img src="../img/cinema.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
+                    </div>
+
+                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                share
+                            </span>
+                            <span class="ps-2">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                mode_comment
+                            </span>
+                            <span class="ps-2">
+                                Comentar
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            <span class="ps-2">
+                                Curtir
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Sexto Post-->
+                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                    <div class="card-header" style="background-color:#E3FFE0">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <a href="../pages/profile_armando.html">
+                                    <img src="../img/perfil_armando.jpg" alt="Foto do Armando" class="foto_perfil_post">
+                                </a>
+                            </div>
+                            <div class="px-3">
+                                <div>Armando Silva</div>
+                            </div>
+                            <div class="px-3" style="margin-left: auto;">
+                                15/04 às 10:12
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Minhas lições de 6 meses de compostagem</h5>
+                        <img src="../img/compostagem.jpg" class="card-img"
+                            style="max-height: 200px; object-fit: cover;">
+                        <p class="card-text mt-2">
+                            A compostagem é um processo natural que transforma resíduos orgânicos em composto orgânico
+                            rico
+                            em
+                            nutrientes para o solo. Aqui estão as etapas básicas para fazer compostagem em casa:<br>
+                        <ol>
+                            <li>Escolha um local: Encontre um local adequado em seu jardim ou quintal para montar uma
+                                pilha
+                                de
+                                compostagem ou use uma composteira específica. Certifique-se de que o local tenha boa
+                                drenagem e
+                                acesso fácil.</li>
+                            <li>Separe os resíduos: Separe os resíduos orgânicos da sua cozinha, como restos de frutas e
+                                legumes,
+                                borra de café, cascas de ovos, entre outros. Evite adicionar resíduos de origem animal,
+                                como
+                                carne e
+                                laticínios, pois podem atrair animais indesejados.</li>
+                            <li>Adicione materiais secos: Acrescente materiais secos, como folhas secas, palha, serragem
+                                ou
+                                papel
+                                picado, para ajudar a equilibrar a umidade e fornecer aeração à pilha. É importante
+                                manter
+                                uma
+                                proporção equilibrada de resíduos verdes (ricos em nitrogênio) e materiais secos (ricos
+                                em
+                                carbono)
+                                para um processo eficiente de compostagem.</li>
+                            <li>Misture os materiais: Misture os resíduos orgânicos com os materiais secos em camadas
+                                alternadas
+                                para garantir uma boa mistura. Você pode usar um garfo de jardim ou uma pá para ajudar
+                                na
+                                mistura.
+                                Mantenha a umidade adequada: A pilha de compostagem deve estar úmida, como uma esponja
+                                úmida,
+                                mas
+                                não encharcada. Se estiver muito seca, adicione um pouco de água. Se estiver muito
+                                úmida,
+                                adicione
+                                mais materiais secos para absorver o excesso de umidade.</li>
+                            <li>Vire a pilha: Para acelerar o processo de compostagem, vire a pilha a cada duas semanas
+                                aproximadamente. Isso ajuda a aerar a pilha e acelera a decomposição dos resíduos.</li>
+                            <li>Aguarde o processo: A compostagem leva tempo e pode variar de algumas semanas a vários
+                                meses,
+                                dependendo das condições e do tipo de resíduos utilizados. O composto estará pronto
+                                quando
+                                tiver
+                                uma
+                                aparência escura e ter uma textura semelhante a um solo rico e cheirar a terra.</li>
+                            <li>Use o composto: O composto orgânico pode ser usado em seu jardim como um fertilizante
+                                natural
+                                para
+                                enriquecer o solo. Aplique-o nas plantas, misturando-o suavemente no solo ou use-o como
+                                cobertura na
+                                superfície.</li>
+                            <li>Lembre-se de que a compostagem requer paciência e cuidados adequados. Evite adicionar
+                                resíduos
+                                não
+                                orgânicos, como plástico e metal, à pilha de compostagem. Também é importante não
+                                adicionar
+                                plantas
+                                doentes ou sementes de ervas daninhas, pois elas podem se espalhar pelo composto. Com um
+                                pouco
+                                de
+                                dedicação, você poderá aproveitar os benefícios da compostagem e reduzir a quantidade de
+                                resíduos
+                                orgânicos enviados para aterros sanitários.</li>
+                        </ol>
+                        </p>
+
+                    </div>
+
+                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                share
+                            </span>
+                            <span class="ps-2">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                mode_comment
+                            </span>
+                            <span class="ps-2">
+                                Comentar
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start">
+                            <span class="material-symbols-outlined">
+                                thumb_up
+                            </span>
+                            <span class="ps-2">
+                                Curtir
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
         <!--Premiações da Semana-->
-        <div class="card mt-3 mx-3" style="max-width: 400px;">
+        <div class="card mt-5 mx-5 d-none d-lg-block" style="max-width: 400px;">
             <div class="card-body px-4">
                 <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                     <div>
@@ -221,518 +937,26 @@
             </div>
         </div>
 
+    </div>
 
 
 
 
-
-        <!--Alinhando os posts-->
-        <div class="mx-auto">
-
-        </div>
-
-        <!--Primeiro Post-->
-        <div class="card mx-3 mt-3" style="max-width: 700px;">
-            <div class="card-header" style="background-color:#E3FFE0">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                    <div>
-                        <a href="../pages/profile_paulo.html">
-                            <img src="../img/perfil_paulo2.jpg" alt="Foto do Paulo" class="foto_perfil_post">
-                        </a>
-                    </div>
-                    <div class="px-3">
-                        <div>Paulo Silveira</div>
-                    </div>
-                    <div class="px-3" style="margin-left: auto;">
-                        28/04 às 15:20
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos</h5>
-                <img src="../img/gato.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-                <p class="card-text mt-2">
-                    Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais cheios de conservantes, você
-                    pode fazer seus próprios biscoitos de carne para gatos. Use carne moída orgânica, como carne de
-                    frango ou carne de peru. Misture com um pouco de farinha de trigo integral e água para formar uma
-                    massa. Modele pequenos biscoitos e asse no forno até que fiquem crocantes. Certifique-se de que a
-                    carne esteja completamente cozida antes de oferecer ao seu gato.
-                </p>
-            </div>
-
-            <div class="d-flex flex-align-row justify-content-around pb-3">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
-                    <span class="ps-2">
-                        Compartilhar
-                    </span>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        mode_comment
-                    </span>
-                    <span class="ps-2">
-                        Comentar
-                    </span>
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        thumb_up
-                    </span>
-                    <span class="ps-2">
-                        Curtir
-                    </span>
-                </div>
+    <footer class="my-5">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
         </div>
-
-        <!--Segundo Post-->
-        <div class="card mx-3 mt-3" style="max-width: 700px;">
-            <div class="card-header" style="background-color:#E3FFE0">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                    <div>
-                        <a href="../pages/profile_maria_luiza.html">
-                            <img src="../img/perfil_maria.jpg" alt="Foto da Maria" class="foto_perfil_post">
-                        </a>
-                    </div>
-                    <div class="px-3">
-                        <div>Maria Luiza</div>
-                    </div>
-                    <div class="px-3" style="margin-left: auto;">
-                        24/07 às 19:30
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Essa semana comecei a tomar banhos mais ecológicos</h5>
-                <p class="card-text">
-                    Aqui temos 3 dicas que me ajudaram muito: <br>
-                    1. <i>Reduza o tempo de banho: </i>Diminuir o tempo que você passa no chuveiro é uma das formas mais
-                    simples e eficazes de economizar água. Tente encurtar seus banhos, limitando o tempo de banho a
-                    cinco minutos ou menos. Isso reduzirá significativamente o consumo de água. <br>
-                    2. <i>Instale um redutor de vazão ou chuveiro econômico: </i>Utilize dispositivos como redutores de
-                    vazão ou chuveiros de baixo fluxo para limitar a quantidade de água que sai do chuveiro. Esses
-                    equipamentos ajudam a reduzir o consumo de água durante o banho sem comprometer o seu conforto. <br>
-                    3. <i>Reaproveite a água: </i>Ao tomar banho, você pode coletar a água que escorre enquanto espera
-                    que a temperatura se ajuste. Coloque um balde ou recipiente no chão do chuveiro para recolher essa
-                    água e use-a posteriormente para regar plantas, lavar o chão ou dar descarga no vaso sanitário. É
-                    uma forma inteligente de aproveitar a água que seria desperdiçada.
-                </p>
-                <img src="../img/bath.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-            </div>
-
-            <div class="d-flex flex-align-row justify-content-around pb-3">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
-                    <span class="ps-2">
-                        Compartilhar
-                    </span>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        mode_comment
-                    </span>
-                    <span class="ps-2">
-                        Comentar
-                    </span>
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        thumb_up
-                    </span>
-                    <span class="ps-2">
-                        Curtir
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!--Terceiro Post-->
-        <div class="card mx-3 mt-3" style="max-width: 700px;">
-            <div class="card-header" style="background-color:#E3FFE0">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                    <div>
-                        <a href="../pages/profile_armando.html">
-                            <img src="../img/perfil_armando.jpg" alt="Foto da Maria" class="foto_perfil_post">
-                        </a>
-                    </div>
-                    <div class="px-3">
-                        <div>Armando Silva</div>
-                    </div>
-                    <div class="px-3" style="margin-left: auto;">
-                        21/04 às 15:20
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-body">
-                <h5 class="card-title">Aqui uma receita de doce que aproveita casca de banana!</h5>
-                <p class="card-text">
-                    A casca de banana pode ser aproveitada de maneira criativa na cozinha, inclusive para fazer doces
-                    deliciosos. Aqui está uma receita simples de doce de casca de banana que você pode experimentar:<br>
-                    <b>Ingredientes:</b>
-                <ul>
-                    <li>Casca de 4 bananas maduras</li>
-                    <li>1 xícara de açúcar</li>
-                    <li>Suco de 1 limão</li>
-                    <li>1 xícara de água</li>
-                    <li>Canela em pau (opcional)</li>
-                </ul>
-                <img src="../img/casca_banana.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-                <b>Instruções</b>
-                <ol>
-                    <li>Lave bem as cascas de banana e remova qualquer sujeira ou resíduo. Corte as cascas em pedaços
-                        pequenos.</li>
-                    <li>Em uma panela, adicione as cascas de banana cortadas, o açúcar, o suco de limão e a água. Se
-                        desejar, adicione um pedaço de canela em pau para dar um sabor extra.</li>
-                    <li>Leve a panela ao fogo médio e deixe ferver. Em seguida, reduza o fogo para médio-baixo e cozinhe
-                        por
-                        cerca de 30 a 40 minutos, mexendo de vez em quando. As cascas de banana devem ficar macias e a
-                        calda
-                        deve engrossar.</li>
-                    <li>Retire a canela em pau, se utilizada, e deixe o doce de casca de banana esfriar um pouco.
-                        Transfira o doce para um liquidificador ou processador de alimentos e bata até obter uma
-                        consistência de purê. Se preferir, você pode deixar alguns pedaços maiores para uma textura mais
-                        rústica.</li>
-                    <li>Volte o doce à panela e leve ao fogo baixo por mais alguns minutos, mexendo sempre, para dar o
-                        ponto
-                        final.</li>
-                    <li>Desligue o fogo e deixe o doce esfriar completamente antes de transferir para um pote de vidro
-                        com
-                        tampa. Armazene na geladeira.</li>
-                    <li>O doce de casca de banana pode ser consumido puro, como acompanhamento para pães, torradas ou
-                        até
-                        mesmo como recheio de bolos e tortas. É uma forma criativa de aproveitar as cascas de banana,
-                        reduzindo o desperdício alimentar.</li>
-                </ol>
-                <img src="../img/doce_de_banana.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-                </p>
-            </div>
-
-            <div class="d-flex flex-align-row justify-content-around pb-3">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
-                    <span class="ps-2">
-                        Compartilhar
-                    </span>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        mode_comment
-                    </span>
-                    <span class="ps-2">
-                        Comentar
-                    </span>
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        thumb_up
-                    </span>
-                    <span class="ps-2">
-                        Curtir
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!--Quarto Post-->
-        <div class="card mx-3 mt-3" style="max-width: 700px;">
-            <div class="card-header" style="background-color:#E3FFE0">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                    <div>
-                        <a href="../pages/profile_maria_luiza.html">
-                            <img src="../img/perfil_maria.jpg" alt="Foto da Maria" class="foto_perfil_post">
-                        </a>
-                    </div>
-                    <div class="px-3">
-                        <div>Maria Silva</div>
-                    </div>
-                    <div class="px-3" style="margin-left: auto;">
-                        20/04 às 12:30
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Meu ponto de vista sobre casas inteligentes</h5>
-                <img src="../img/smart_house.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-                <p class="card-text mt-2">
-                    O custo de uma casa inteligente ecológica pode variar significativamente, dependendo de diversos
-                    fatores, como o tamanho da casa, o nível de automação desejado, os recursos de eficiência energética
-                    implementados e a região onde a construção ocorre. Além disso, o preço também pode ser influenciado
-                    pelos materiais de construção escolhidos, a contratação de profissionais especializados e as
-                    tecnologias específicas incorporadas ao projeto.
-                    Em geral, uma casa inteligente ecológica pode envolver investimentos adicionais em comparação com
-                    uma construção convencional devido às tecnologias e soluções sustentáveis empregadas. É possível que
-                    os custos iniciais sejam mais altos, mas podem ser compensados ao longo do tempo por meio da redução
-                    de despesas com energia e água.
-                    Embora seja difícil fornecer um valor exato, estima-se que o custo de uma casa inteligente ecológica
-                    possa variar de algumas dezenas de milhares de dólares até centenas de milhares de dólares,
-                    dependendo do escopo do projeto. É recomendado consultar profissionais da área, como arquitetos,
-                    construtores e especialistas em automação residencial, para obter estimativas mais precisas com base
-                    nas suas necessidades e localização geográfica.
-                    Lembre-se de considerar o retorno do investimento a longo prazo, bem como os benefícios ambientais e
-                    econômicos que uma casa inteligente ecológica pode proporcionar. Além disso, existem incentivos
-                    fiscais e programas de financiamento sustentável disponíveis em algumas regiões, que podem ajudar a
-                    reduzir os custos e tornar a construção mais acessível.
-                </p>
-            </div>
-
-            <div class="d-flex flex-align-row justify-content-around pb-3">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
-                    <span class="ps-2">
-                        Compartilhar
-                    </span>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        mode_comment
-                    </span>
-                    <span class="ps-2">
-                        Comentar
-                    </span>
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        thumb_up
-                    </span>
-                    <span class="ps-2">
-                        Curtir
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!--Quinto Post-->
-        <div class="card mx-3 mt-3" style="max-width: 700px;">
-            <div class="card-header" style="background-color:#E3FFE0">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                    <div>
-                        <a href="../pages/profile_bianca_salazar.html">
-                            <img src="../img/perfil_bianca.jpg" alt="Foto do Armando" class="foto_perfil_post">
-                        </a>
-                    </div>
-                    <div class="px-3">
-                        <div>Bianca Salazar</div>
-                    </div>
-                    <div class="px-3" style="margin-left: auto;">
-                        20/04 às 11:15
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Sustentabilidade no Cinema</h5>
-                <p class="card-text">
-
-                    A sustentabilidade no cinema refere-se à adoção de práticas ecológicas e socialmente responsáveis em
-                    todas as etapas da produção cinematográfica, desde a pré-produção até a pós-produção e distribuição.
-                    Isso envolve minimizar o impacto ambiental da produção, promover a conscientização sobre questões
-                    sociais e ambientais por meio das narrativas, e inspirar mudanças positivas na indústria do
-                    entretenimento e na sociedade em geral. Aqui estão algumas maneiras pelas quais a sustentabilidade
-                    pode ser incorporada ao cinema:<br>
-                <ol>
-                    <li>Práticas de produção ecológicas: As produções podem adotar medidas para reduzir o consumo de
-                        energia, água e recursos naturais, bem como minimizar a geração de resíduos. Isso inclui o uso
-                        de
-                        fontes de energia renovável, redução do uso de plásticos descartáveis, reciclagem e reutilização
-                        de
-                        materiais, e escolha de locações que tenham menor impacto ambiental.</li>
-                    <li>Transporte consciente: A minimização das emissões de carbono relacionadas ao transporte é
-                        fundamental. As equipes de produção podem optar por veículos elétricos ou híbridos e incentivar
-                        o
-                        uso de transportes públicos sempre que possível.</li>
-                    <li>Alimentação sustentável: Durante as filmagens, escolher alimentos orgânicos e locais para a
-                        equipe
-                        pode ajudar a reduzir a pegada de carbono e apoiar a agricultura sustentável.</li>
-                    <li>Cenografia e figurino: A reutilização de adereços, cenários e figurinos pode reduzir a
-                        necessidade
-                        de produção de novos materiais, diminuindo o desperdício e o consumo de recursos.</li>
-                    <li>Conscientização nas narrativas: Filmes podem abordar temas relacionados à sustentabilidade, como
-                        mudanças climáticas, conservação da natureza, justiça social e direitos humanos. Essas
-                        narrativas
-                        podem aumentar a conscientização do público sobre questões críticas e inspirar ação.</li>
-                    <li>Distribuição e exibição sustentável: A distribuição digital de filmes tem um menor impacto
-                        ambiental
-                        em comparação com as cópias físicas. Além disso, teatros e festivais de cinema podem adotar
-                        práticas
-                        mais sustentáveis, como a redução do uso de papel para ingressos e materiais promocionais.</li>
-                    <li>Conscientização e responsabilidade social: Filmes e equipes de produção podem colaborar com
-                        organizações sem fins lucrativos e instituições de caridade que trabalham em prol da
-                        sustentabilidade e da justiça social. Isso pode envolver doações, parcerias e campanhas de
-                        conscientização.</li>
-                    <li>Educação e engajamento: Os cineastas podem usar seu trabalho para educar o público sobre
-                        questões
-                        ambientais e sociais, incentivando a reflexão e a ação. Isso pode ser feito por meio de
-                        documentários, filmes educativos e histórias envolventes.</li>
-                </ol>
-                A indústria cinematográfica tem um papel importante na disseminação de mensagens e valores, e pode
-                desempenhar um papel significativo na promoção da sustentabilidade e na conscientização sobre
-                questões globais. À medida que a conscientização sobre a importância da sustentabilidade continua a
-                crescer, espera-se que mais cineastas e equipes de produção adotem práticas ecológicas e socialmente
-                responsáveis em suas obras.
-
-                </p>
-                <img src="../img/cinema.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-            </div>
-
-            <div class="d-flex flex-align-row justify-content-around pb-3">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
-                    <span class="ps-2">
-                        Compartilhar
-                    </span>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        mode_comment
-                    </span>
-                    <span class="ps-2">
-                        Comentar
-                    </span>
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        thumb_up
-                    </span>
-                    <span class="ps-2">
-                        Curtir
-                    </span>
-                </div>
-            </div>
-        </div>
-
-
-        <!--Sexto Post-->
-        <div class="card mx-3 mt-3" style="max-width: 700px;">
-            <div class="card-header" style="background-color:#E3FFE0">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                    <div>
-                        <a href="../pages/profile_armando.html">
-                            <img src="../img/perfil_armando.jpg" alt="Foto do Armando" class="foto_perfil_post">
-                        </a>
-                    </div>
-                    <div class="px-3">
-                        <div>Armando Silva</div>
-                    </div>
-                    <div class="px-3" style="margin-left: auto;">
-                        15/04 às 10:12
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Minhas lições de 6 meses de compostagem</h5>
-                <img src="../img/compostagem.jpg" class="card-img" style="max-height: 200px; object-fit: cover;">
-                <p class="card-text mt-2">
-                    A compostagem é um processo natural que transforma resíduos orgânicos em composto orgânico rico em
-                    nutrientes para o solo. Aqui estão as etapas básicas para fazer compostagem em casa:<br>
-                <ol>
-                    <li>Escolha um local: Encontre um local adequado em seu jardim ou quintal para montar uma pilha de
-                        compostagem ou use uma composteira específica. Certifique-se de que o local tenha boa drenagem e
-                        acesso fácil.</li>
-                    <li>Separe os resíduos: Separe os resíduos orgânicos da sua cozinha, como restos de frutas e
-                        legumes,
-                        borra de café, cascas de ovos, entre outros. Evite adicionar resíduos de origem animal, como
-                        carne e
-                        laticínios, pois podem atrair animais indesejados.</li>
-                    <li>Adicione materiais secos: Acrescente materiais secos, como folhas secas, palha, serragem ou
-                        papel
-                        picado, para ajudar a equilibrar a umidade e fornecer aeração à pilha. É importante manter uma
-                        proporção equilibrada de resíduos verdes (ricos em nitrogênio) e materiais secos (ricos em
-                        carbono)
-                        para um processo eficiente de compostagem.</li>
-                    <li>Misture os materiais: Misture os resíduos orgânicos com os materiais secos em camadas alternadas
-                        para garantir uma boa mistura. Você pode usar um garfo de jardim ou uma pá para ajudar na
-                        mistura.
-                        Mantenha a umidade adequada: A pilha de compostagem deve estar úmida, como uma esponja úmida,
-                        mas
-                        não encharcada. Se estiver muito seca, adicione um pouco de água. Se estiver muito úmida,
-                        adicione
-                        mais materiais secos para absorver o excesso de umidade.</li>
-                    <li>Vire a pilha: Para acelerar o processo de compostagem, vire a pilha a cada duas semanas
-                        aproximadamente. Isso ajuda a aerar a pilha e acelera a decomposição dos resíduos.</li>
-                    <li>Aguarde o processo: A compostagem leva tempo e pode variar de algumas semanas a vários meses,
-                        dependendo das condições e do tipo de resíduos utilizados. O composto estará pronto quando tiver
-                        uma
-                        aparência escura e ter uma textura semelhante a um solo rico e cheirar a terra.</li>
-                    <li>Use o composto: O composto orgânico pode ser usado em seu jardim como um fertilizante natural
-                        para
-                        enriquecer o solo. Aplique-o nas plantas, misturando-o suavemente no solo ou use-o como
-                        cobertura na
-                        superfície.</li>
-                    <li>Lembre-se de que a compostagem requer paciência e cuidados adequados. Evite adicionar resíduos
-                        não
-                        orgânicos, como plástico e metal, à pilha de compostagem. Também é importante não adicionar
-                        plantas
-                        doentes ou sementes de ervas daninhas, pois elas podem se espalhar pelo composto. Com um pouco
-                        de
-                        dedicação, você poderá aproveitar os benefícios da compostagem e reduzir a quantidade de
-                        resíduos
-                        orgânicos enviados para aterros sanitários.</li>
-                </ol>
-                </p>
-
-            </div>
-
-            <div class="d-flex flex-align-row justify-content-around pb-3">
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
-                    <span class="ps-2">
-                        Compartilhar
-                    </span>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        mode_comment
-                    </span>
-                    <span class="ps-2">
-                        Comentar
-                    </span>
-                </div>
-                <div class="d-flex align-items-center justify-content-start">
-                    <span class="material-symbols-outlined">
-                        thumb_up
-                    </span>
-                    <span class="ps-2">
-                        Curtir
-                    </span>
-                </div>
-            </div>
-        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
 
 
 
 
-
-        <footer>
-            <section>
-                <div>
-                    <p class="fs-3 text-center">Você viu todos os posts até o momento. Por favor, volte mais tarde. :)
-                    </p>
-                </div>
-            </section>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-            crossorigin="anonymous"></script>
-        <script src="../main.js"></script>
 
 </body>
 
