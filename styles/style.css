@@ -36,7 +36,6 @@ body{
 .login_img{
     height: 150px;
     width: 150px;
-    border: 1px solid black;
     border-radius: 90px;
 }
 .password{
@@ -45,7 +44,6 @@ body{
     max-width: 18.375rem;
     height: 1.5rem;
     background-color: #EBE5D6;
-    border: 1px solid black;
     border-radius: 7px;
 }
 .password_forgot_container{
@@ -56,25 +54,7 @@ body{
     color: #8A8A8A;
     font-size: 10px;
 }
-.login_button{
-    margin-top: 2rem;
-    width: 50%;
-    max-width: 12rem;
-    height: 2.5rem;
-    background-color: var(--cor_botao);
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 600;
-}
-.footer_container{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 14rem;
-}
-.footer_img{
-    width: 150px;
-    height: 50px;
-}
+
 
 
 

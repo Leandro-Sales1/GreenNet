@@ -50,65 +50,10 @@ main{
     margin: 0 4rem;
     text-align: center;
 }
-.botao_menu_hamburguer{
-    width: 48px;
-    height: 48px;
-    background-image: url(../img/Menu.svg);
-    background-repeat: no-repeat;
-    display: block;
-}
-.menu_rotulo{
-    padding: 0.5rem;
-}
-.botao_menu:checked ~ .menu_rotulo > .botao_menu_hamburguer{
-    background-image: url(../img/Menu_Aberto.svg);
-}
-.botao_menu:checked ~ .menu_rotulo{
-    background: var(--cor_fundo_menu);
-    
-   }
-.elementos_menu{
-    display: flex;
-    align-items: center;
-}
-.lista_menu{
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: -9%;
-    width: 65vw;
-    list-style-type: none;
-}
 
-.botao_menu:checked~.lista_menu{
-    display: block;
-}
-.lista_titulo,.lista_elemento{
-    padding: 1rem;
-    background-color: var(--cor_fundo_menu);
-}
-.lista_elemento{
-    font-size: 16px;
-}
-.lista_titulo{
-    color: var(--cor_fonte_menu)
-}
-.lista_elemento_link{
-    background: var(--cor_fonte_menu);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-#menu{
-    display: none;
-}
-.esq{
-    margin-right: 10px;
-}
 .imagem_perfil{
     height: 40px;
     width: 40px;
-    border: 1px solid black;
     border-radius: 90px;
     
 }
@@ -131,7 +76,6 @@ main{
 .foto_perfil_post{
     height: 40px;
     width: 40px;
-    border: 1px solid black;
     border-radius: 90px;
 }
 .bi-star{
