@@ -20,7 +20,7 @@ function salvar(){
     var descricao = document.querySelector("#descricao").value;
     localStorage.setItem("valueText6", descricao)
 
-    alert("Lembre-se de atualizar os dados digitados na próxima página. Aperte o botão 'Atualizar dados'.")
+    alert("Ainda não temos essa funcionalidade, aguarde por mais informações.")
 
 }
 function atualizar(){
