@@ -234,7 +234,7 @@
                                                                     data-bs-toggle="modal" data-bs-target="#modalResult">Enviar</button>
                                                             </div>
                                                 
-                                                            <!-- Modal -->
+                                                            <!-- Modal Quiz-->
                                                             <div class="modal fade" id="modalResult" tabindex="-1" aria-labelledby="modalResultLabel"
                                                                 aria-hidden="true">
                                                                 <div class="modal-dialog modal-dialog-centered">
@@ -269,12 +269,13 @@
                                             aria-controls="panelsStayOpen-collapseOne">
                                             <div class="row g-0" style="min-height: 100px;">
                                                 <div class="col-2 d-flex align-items-center justify-content-center">
-                                                    <img src="../img/controle-de-video-game.png" class="rounded-circle" style="max-width: 80px;">
+                                                    <img src="../img/forca.png" class="rounded-circle" style="max-width: 80px;">
                                                 </div>
                                                 <div class="col-10">
                                                     <div class="card-body">
-                                                        <h6 class="card-title mb-1">Outros jogos</h6>
-                                                        <h6 class="card-subtitle mb-2 text-muted"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex eum neque animi minus facilis veniam.</h6>
+                                                        <h6 class="card-title mb-1">Jogo da forca</h6>
+                                                        <h6 class="card-subtitle mb-2 text-muted"> Tente acertar diversar palavras sobre crescimento
+                                                            sustentável. Acumule pontos e ganhe recompensas!</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -282,8 +283,55 @@
                                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="panelsStayOpen-headingOne">
                                             <div class="accordion-body px-4 py-2">
+                                                <div class="card-body items p-5">
+                                                    <form id="forca" onsubmit="return false;">
+                                                        <div class="row justify-content-center ">
+                                                            <div class="col-12 text-center mb-3 items-main game_forca_bg">
+                                                                <div class="label mx-5">
+                                                                    <label id="lacunas"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 text-center items-main">
+                                                                <input type="text" id="tentativa" disabled class="form-text text_area">
+                                                            </div>
+                                                            <div class="col-12 text-center mb-3 items-main">
+                                                                <label class="text-muted">Restante: <label id="restante"></label></label>
+                                                            </div>
+                                                        </div>
+                                
+                                                        <div class="text-center">
+                                                            <button class="btn btn-primary btn-block btn-lg" type="button" onclick="clickBtnSortear()"
+                                                                id="btnSortear">Sortear</button>
+                                                        </div>
+                                                        <h6 class="justify-content-start d-flex my-4">Regras: Clique em Sorterar para inciar. Digite uma
+                                                            letra para verificar se ela
+                                                            existe na palavra chave ou digite uma palavra completa para dar um chute. Cada letra ou
+                                                            chute errado, custa uma 
+                                                            tentativa. Boa sorte!
+                                                        </h6>
+                                                        <button hidden data-bs-toggle="modal" type="button" data-bs-target="#modalForca" id="btnModalForca"></button>
+                                                        </div>
 
-                                                
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="modalForca" tabindex="-1" aria-labelledby="modalForcaLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5" id="modalForcaLabel">Jogo da Forca concluído.</h1>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body" id="text-modal-forca">
+                                                                            .
+                                                                        </div>
+                                                                        <img id="qr" alt="">
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
