@@ -20,10 +20,10 @@ function validaRespostas() {
 
 function exibeMensagens(countSuccess){
     let text = document.getElementById("text-modal");
-    if (countSuccess >= 3)
-        text.innerHTML = `Parabéns! Você acertou ${countSuccess} de 5 questões! Logo mais você recebera uma premiação em seu cartão de benefícios.`;
+    if (countSuccess >= 3){
+        text.innerHTML = `Parabéns! Você acertou ${countSuccess} de 5 questões! Utilize o QR Code para retirar sua recompensa.`;
+        document.getElementById("qr").src = "../img/qrCode.png";
+    }
     else
         text.innerHTML = `Não foi dessa vez! Você acertou ${countSuccess} de 5 questões! Tente novamente amanhã.`;
-
-    document.getElementById("footer").innerHTML = "Volte amanhã para tentar ganhar mais prêmios!";
 }
