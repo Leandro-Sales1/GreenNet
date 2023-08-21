@@ -97,7 +97,7 @@
                     style="max-height:400px; object-fit: cover;">
                 <div class="carousel-caption d-md-block">
                     <h5>Venha ser voluntário no Instituto Schneider</h5>
-                    <p><a href="https://volunteerin.se.com/#/" target="_blank"> Programa VolunteerIn </a></p>
+                    <p><a class="btn btn-primary" href="https://volunteerin.se.com/#/" target="_blank"> Programa VolunteerIn </a></p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -107,7 +107,7 @@
                 <div class="carousel-caption d-md-block">
                     <h5>Envie seu projeto!</h5>
                     <p>Verifique se seu projeto tem elegibilidade para receber verba da Schneider!</p>
-                    <p><a href="https://fondation-schneider-electric.optimytool.com/en/" target="_blank">Schneider
+                    <p><a class="btn btn-primary" href="https://fondation-schneider-electric.optimytool.com/en/" target="_blank">Schneider
                             Foundation</a>
                     </p>
                 </div>
@@ -143,7 +143,7 @@
         <!--Ranking dos Funcionarios Externo-->
         <div class="card mt-5 mx-5 d-none d-lg-block" style="max-width: 400px;">
             <div class="card-body">
-                <h4 class="card-title text-center pb-2" alt="Estrelas" title="Estrelas">⭐Ranking Semanal⭐ </h4>
+                <h4 class="card-title text-center pt-4" alt="Estrelas" title="Estrelas">⭐Ranking Semanal⭐ </h4>
 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
@@ -273,10 +273,10 @@
             <div class="row row-cols-1 row-cols-md-2">
                 <!--Ranking dos Funcionarios-->
 
-                <div class="col mx">
+                <div style="max-width: 400px;">
                     <div class="card mt-3 mx-3 d-lg-none">
                         <div class="card-body px-4">
-                            <h4 class="card-title text-center pb-2">⭐Ranking Semanal⭐ </h4>
+                            <h4 class="card-title text-center pt-4">⭐Ranking Semanal⭐ </h4>
 
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
@@ -759,7 +759,8 @@
                                 </a>
                             </div>
                             <div class="px-3">
-                                <a href="../pages/profile_bianca_salazar.html" style="color: black; text-decoration: none;">
+                                <a href="../pages/profile_bianca_salazar.html"
+                                    style="color: black; text-decoration: none;">
                                     <div>Bianca Salazar</div>
                                 </a>
                             </div>
@@ -1006,30 +1007,54 @@
 
         </div>
 
-        <!--Premiações da Semana-->
-        <div class="card mt-5 mx-5 d-none d-lg-block" style="max-width: 400px;">
-            <div class="card-body px-4">
-                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+
+        <div class="d-flex flex-column">
+            <!--Premiações da Semana-->
+            <div class="card mt-5 mx-5 d-none d-lg-block" style="max-width: 400px;">
+                <div class="card-body px-4">
+                    <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                        <div>
+                            <h4 class="card-title py-3" alt="Notas de dinheiro com asas voando"
+                                title="Notas de dinheiro com asas voando">Premiações 💸</h4>
+                        </div>
+                        <div style="margin-left: auto;">
+                            <img src="../img/happy_icon.png" alt="Moça algre" title="Moça alegre" class="card-img"
+                                style="max-height: 50px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
+                        <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
+                        <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
+                    </ul>
                     <div>
-                        <h4 class="card-title py-3" alt="Notas de dinheiro com asas voando"
-                            title="Notas de dinheiro com asas voando">Premiações 💸</h4>
+
                     </div>
-                    <div style="margin-left: auto;">
-                        <img src="../img/happy_icon.png" alt="Moça algre" title="Moça alegre" class="card-img"
-                            style="max-height: 50px; object-fit: contain;">
-                    </div>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
-                    <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
-                    <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
-                </ul>
-                <div>
 
                 </div>
-
             </div>
+
+            <div class="mt-auto">
+                <div class="card mt-5 mx-5 d-none d-lg-block" style="max-width: 400px;">
+                    <div class="card-body px-4">
+                        <h4 class="card-title text-center pt-4"> Teste a responsividade do nosso site!</h4>
+                        <img class="card-img" src="../img/Mobile_feed.png"  alt="Animação de uma mulher olhando um celular" title="Animação de uma mulher olhando um celular" style="max-height: 360px; object-fit: cover;">
+                        <div class="card-subtitle mb-2 text-muted">
+                            1. No Google Chrome, ative Inspecionar.<br> (Ctrl + Shift + I)<br>
+                            2. Clique no ícone com um celular sobrepondo um desktop.<br> (Ctrl + Shift + M)<br>
+                            3. Em dimensions, você pode escolher um dispositivo ou utilizar o modo responsivo e verificar as alterações do site para diferentes tamanhos em tempo real. 
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+
         </div>
+
+
+
 
     </div>
 
