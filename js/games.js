@@ -106,7 +106,7 @@ function selecionaPalavraChave() {
 // Funções auxiliares Realiza Tentativa
 function realizaTentativa() {
     if (_restante == 0) {
-        return exibeMensagens("Nao foi dessa vez! Voce atingiu o limite de tentativas. Tente Novamente!");
+        return exibeMensagensForca("Nao foi dessa vez! Voce atingiu o limite de tentativas. Tente Novamente!");
     }
     validaTentativa();
 }
@@ -114,7 +114,7 @@ function validaTentativa() {
     let value = document.getElementById("tentativa").value;
 
     if (value.length > 1 && value == _palavraChave) {
-        return exibeMensagens("Parabens! Voce adivinhou a palavra chave! Tente novamente e some mais pontos.");
+        return exibeMensagensForca("Parabens! Voce adivinhou a palavra chave! Tente novamente e some mais pontos.");
     }
     else if (value.length > 1) {
         reduzRestanteTentativas();
@@ -132,13 +132,13 @@ function validaTentativa() {
     document.getElementById("tentativa").value = '';
 
     if (_acertos.join("") == _palavraChave) {
-        return exibeMensagens("Parabens! Voce adivinhou a palavra chave! Tente novamente e some mais pontos.");
+        return exibeMensagensForca("Parabens! Voce adivinhou a palavra chave! Tente novamente e some mais pontos.");
     }
 }
 function reduzRestanteTentativas() {
     document.getElementById("restante").innerHTML = --_restante;
 }
-function exibeMensagens(message) {
+function exibeMensagensForca(message) {
     document.getElementById("text-modal-forca").innerHTML = message;
     document.getElementById("btnModalForca").click();
     reinicia();
