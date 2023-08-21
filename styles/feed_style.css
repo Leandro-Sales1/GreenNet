@@ -78,6 +78,8 @@ main{
     width: 40px;
     border-radius: 90px;
 }
+
+/*Estrela do Feed*/
 .bi-star{
     font-size: 1.5rem;
     color:black;
