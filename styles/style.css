@@ -94,6 +94,7 @@ body{
 /*Perfil do Armando*/
 .imagem_de_fundo_1{
     background-image: url(../img/arvore.jpg);
+    background-size: 960px 300px;
     background-repeat: no-repeat;
     display: block;
     object-fit: cover;
@@ -104,6 +105,7 @@ body{
 /*Perfil da Maria Luiza*/
 .imagem_de_fundo_2{
     background-image: url(../img/summer-country-road.jpg);
+    background-size: 960px 300px;
     background-repeat: no-repeat;
     display: block;
     object-fit: cover;
@@ -114,6 +116,7 @@ body{
 /*Perfil do Paulo*/
 .imagem_de_fundo_3{
     background-image: url(../img/reserve-na-biblioteca-com-livro-aberto.jpg);
+    background-size: 960px 300px;
     background-repeat: no-repeat;
     display: block;
     object-fit: cover;
@@ -125,6 +128,7 @@ body{
 /*Perfil da Bianca*/
 .imagem_de_fundo_4{
     background-image: url(../img/bandeira_bianca.jpg);
+    background-size: 960px 300px;
     background-repeat: no-repeat;
     display: block;
     object-fit: cover;
