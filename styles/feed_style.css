@@ -78,6 +78,13 @@ main{
     width: 40px;
     border-radius: 90px;
 }
+/*Botão Input Files*/
+
+input[type="file"] {
+    display: none;
+}
+
+
 
 /*Estrela do Feed*/
 .bi-star{
