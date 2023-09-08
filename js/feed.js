@@ -15,3 +15,10 @@ estrela.forEach( (element) =>{
 function funcionalidade_nao_disponivel(){
     alert("Funcionalidade não disponível")
 }
+
+function scrollToTopBtn(){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // This makes the scroll behavior smooth
+    });
+}
