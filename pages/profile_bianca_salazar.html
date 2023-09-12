@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/feed_style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -54,8 +58,410 @@
             Morando sozinha pude descobrir que sou uma excelente gastrônoma da culinária vegana, ou seja, não é necessário ser uma profissional da área para se encantar pela gastronomia.
         </div>
 
+        <div class="mt-4">
+            <ul class="nav nav-tabs d-flex justify-content-evenly" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                        type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Publicação</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Curtidos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                        type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Favoritos</button>
+                </li>
+            </ul>
+        
+        
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <!-- Alinhamento dos posts -->
+                    <div class="d-flex justify-content-center">
+                        <div style="max-width: 960px;">
+                            <div class="col-md-10 col-lg-12 mx-auto">
+                                <!-- Primeiro Post -->
+                                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                                    <div class="card-header" style="background-color:#E3FFE0">
+                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                            <div>
+                                                <a href="">
+                                                    <img src="../img/perfil_bianca.jpg" alt="Foto de perfil de Bianca" title="Foto de perfil de Bianca"
+                                                        class="foto_perfil_post">
+                                                </a>
+                                            </div>
+                                            <div class="px-3">
+                                                <a href="../pages/profile_bianca_salazar.html" style="color: black; text-decoration: none;">
+                                                    <div>Bianca Salazar</div>
+                                                </a>
+                                            </div>
+                                            <div class="px-3" style="margin-left: auto;">
+                                                20/04 às 11:15
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row py-1">
+                                            <div class="col-10 col-sm-11">
+                                                <h5 class="card-title">Sustentabilidade no Cinema</h5>
+                                            </div>
+                                            <div class="col-2 col-sm-1">
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                
+                                        <p class="card-text">
+                                
+                                            A sustentabilidade no cinema refere-se à adoção de práticas ecológicas e socialmente
+                                            responsáveis em
+                                            todas as etapas da produção cinematográfica, desde a pré-produção até a pós-produção e
+                                            distribuição.
+                                            Isso envolve minimizar o impacto ambiental da produção, promover a conscientização sobre
+                                            questões
+                                            sociais e ambientais por meio das narrativas, e inspirar mudanças positivas na indústria do
+                                            entretenimento e na sociedade em geral. Aqui estão algumas maneiras pelas quais a
+                                            sustentabilidade
+                                            pode ser incorporada ao cinema:<br>
+                                        <ol>
+                                            <li>Práticas de produção ecológicas: As produções podem adotar medidas para reduzir o
+                                                consumo de
+                                                energia, água e recursos naturais, bem como minimizar a geração de resíduos. Isso inclui
+                                                o
+                                                uso
+                                                de
+                                                fontes de energia renovável, redução do uso de plásticos descartáveis, reciclagem e
+                                                reutilização
+                                                de
+                                                materiais, e escolha de locações que tenham menor impacto ambiental.</li>
+                                            <li>Transporte consciente: A minimização das emissões de carbono relacionadas ao transporte
+                                                é
+                                                fundamental. As equipes de produção podem optar por veículos elétricos ou híbridos e
+                                                incentivar
+                                                o
+                                                uso de transportes públicos sempre que possível.</li>
+                                            <li>Alimentação sustentável: Durante as filmagens, escolher alimentos orgânicos e locais
+                                                para a
+                                                equipe
+                                                pode ajudar a reduzir a pegada de carbono e apoiar a agricultura sustentável.</li>
+                                            <li>Cenografia e figurino: A reutilização de adereços, cenários e figurinos pode reduzir a
+                                                necessidade
+                                                de produção de novos materiais, diminuindo o desperdício e o consumo de recursos.</li>
+                                            <li>Conscientização nas narrativas: Filmes podem abordar temas relacionados à
+                                                sustentabilidade,
+                                                como
+                                                mudanças climáticas, conservação da natureza, justiça social e direitos humanos. Essas
+                                                narrativas
+                                                podem aumentar a conscientização do público sobre questões críticas e inspirar ação.
+                                            </li>
+                                            <li>Distribuição e exibição sustentável: A distribuição digital de filmes tem um menor
+                                                impacto
+                                                ambiental
+                                                em comparação com as cópias físicas. Além disso, teatros e festivais de cinema podem
+                                                adotar
+                                                práticas
+                                                mais sustentáveis, como a redução do uso de papel para ingressos e materiais
+                                                promocionais.
+                                            </li>
+                                            <li>Conscientização e responsabilidade social: Filmes e equipes de produção podem colaborar
+                                                com
+                                                organizações sem fins lucrativos e instituições de caridade que trabalham em prol da
+                                                sustentabilidade e da justiça social. Isso pode envolver doações, parcerias e campanhas
+                                                de
+                                                conscientização.</li>
+                                            <li>Educação e engajamento: Os cineastas podem usar seu trabalho para educar o público sobre
+                                                questões
+                                                ambientais e sociais, incentivando a reflexão e a ação. Isso pode ser feito por meio de
+                                                documentários, filmes educativos e histórias envolventes.</li>
+                                        </ol>
+                                        A indústria cinematográfica tem um papel importante na disseminação de mensagens e valores, e
+                                        pode
+                                        desempenhar um papel significativo na promoção da sustentabilidade e na conscientização sobre
+                                        questões globais. À medida que a conscientização sobre a importância da sustentabilidade
+                                        continua a
+                                        crescer, espera-se que mais cineastas e equipes de produção adotem práticas ecológicas e
+                                        socialmente
+                                        responsáveis em suas obras.
+                                
+                                        </p>
+                                        <img src="../img/cinema.jpg" alt="Sala de cinema com cadeiras vazias" title="Sala de cinema com cadeiras vazias"
+                                            class="card-img" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                
+                                    <!--Botões-->
+                                    <div class="row py-2 " style="margin-top: -1rem;">
+                                        <!--Share-->
+                                        <div class="col d-flex justify-content-center botao-post">
+                                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                                    share
+                                                </span>
+                                                <span class="ps-2 d-none d-md-block">
+                                                    Compartilhar
+                                                </span>
+                                
+                                            </div>
+                                        </div>
+                                        <!--Comment-->
+                                        <div class="col d-flex justify-content-center botao-post">
+                                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                                        mode_comment
+                                                    </span>
+                                                    <span class="ps-2 d-none d-md-block">
+                                                        Comentar
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                        <!--Like-->
+                                        <div class="col d-flex justify-content-center botao-post">
+                                            <div class="like-notfilled">
+                                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                                        thumb_up
+                                                    </span>
+                                                    <span class="ps-2 d-none d-md-block">
+                                                        Curtir
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <!-- Alinhamento dos posts -->
+                    <div class="d-flex justify-content-center">
+                        <div style="max-width: 960px;">
+                            <div class="col-md-10 col-lg-12 mx-auto">
+                                <!-- Primeiro curtido -->
+                                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                                    <div class="card-header" style="background-color:#E3FFE0">
+                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                            <div>
+                                                <a href="../pages/profile_paulo.html">
+                                                    <img src="../img/perfil_paulo2.jpg" alt="Foto de perfil do Paulo"
+                                                        title="Foto de perfil do Paulo" class="foto_perfil_post">
+                                                </a>
+                                            </div>
+                                            <div class="px-3">
+                                                <a href="../pages/profile_paulo.html"
+                                                    style="color: black; text-decoration: none;">
+                                                    <div>Paulo Silveira</div>
+                                                </a>
+        
+                                            </div>
+                                            <div class="px-3" style="margin-left: auto;">
+                                                28/04 às 15:20
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row py-1">
+                                            <div class="col-10 col-sm-11">
+                                                <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos</h5>
+                                            </div>
+                                            <div class="col-2 col-sm-1">
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+        
+                                        <img src="../img/gato.jpg" alt="Gato malhado deitado" title="Gato malhado deitado"
+                                            class="card-img" style="max-height: 200px; object-fit: cover;">
+                                        <p class="card-text mt-2">
+                                            Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais cheios de
+                                            conservantes,
+                                            você
+                                            pode fazer seus próprios biscoitos de carne para gatos. Use carne moída orgânica,
+                                            como carne
+                                            de
+                                            frango ou carne de peru. Misture com um pouco de farinha de trigo integral e água
+                                            para
+                                            formar
+                                            uma
+                                            massa. Modele pequenos biscoitos e asse no forno até que fiquem crocantes.
+                                            Certifique-se de
+                                            que
+                                            a
+                                            carne esteja completamente cozida antes de oferecer ao seu gato.
+                                        </p>
+                                    </div>
+        
+                                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                                share
+                                            </span>
+                                            <span class="ps-2 d-none d-md-block">
+                                                Compartilhar
+                                            </span>
+        
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                                mode_comment
+                                            </span>
+                                            <span class="ps-2 d-none d-md-block">
+                                                Comentar
+                                            </span>
+                                        </div>
+                                        <!--Like-->
+                                        <div class="like-filled">
+                                            <div class="d-flex align-items-center justify-content-start">
+                                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                                    thumb_up
+                                                </span>
+                                                <span class="ps-2 d-none d-md-block">
+                                                    Curtir
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <!-- Alinhamento dos posts -->
+                    <div class="d-flex justify-content-center">
+                        <div style="max-width: 960px;">
+                            <div class="col-md-10 col-lg-12 mx-auto">
+                                <!-- Post favoritado -->
+                                <div class="card mx-3 mt-3" style="max-width: 700px;">
+                                    <div class="card-header" style="background-color:#E3FFE0">
+                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                            <div>
+                                                <a href="../pages/profile_maria_luiza.html">
+                                                    <img src="../img/perfil_maria.jpg" alt="Foto de perfil de Maria"
+                                                        title="Foto de perfil de Maria" class="foto_perfil_post">
+                                                </a>
+                                            </div>
+                                            <div class="px-3">
+                                                <a href="../pages/profile_maria_luiza.html"
+                                                    style="color: black; text-decoration: none;">
+                                                    <div>Maria Luiza</div>
+                                                </a>
+                                            </div>
+                                            <div class="px-3" style="margin-left: auto;">
+                                                20/04 às 12:30
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row py-1">
+                                            <div class="col-10 col-sm-11">
+                                                <h5 class="card-title">Meu ponto de vista sobre casas inteligentes
+                                                </h5>
+                                            </div>
+                                            <div class="col-2 col-sm-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+        
+                                        <img src="../img/smart_house.jpg" alt="Painel de controle de temperatura automático"
+                                            title="Painel de controle de temperatura automático" class="card-img"
+                                            style="max-height: 200px; object-fit: cover;">
+                                        <p class="card-text mt-2">
+                                            O custo de uma casa inteligente ecológica pode variar
+                                            significativamente, dependendo de
+                                            diversos
+                                            fatores, como o tamanho da casa, o nível de automação desejado, os
+                                            recursos de eficiência
+                                            energética
+                                            implementados e a região onde a construção ocorre. Além disso, o preço
+                                            também pode ser
+                                            influenciado
+                                            pelos materiais de construção escolhidos, a contratação de profissionais
+                                            especializados e as
+                                            tecnologias específicas incorporadas ao projeto.
+                                            Em geral, uma casa inteligente ecológica pode envolver investimentos
+                                            adicionais em
+                                            comparação
+                                            com
+                                            uma construção convencional devido às tecnologias e soluções
+                                            sustentáveis empregadas. É
+                                            possível
+                                            que
+                                            os custos iniciais sejam mais altos, mas podem ser compensados ao longo
+                                            do tempo por meio da
+                                            redução
+                                            de despesas com energia e água.
+                                            Embora seja difícil fornecer um valor exato, estima-se que o custo de
+                                            uma casa inteligente
+                                            ecológica
+                                            possa variar de algumas dezenas de milhares de dólares até centenas de
+                                            milhares de dólares,
+                                            dependendo do escopo do projeto. É recomendado consultar profissionais
+                                            da área, como
+                                            arquitetos,
+                                            construtores e especialistas em automação residencial, para obter
+                                            estimativas mais precisas
+                                            com
+                                            base
+                                            nas suas necessidades e localização geográfica.
+                                            Lembre-se de considerar o retorno do investimento a longo prazo, bem
+                                            como os benefícios
+                                            ambientais e
+                                            econômicos que uma casa inteligente ecológica pode proporcionar. Além
+                                            disso, existem
+                                            incentivos
+                                            fiscais e programas de financiamento sustentável disponíveis em algumas
+                                            regiões, que podem
+                                            ajudar a
+                                            reduzir os custos e tornar a construção mais acessível.
+                                        </p>
+                                    </div>
+        
+                                    <div class="d-flex flex-align-row justify-content-around pb-3">
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                                share
+                                            </span>
+                                            <span class="ps-2 d-none d-md-block">
+                                                Compartilhar
+                                            </span>
+        
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                                mode_comment
+                                            </span>
+                                            <span class="ps-2 d-none d-md-block">
+                                                Comentar
+                                            </span>
+                                        </div>
+                                        <div class="like-notfilled">
+                                            <div class="d-flex align-items-center justify-content-start">
+                                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                                    thumb_up
+                                                </span>
+                                                <span class="ps-2 d-none d-md-block">
+                                                    Curtir
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/edicao.js"></script>
 </body>
 
 </html>

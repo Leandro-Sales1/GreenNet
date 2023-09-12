@@ -45,3 +45,20 @@ function atualizar(){
     var descricao_nova = document.querySelector("#descricao_nova");
     descricao_nova.textContent = localStorage.getItem("valueText6");  
 }
+
+const thumbs_up = document.querySelectorAll(".like-notfilled")
+console.log(thumbs_up)
+
+thumbs_up.forEach((element) => {
+    element.addEventListener('click', () => {
+        if (element.classList.contains('like-notfilled')) {
+            element.classList.remove('like-notfilled')
+            element.classList.add('like-filled')
+
+        } else {
+            element.classList.remove('like-filled')
+            element.classList.add('like-notfilled')
+        }
+    }
+    )
+})
