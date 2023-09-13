@@ -194,7 +194,7 @@ input[type="file"] {
     opacity: 0.2;
 }
 
-.game_area{
+.img_area{
     padding: 0%;
     margin: 10px;
     background-position: center;
@@ -212,14 +212,12 @@ input[type="file"] {
     background-color: #e4e4e46b;
     border-radius: 10px;
 }
-.game_area.desc{
+.img_area.game_foot{
     background-image: url(../img/EcoEducation.png);
 }
-.game_area.title{
+.img_area.game_head{
     background-image: url(../img/Logic.png);
 }
-
-/* Games */
 
 .game_forca_bg{
     background-image: url(../img/forcaPB.png);
@@ -247,4 +245,20 @@ input[type="file"] {
 }
 .text_area:focus {
     outline: none;
+}
+
+/* Estatisticas */
+
+.img_area.adm_head{
+    background-image: url(../img/Statistics.png);
+}
+
+.adm_title{
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    background-color: #e4e4e46b;
+    border-radius: 10px;
+    font-size: 20px;
+    max-width: 850px;
 }
