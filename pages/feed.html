@@ -22,17 +22,14 @@
 
     <!--Header: Navbar-->
     <div style="background-color:#3DCD58;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto" style="max-width: 870px;">
-            <div class="container-fluid d-flex flex-align-row justify-content-center align-items-center"
+        <nav class="navbar bg-body-tertiary container-fluid d-flex flex-align-row justify-content-center align-items-center navbar-expand-xl"
+            style="max-width: 54.375rem;">
+            <div class="container-fluid"
                 style="background-color:#3DCD58; min-height: 75px; margin-bottom: -1rem; margin-top: -1rem;">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
                 <div class="navbar-brand mx-auto">
                     <div>
                         <h1 style="font-size: 25px; font-weight: 700;">GreenNet</h1>
@@ -47,30 +44,37 @@
                         </a>
                     </div>
                 </div>
+                <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header" style="background-color:#3DCD58; border-bottom: 1px solid black;">
+                        <div>
+                            <h1 style="font-size: 25px; font-weight: 700; ">GreenNet</h1>
+                        </div>
 
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
 
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item px-2" style="font-size: 18px;">
-                            <a class="nav-link" aria-current="page" href="../pages/feed.html">Feed</a>
-                        </li>
-                        <li class="nav-item px-2" style="font-size: 18px;">
-                            <a class="nav-link" href="../pages/games.html">Game</a>
-                        </li>
-                        <li class="nav-item px-2" style="font-size: 18px;">
-                            <a class="nav-link" href="https://youtu.be/W2kuB-oNSBM?si=EkedPywEfCPKbh5G"
-                                target="_blank">Vídeo Pitch</a>
-                        </li>
-                        <li class="nav-item px-2" style="font-size: 18px;">
-                            <a class="nav-link" href="../pages/sobre_o_projeto.html">Sobre o Projeto</a>
-                        </li>
-                        <li class="nav-item px-2" style="font-size: 18px;">
-                            <a class="nav-link" href="../pages/estatisticas.html">Estatísticas</a>
-                        </li>
-                    </ul>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" aria-current="page" href="../pages/feed.html">Feed</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="../pages/games.html">Game</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="https://youtu.be/W2kuB-oNSBM?si=EkedPywEfCPKbh5G"
+                                    target="_blank">Vídeo Pitch</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="../pages/sobre_o_projeto.html">Sobre o Projeto</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="../pages/estatisticas.html">Estatísticas</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
                 <div class="navbar-brand">
                     <div class="d-none d-lg-block">
                         <a href="../pages/perfil_usuario.html">
@@ -79,13 +83,10 @@
                         </a>
                     </div>
                 </div>
-
-
-
             </div>
         </nav>
-    </div>
 
+    </div>
     <!--Acordeon-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -146,7 +147,7 @@
 
 
     <!--Container: Ranking, Feed, Recompensas-->
-    <div class="d-flex flex-align-row justify-content-center align-items-start mx-2">
+    <div class="d-flex flex-align-row justify-content-center align-items-start mx-3">
 
         <div class="d-flex flex-column align-itens-center">
             <!--Ranking dos Funcionarios Externo-->
@@ -228,8 +229,8 @@
             <div class="card mt-5 mx-5 d-none d-xl-block mb-auto" style="max-width: 400px; background-color: #E3FFE0;">
                 <div class="card-body px-4">
                     <div class="d-flex flex-align-row align-items-center justify-content-center mt-3">
-                            <h4 class="card-title" alt="Notas de dinheiro com asas voando"
-                                title="Notas de dinheiro com asas voando">Dicas diárias de ESG 💧</h4>
+                        <h4 class="card-title" alt="Notas de dinheiro com asas voando"
+                            title="Notas de dinheiro com asas voando">Dicas diárias de ESG 💧</h4>
                     </div>
                     <div class="px-3 py-3">
                         Lembrou de desligar todas as luzes antes de sair de casa? 🧐
