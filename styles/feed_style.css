@@ -19,8 +19,10 @@ body{
     font-family: var(--fonte_principal);
     color: var(--cor_fonte_principal);
     width: 100vw;
-    overflow-x: hidden;
+
 }
+
+
 header{
     display: flex;
     flex-direction: row;
@@ -32,6 +34,7 @@ main{
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .banner_top{
     display: flex;
