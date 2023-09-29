@@ -22,7 +22,9 @@ body{
 
 }
 
-
+.offcanvas{
+    --bs-offcanvas-padding-y: 0.7rem;
+}
 header{
     display: flex;
     flex-direction: row;
