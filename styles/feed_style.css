@@ -18,13 +18,13 @@ body{
     background-color: var(--cor_principal);
     font-family: var(--fonte_principal);
     color: var(--cor_fonte_principal);
-    width: 100vw;
-
 }
 
 .offcanvas{
     --bs-offcanvas-padding-y: 0.65rem;
 }
+
+
 header{
     display: flex;
     flex-direction: row;
