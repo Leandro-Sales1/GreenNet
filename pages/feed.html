@@ -24,7 +24,7 @@
     <div style="background-color:#3DCD58;">
         <nav class="navbar bg-body-tertiary container-fluid d-flex flex-align-row justify-content-center align-items-center navbar-expand-xl"
             style="max-width: 54.375rem;">
-            <div class="container-fluid"
+            <div class="container-fluid "
                 style="background-color:#3DCD58; min-height: 75px; margin-bottom: -1rem; margin-top: -1rem;">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -147,7 +147,7 @@
 
 
     <!--Container: Ranking, Feed, Recompensas-->
-    <div class="d-flex flex-align-row justify-content-center align-items-start mx-3">
+    <div class="d-flex flex-align-row justify-content-center align-items-start w-100 overflow-hidden">
 
         <div class="d-flex flex-column align-itens-center">
             <!--Ranking dos Funcionarios Externo-->
@@ -247,1073 +247,1070 @@
 
             <!--Novo Post-->
             <div class="col-md-10 col-lg-12 mx-auto">
-                <div class="card mx-3 mt-3" style="background-color: #E3FFE0">
-                    <div class="card-body">
+                <form id="novo_post">
+                    <div class="card mx-3 mt-3" style="background-color: #E3FFE0">
+                        
+                        <div class="card-body">
+                           
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="tituloPost"
+                                    placeholder="">
+                                <label for="tituloPost">Título</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput"
+                                    placeholder="">
+                                <label for="floatingInput">Post</label>
+                            </div>
+                            
+                            <div class="d-flex flex-align-row justify-content-around">
+                                <div class="btn btn-primary px-xl-5 px-sm-5 pt-2">
+                                    <label for="file-upload" class="custom-file-upload">
+                                        <div class="d-flex align-itens-center">
+                                            <span class="material-symbols-outlined">
+                                                video_library
+                                            </span>
+                                            <span class="px-2 d-none d-md-block">
+                                                Vídeo
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <input id="file-upload" type="file" />
+                                </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Nova Postagem</label>
-                        </div>
-                        <div class="d-flex flex-align-row justify-content-around">
+                                <div class="btn btn-primary px-xl-5 px-sm-5 pt-2">
+                                    <label for="file-upload" class="custom-file-upload">
+                                        <div class="d-flex align-itens-center">
+                                            <span class="material-symbols-outlined">
+                                                image
+                                            </span>
+                                            <span class="px-2 d-none d-md-block">
+                                                Foto
+                                            </span>
+                                        </div>
+                                    </label>
+                                    <input id="file-upload" type="file" />
+                                </div>
 
-                            <div class="btn btn-primary px-xl-5 px-sm-5 pt-2">
-                                <label for="file-upload" class="custom-file-upload">
+                                <button class="btn btn-primary px-xl-5 px-sm-5 pt-1">
                                     <div class="d-flex align-itens-center">
-                                        <span class="material-symbols-outlined">
-                                            video_library
+                                        <span class="material-symbols-outlined ">
+                                            send
                                         </span>
                                         <span class="px-2 d-none d-md-block">
-                                            Vídeo
+                                            Enviar
                                         </span>
                                     </div>
-                                </label>
-                                <input id="file-upload" type="file" />
+                                </button>
                             </div>
-
-                            <div class="btn btn-primary px-xl-5 px-sm-5 pt-2">
-                                <label for="file-upload" class="custom-file-upload">
-                                    <div class="d-flex align-itens-center">
-                                        <span class="material-symbols-outlined">
-                                            image
-                                        </span>
-                                        <span class="px-2 d-none d-md-block">
-                                            Foto
-                                        </span>
-                                    </div>
-                                </label>
-                                <input id="file-upload" type="file" />
-                            </div>
-
-                            <button class="btn btn-primary px-xl-5 px-sm-5 pt-1"
-                                onclick="funcionalidade_nao_disponivel()">
-                                <div class="d-flex align-itens-center">
-                                    <span class="material-symbols-outlined ">
-                                        send
-                                    </span>
-                                    <span class="px-2 d-none d-md-block">
-                                        Enviar
-                                    </span>
-                                </div>
-                            </button>
 
                         </div>
-                    </div>
-                </div>
+                </form>
             </div>
+        </div>
 
 
-            <!--Container Ranking -->
+        <!--Container Ranking -->
 
-            <div class="row row-cols-1 row-cols-md-2">
-                <!--Ranking dos Funcionarios-->
+        <div class="row row-cols-1 row-cols-md-2">
+            <!--Ranking dos Funcionarios-->
 
-                <div style="max-width: 400px;">
-                    <div class="card mt-3 mx-3 d-lg-none">
-                        <div class="card-body px-4">
-                            <h4 class="card-title text-center pt-4">⭐Ranking Semanal⭐ </h4>
+            <div style="max-width: 400px;">
+                <div class="card mt-3 mx-3 d-lg-none">
+                    <div class="card-body px-4">
+                        <h4 class="card-title text-center pt-4">⭐Ranking Semanal⭐ </h4>
 
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
 
-                                    <!--Primeiro Lugar-->
-                                    <div
-                                        class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                                        <div>
-                                            <a href="../pages/profile_maria_luiza.html">
-                                                <img src="../img/perfil_maria.jpg" alt="Foto da Maria"
-                                                    title="Foto da Maria" class="foto_perfil_post">
-                                            </a>
-                                        </div>
-                                        <div class="px-3">
-                                            <a href="../pages/profile_maria_luiza.html"
-                                                style="color: black; text-decoration: none;">
-                                                <div>Maria Luiza</div>
-                                            </a>
-                                        </div>
-                                        <div class="px-3" style="margin-left: auto;">
-                                            <b>#1</b>
-                                        </div>
+                                <!--Primeiro Lugar-->
+                                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                    <div>
+                                        <a href="../pages/profile_maria_luiza.html">
+                                            <img src="../img/perfil_maria.jpg" alt="Foto da Maria" title="Foto da Maria"
+                                                class="foto_perfil_post">
+                                        </a>
                                     </div>
-                                    <div class="d-block d-sm-none">
-                                        <span class="badge bg-success">R$150,00 em vale alimentação</span>
+                                    <div class="px-3">
+                                        <a href="../pages/profile_maria_luiza.html"
+                                            style="color: black; text-decoration: none;">
+                                            <div>Maria Luiza</div>
+                                        </a>
                                     </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <!--Segundo Lugar-->
-                                    <div
-                                        class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                                        <div>
-                                            <a href="../pages/profile_bianca_salazar.html">
-                                                <img src="../img/perfil_bianca.jpg" alt="Foto da Bianca"
-                                                    title="Foto da Bianca" class="foto_perfil_post">
-                                            </a>
-                                        </div>
-                                        <div class="px-3">
-                                            <a href="../pages/profile_bianca_salazar.html"
-                                                style="color: black; text-decoration: none;">
-                                                <div>Bianca Salazar</div>
-                                            </a>
-                                        </div>
-                                        <div class="px-3" style="margin-left: auto;">
-                                            <b>#2</b>
-                                        </div>
+                                    <div class="px-3" style="margin-left: auto;">
+                                        <b>#1</b>
                                     </div>
-
-                                    <div class="d-block d-sm-none">
-                                        <span class="badge bg-success">R$70,00 em vale alimentação</span>
-                                    </div>
-
-                                </li>
-                                <li class="list-group-item">
-                                    <!--Terceiro Lugar-->
-                                    <div
-                                        class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                                        <div>
-                                            <a href="../pages/profile_paulo.html">
-                                                <img src="../img/perfil_paulo2.jpg" alt="Foto do Paulo"
-                                                    title="Foto do Paulo" class="foto_perfil_post">
-                                            </a>
-                                        </div>
-                                        <div class="px-3">
-                                            <a href="../pages/profile_paulo.html"
-                                                style="color: black; text-decoration: none;">
-                                                <div>Paulo Silveira</div>
-                                            </a>
-                                        </div>
-                                        <div class="px-3" style="margin-left: auto;">
-                                            <b>#3</b>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-block d-sm-none">
-                                        <span class="badge bg-success">10% de
-                                            cashback em loja parceira</span>
-                                    </div>
-
-
-                                </li>
-                                <li class="list-group-item">
-                                    <img src="../img/ranking.png" alt="pessoas subindo no ranking"
-                                        title="Pessoas subindo no ranking" class="card-img"
-                                        style="max-height: 360px; object-fit: cover;">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Premiações da Semana-->
-
-                <div class="col">
-                    <div class="card mt-3 mx-3 d-none d-sm-none d-md-block d-lg-none">
-                        <div class="card-body px-4">
-                            <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                                <div>
-                                    <h4 class="card-title py-3" alt="Dinheiro com asas voando"
-                                        title="Dinheiro com asas voando">Premiações 💸</h4>
                                 </div>
-                                <div style="margin-left: auto;">
-                                    <img src="../img/happy_icon.png" alt="moça alegre" title="Moça alegre"
-                                        class="card-img" style="max-height: 50px; object-fit: contain;">
+                                <div class="d-block d-sm-none">
+                                    <span class="badge bg-success">R$150,00 em vale alimentação</span>
                                 </div>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
-                                <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
-                                <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
-                            </ul>
-                            <div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <!--Alinhamento dos Posts-->
-            <div class="col-md-10 col-lg-12 mx-auto">
-                <!--Primeiro Post-->
-                <div class="card mx-3 mt-3" style="max-width: 700px;">
-                    <div class="card-header" style="background-color:#E3FFE0">
-                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div>
-                                <a href="../pages/profile_paulo.html">
-                                    <img src="../img/perfil_paulo2.jpg" alt="Foto de perfil do Paulo"
-                                        title="Foto de perfil do Paulo" class="foto_perfil_post">
-                                </a>
-                            </div>
-                            <div class="px-3">
-                                <a href="../pages/profile_paulo.html" style="color: black; text-decoration: none;">
-                                    <div>Paulo Silveira</div>
-                                </a>
-
-                            </div>
-                            <div class="px-3" style="margin-left: auto;">
-                                28/04 às 15:20
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row py-1">
-                            <div class="col-10 col-sm-11">
-                                <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos</h5>
-                            </div>
-                            <div class="col-2 col-sm-1">
-                                <i class="bi bi-star"></i>
-                            </div>
-                        </div>
-
-                        <img src="../img/gato.jpg" alt="Gato malhado deitado" title="Gato malhado deitado"
-                            class="card-img" style="max-height: 200px; object-fit: cover;">
-                        <p class="card-text mt-2">
-                            Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais cheios de
-                            conservantes,
-                            você
-                            pode fazer seus próprios biscoitos de carne para gatos. Use carne moída orgânica, como carne
-                            de
-                            frango ou carne de peru. Misture com um pouco de farinha de trigo integral e água para
-                            formar
-                            uma
-                            massa. Modele pequenos biscoitos e asse no forno até que fiquem crocantes. Certifique-se de
-                            que
-                            a
-                            carne esteja completamente cozida antes de oferecer ao seu gato.
-                        </p>
-                    </div>
-
-                    <!--Botões-->
-                    <div class="row py-2 " style="margin-top: -1rem;">
-                        <!--Share-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
-                                    share
-                                </span>
-                                <span class="ps-2 d-none d-md-block">
-                                    Compartilhar
-                                </span>
-
-                            </div>
-                        </div>
-                        <!--Comment-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                        mode_comment
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Comentar
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Like-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="like-notfilled">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                        thumb_up
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Curtir
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Comentários-->
-                <!-- Modal-1 -->
-                <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title fs-5" id="exampleModalLabel">Comentários</h2>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body d-flex flex-column justify-content-center">
-                                <!--primeiro comentário-->
-                                <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+                            </li>
+                            <li class="list-group-item">
+                                <!--Segundo Lugar-->
+                                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                     <div>
                                         <a href="../pages/profile_bianca_salazar.html">
                                             <img src="../img/perfil_bianca.jpg" alt="Foto da Bianca"
                                                 title="Foto da Bianca" class="foto_perfil_post">
                                         </a>
                                     </div>
-                                    <div>
-
-                                    </div>
                                     <div class="px-3">
-                                        <div>
-                                            <a href="../pages/profile_bianca_salazar.html"
-                                                style="color: black; text-decoration: none;">
-                                                <div>Bianca Salazar</div>
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <small>
-                                                Nossa, adorei! Vou fazer para os meus!!!
-                                            </small>
-                                        </div>
+                                        <a href="../pages/profile_bianca_salazar.html"
+                                            style="color: black; text-decoration: none;">
+                                            <div>Bianca Salazar</div>
+                                        </a>
+                                    </div>
+                                    <div class="px-3" style="margin-left: auto;">
+                                        <b>#2</b>
                                     </div>
                                 </div>
-                                <!--segundo comentário-->
-                                <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+
+                                <div class="d-block d-sm-none">
+                                    <span class="badge bg-success">R$70,00 em vale alimentação</span>
+                                </div>
+
+                            </li>
+                            <li class="list-group-item">
+                                <!--Terceiro Lugar-->
+                                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                     <div>
                                         <a href="../pages/profile_paulo.html">
-                                            <img src="../img/perfil_paulo2.jpg" alt="Foto da Bianca"
+                                            <img src="../img/perfil_paulo2.jpg" alt="Foto do Paulo"
                                                 title="Foto do Paulo" class="foto_perfil_post">
                                         </a>
                                     </div>
-                                    <div>
-
-                                    </div>
                                     <div class="px-3">
-                                        <div>
-                                            <a href="../pages/profile_paulo.html"
-                                                style="color: black; text-decoration: none;">
-                                                <div>Paulo Silveira</div>
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <small>
-                                                Boa!
-                                            </small>
-                                        </div>
+                                        <a href="../pages/profile_paulo.html"
+                                            style="color: black; text-decoration: none;">
+                                            <div>Paulo Silveira</div>
+                                        </a>
+                                    </div>
+                                    <div class="px-3" style="margin-left: auto;">
+                                        <b>#3</b>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer justify-content-center">
-                                <div class="input-group col">
-                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+
+                                <div class="d-block d-sm-none">
+                                    <span class="badge bg-success">10% de
+                                        cashback em loja parceira</span>
                                 </div>
-                                <div class="btn btn-primary col-2 pt-2">
-                                    <span class="material-symbols-outlined">
-                                        send
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!--Segundo Post-->
-                <div class="card mx-3 mt-3" style="max-width: 700px;">
-                    <div class="card-header" style="background-color:#E3FFE0">
-                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div>
-                                <a href="../pages/profile_maria_luiza.html">
-                                    <img src="../img/perfil_maria.jpg" alt="Foto de perfil da Maria"
-                                        title="Foto de perfil da Maria" class="foto_perfil_post">
-                                </a>
-                            </div>
-                            <div class="px-3">
-                                <a href="../pages/profile_maria_luiza.html"
-                                    style="color: black; text-decoration: none;">
-                                    <div>Maria Luiza</div>
-                                </a>
-                            </div>
-                            <div class="px-3" style="margin-left: auto;">
-                                24/07 às 19:30
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row py-1">
-                            <div class="col-10 col-sm-11">
-                                <h5 class="card-title">Essa semana comecei a tomar banhos mais ecológicos</h5>
-                            </div>
-                            <div class="col-2 col-sm-1">
-                                <i class="bi bi-star"></i>
-                            </div>
-                        </div>
-                        <p class="card-text">
-                            Aqui temos 3 dicas que me ajudaram muito: <br>
-                            1.<b><i>Reduza o tempo de banho: </i></b>Diminuir o tempo que você passa no chuveiro é uma
-                            das
-                            formas
-                            mais
-                            simples e eficazes de economizar água. Tente encurtar seus banhos, limitando o tempo de
-                            banho a
-                            cinco minutos ou menos. Isso reduzirá significativamente o consumo de água. <br>
-                            2.<b><i>Instale um redutor de vazão ou chuveiro econômico: </i></b>Utilize dispositivos como
-                            redutores
-                            de
-                            vazão ou chuveiros de baixo fluxo para limitar a quantidade de água que sai do chuveiro.
-                            Esses
-                            equipamentos ajudam a reduzir o consumo de água durante o banho sem comprometer o seu
-                            conforto.
-                            <br>
-                            3.<b><i>Reaproveite a água: </i></b>Ao tomar banho, você pode coletar a água que escorre
-                            enquanto
-                            espera
-                            que a temperatura se ajuste. Coloque um balde ou recipiente no chão do chuveiro para
-                            recolher
-                            essa
-                            água e use-a posteriormente para regar plantas, lavar o chão ou dar descarga no vaso
-                            sanitário.
-                            É
-                            uma forma inteligente de aproveitar a água que seria desperdiçada.
-                        </p>
-                        <img src="../img/bath.jpg" alt="Patinho de borracha com espuma de banho"
-                            title="Patinho de borracha com espuma de banho" class="card-img"
-                            style="max-height: 200px; object-fit: cover;">
-                    </div>
-                    <!--Botões-->
-                    <div class="row py-2 " style="margin-top: -1rem;">
-                        <!--Share-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
-                                    share
-                                </span>
-                                <span class="ps-2 d-none d-md-block">
-                                    Compartilhar
-                                </span>
 
-                            </div>
-                        </div>
-                        <!--Comment-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                        mode_comment
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Comentar
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Like-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="like-notfilled">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                        thumb_up
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Curtir
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!--Terceiro Post-->
-                <div class="card mx-3 mt-3" style="max-width: 700px;">
-                    <div class="card-header" style="background-color:#E3FFE0">
-                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div>
-                                <a href="../pages/profile_armando.html">
-                                    <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
-                                        title="Foto de perfil do Armando" class="foto_perfil_post">
-                                </a>
-                            </div>
-                            <div class="px-3">
-                                <a href="../pages/profile_armando.html" style="color: black; text-decoration: none;">
-                                    <div>Armando Silva</div>
-                                </a>
-                            </div>
-                            <div class="px-3" style="margin-left: auto;">
-                                21/04 às 15:20
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row py-1">
-                            <div class="col-10 col-sm-11">
-                                <h5 class="card-title">Aqui uma receita de doce que aproveita casca de banana!</h5>
-                            </div>
-                            <div class="col-2 col-sm-1">
-                                <i class="bi bi-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="card-text">
-                            A casca de banana pode ser aproveitada de maneira criativa na cozinha, inclusive para fazer
-                            doces
-                            deliciosos. Aqui está uma receita simples de doce de casca de banana que você pode
-                            experimentar:<br>
-                            <b>Ingredientes:</b>
-                        <ul>
-                            <li>Casca de 4 bananas maduras</li>
-                            <li>1 xícara de açúcar</li>
-                            <li>Suco de 1 limão</li>
-                            <li>1 xícara de água</li>
-                            <li>Canela em pau (opcional)</li>
+                            </li>
+                            <li class="list-group-item">
+                                <img src="../img/ranking.png" alt="pessoas subindo no ranking"
+                                    title="Pessoas subindo no ranking" class="card-img"
+                                    style="max-height: 360px; object-fit: cover;">
+                            </li>
                         </ul>
-                        <img src="../img/casca_banana.jpg" alt="Casca de banana aberta e jogada"
-                            title="Casca de banana aberta e jogada" class="card-img"
-                            style="max-height: 200px; object-fit: cover;">
-                        <b>Instruções</b>
-                        <ol>
-                            <li>Lave bem as cascas de banana e remova qualquer sujeira ou resíduo. Corte as cascas em
-                                pedaços
-                                pequenos.</li>
-                            <li>Em uma panela, adicione as cascas de banana cortadas, o açúcar, o suco de limão e a
-                                água. Se
-                                desejar, adicione um pedaço de canela em pau para dar um sabor extra.</li>
-                            <li>Leve a panela ao fogo médio e deixe ferver. Em seguida, reduza o fogo para médio-baixo e
-                                cozinhe
-                                por
-                                cerca de 30 a 40 minutos, mexendo de vez em quando. As cascas de banana devem ficar
-                                macias e
-                                a
-                                calda
-                                deve engrossar.</li>
-                            <li>Retire a canela em pau, se utilizada, e deixe o doce de casca de banana esfriar um
-                                pouco.
-                                Transfira o doce para um liquidificador ou processador de alimentos e bata até obter uma
-                                consistência de purê. Se preferir, você pode deixar alguns pedaços maiores para uma
-                                textura
-                                mais
-                                rústica.</li>
-                            <li>Volte o doce à panela e leve ao fogo baixo por mais alguns minutos, mexendo sempre, para
-                                dar
-                                o
-                                ponto
-                                final.</li>
-                            <li>Desligue o fogo e deixe o doce esfriar completamente antes de transferir para um pote de
-                                vidro
-                                com
-                                tampa. Armazene na geladeira.</li>
-                            <li>O doce de casca de banana pode ser consumido puro, como acompanhamento para pães,
-                                torradas
-                                ou
-                                até
-                                mesmo como recheio de bolos e tortas. É uma forma criativa de aproveitar as cascas de
-                                banana,
-                                reduzindo o desperdício alimentar.</li>
-                        </ol>
-                        <img src="../img/doce_de_banana.jpg" alt="Doce de casca de banana"
-                            title="Doce de casca de banana" class="card-img"
-                            style="max-height: 200px; object-fit: cover;">
-                        </p>
-                    </div>
-
-                    <!--Botões-->
-                    <div class="row py-2" style="margin-top: -2rem;">
-                        <!--Share-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
-                                    share
-                                </span>
-                                <span class="ps-2 d-none d-md-block">
-                                    Compartilhar
-                                </span>
-
-                            </div>
-                        </div>
-                        <!--Comment-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                        mode_comment
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Comentar
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Like-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="like-notfilled">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                        thumb_up
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Curtir
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Quarto Post-->
-                <div class="card mx-3 mt-3" style="max-width: 700px;">
-                    <div class="card-header" style="background-color:#E3FFE0">
-                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div>
-                                <a href="../pages/profile_maria_luiza.html">
-                                    <img src="../img/perfil_maria.jpg" alt="Foto de perfil de Maria"
-                                        title="Foto de perfil de Maria" class="foto_perfil_post">
-                                </a>
-                            </div>
-                            <div class="px-3">
-                                <a href="../pages/profile_maria_luiza.html"
-                                    style="color: black; text-decoration: none;">
-                                    <div>Maria Luiza</div>
-                                </a>
-                            </div>
-                            <div class="px-3" style="margin-left: auto;">
-                                20/04 às 12:30
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row py-1">
-                            <div class="col-10 col-sm-11">
-                                <h5 class="card-title">Meu ponto de vista sobre casas inteligentes</h5>
-                            </div>
-                            <div class="col-2 col-sm-1">
-                                <i class="bi bi-star"></i>
-                            </div>
-                        </div>
-
-                        <img src="../img/smart_house.jpg" alt="Painel de controle de temperatura automático"
-                            title="Painel de controle de temperatura automático" class="card-img"
-                            style="max-height: 200px; object-fit: cover;">
-                        <p class="card-text mt-2">
-                            O custo de uma casa inteligente ecológica pode variar significativamente, dependendo de
-                            diversos
-                            fatores, como o tamanho da casa, o nível de automação desejado, os recursos de eficiência
-                            energética
-                            implementados e a região onde a construção ocorre. Além disso, o preço também pode ser
-                            influenciado
-                            pelos materiais de construção escolhidos, a contratação de profissionais especializados e as
-                            tecnologias específicas incorporadas ao projeto.
-                            Em geral, uma casa inteligente ecológica pode envolver investimentos adicionais em
-                            comparação
-                            com
-                            uma construção convencional devido às tecnologias e soluções sustentáveis empregadas. É
-                            possível
-                            que
-                            os custos iniciais sejam mais altos, mas podem ser compensados ao longo do tempo por meio da
-                            redução
-                            de despesas com energia e água.
-                            Embora seja difícil fornecer um valor exato, estima-se que o custo de uma casa inteligente
-                            ecológica
-                            possa variar de algumas dezenas de milhares de dólares até centenas de milhares de dólares,
-                            dependendo do escopo do projeto. É recomendado consultar profissionais da área, como
-                            arquitetos,
-                            construtores e especialistas em automação residencial, para obter estimativas mais precisas
-                            com
-                            base
-                            nas suas necessidades e localização geográfica.
-                            Lembre-se de considerar o retorno do investimento a longo prazo, bem como os benefícios
-                            ambientais e
-                            econômicos que uma casa inteligente ecológica pode proporcionar. Além disso, existem
-                            incentivos
-                            fiscais e programas de financiamento sustentável disponíveis em algumas regiões, que podem
-                            ajudar a
-                            reduzir os custos e tornar a construção mais acessível.
-                        </p>
-                    </div>
-
-                    <!--Botões-->
-                    <div class="row py-2 " style="margin-top: -1rem;">
-                        <!--Share-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
-                                    share
-                                </span>
-                                <span class="ps-2 d-none d-md-block">
-                                    Compartilhar
-                                </span>
-
-                            </div>
-                        </div>
-                        <!--Comment-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                        mode_comment
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Comentar
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Like-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="like-notfilled">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                        thumb_up
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Curtir
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Quinto Post-->
-                <div class="card mx-3 mt-3" style="max-width: 700px;">
-                    <div class="card-header" style="background-color:#E3FFE0">
-                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div>
-                                <a href="">
-                                    <img src="../img/perfil_bianca.jpg" alt="Foto de perfil de Bianca"
-                                        title="Foto de perfil de Bianca" class="foto_perfil_post">
-                                </a>
-                            </div>
-                            <div class="px-3">
-                                <a href="../pages/profile_bianca_salazar.html"
-                                    style="color: black; text-decoration: none;">
-                                    <div>Bianca Salazar</div>
-                                </a>
-                            </div>
-                            <div class="px-3" style="margin-left: auto;">
-                                20/04 às 11:15
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row py-1">
-                            <div class="col-10 col-sm-11">
-                                <h5 class="card-title">Sustentabilidade no Cinema</h5>
-                            </div>
-                            <div class="col-2 col-sm-1">
-                                <i class="bi bi-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="card-text">
-
-                            A sustentabilidade no cinema refere-se à adoção de práticas ecológicas e socialmente
-                            responsáveis em
-                            todas as etapas da produção cinematográfica, desde a pré-produção até a pós-produção e
-                            distribuição.
-                            Isso envolve minimizar o impacto ambiental da produção, promover a conscientização sobre
-                            questões
-                            sociais e ambientais por meio das narrativas, e inspirar mudanças positivas na indústria do
-                            entretenimento e na sociedade em geral. Aqui estão algumas maneiras pelas quais a
-                            sustentabilidade
-                            pode ser incorporada ao cinema:<br>
-                        <ol>
-                            <li>Práticas de produção ecológicas: As produções podem adotar medidas para reduzir o
-                                consumo de
-                                energia, água e recursos naturais, bem como minimizar a geração de resíduos. Isso inclui
-                                o
-                                uso
-                                de
-                                fontes de energia renovável, redução do uso de plásticos descartáveis, reciclagem e
-                                reutilização
-                                de
-                                materiais, e escolha de locações que tenham menor impacto ambiental.</li>
-                            <li>Transporte consciente: A minimização das emissões de carbono relacionadas ao transporte
-                                é
-                                fundamental. As equipes de produção podem optar por veículos elétricos ou híbridos e
-                                incentivar
-                                o
-                                uso de transportes públicos sempre que possível.</li>
-                            <li>Alimentação sustentável: Durante as filmagens, escolher alimentos orgânicos e locais
-                                para a
-                                equipe
-                                pode ajudar a reduzir a pegada de carbono e apoiar a agricultura sustentável.</li>
-                            <li>Cenografia e figurino: A reutilização de adereços, cenários e figurinos pode reduzir a
-                                necessidade
-                                de produção de novos materiais, diminuindo o desperdício e o consumo de recursos.</li>
-                            <li>Conscientização nas narrativas: Filmes podem abordar temas relacionados à
-                                sustentabilidade,
-                                como
-                                mudanças climáticas, conservação da natureza, justiça social e direitos humanos. Essas
-                                narrativas
-                                podem aumentar a conscientização do público sobre questões críticas e inspirar ação.
-                            </li>
-                            <li>Distribuição e exibição sustentável: A distribuição digital de filmes tem um menor
-                                impacto
-                                ambiental
-                                em comparação com as cópias físicas. Além disso, teatros e festivais de cinema podem
-                                adotar
-                                práticas
-                                mais sustentáveis, como a redução do uso de papel para ingressos e materiais
-                                promocionais.
-                            </li>
-                            <li>Conscientização e responsabilidade social: Filmes e equipes de produção podem colaborar
-                                com
-                                organizações sem fins lucrativos e instituições de caridade que trabalham em prol da
-                                sustentabilidade e da justiça social. Isso pode envolver doações, parcerias e campanhas
-                                de
-                                conscientização.</li>
-                            <li>Educação e engajamento: Os cineastas podem usar seu trabalho para educar o público sobre
-                                questões
-                                ambientais e sociais, incentivando a reflexão e a ação. Isso pode ser feito por meio de
-                                documentários, filmes educativos e histórias envolventes.</li>
-                        </ol>
-                        A indústria cinematográfica tem um papel importante na disseminação de mensagens e valores, e
-                        pode
-                        desempenhar um papel significativo na promoção da sustentabilidade e na conscientização sobre
-                        questões globais. À medida que a conscientização sobre a importância da sustentabilidade
-                        continua a
-                        crescer, espera-se que mais cineastas e equipes de produção adotem práticas ecológicas e
-                        socialmente
-                        responsáveis em suas obras.
-
-                        </p>
-                        <img src="../img/cinema.jpg" alt="Sala de cinema com cadeiras vazias"
-                            title="Sala de cinema com cadeiras vazias" class="card-img"
-                            style="max-height: 200px; object-fit: cover;">
-                    </div>
-
-                    <!--Botões-->
-                    <div class="row py-2 " style="margin-top: -1rem;">
-                        <!--Share-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
-                                    share
-                                </span>
-                                <span class="ps-2 d-none d-md-block">
-                                    Compartilhar
-                                </span>
-
-                            </div>
-                        </div>
-                        <!--Comment-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                        mode_comment
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Comentar
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Like-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="like-notfilled">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                        thumb_up
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Curtir
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!--Sexto Post-->
-                <div class="card mx-3 mt-3" style="max-width: 700px;">
-                    <div class="card-header" style="background-color:#E3FFE0">
-                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                            <div>
-                                <a href="../pages/profile_armando.html">
-                                    <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
-                                        title="Foto de perfil do Armando" class="foto_perfil_post">
-                                </a>
-                            </div>
-                            <div class="px-3">
-                                <a href="../pages/profile_armando.html" style="color: black; text-decoration: none;">
-                                    <div>Armando Silva</div>
-                                </a>
-                            </div>
-                            <div class="px-3" style="margin-left: auto;">
-                                15/04 às 10:12
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row py-1">
-                            <div class="col-10 col-sm-11">
-                                <h5 class="card-title">Minhas lições de 6 meses de compostagem</h5>
-                            </div>
-                            <div class="col-2 col-sm-1">
-                                <i class="bi bi-star"></i>
-                            </div>
-                        </div>
-                        <img src="../img/compostagem.jpg" alt="Mãos segurando terra" title="Mãos segurando terra"
-                            class="card-img" style="max-height: 200px; object-fit: cover;">
-                        <p class="card-text mt-2">
-                            A compostagem é um processo natural que transforma resíduos orgânicos em composto orgânico
-                            rico
-                            em
-                            nutrientes para o solo. Aqui estão as etapas básicas para fazer compostagem em casa:<br>
-                        <ol>
-                            <li>Escolha um local: Encontre um local adequado em seu jardim ou quintal para montar uma
-                                pilha
-                                de
-                                compostagem ou use uma composteira específica. Certifique-se de que o local tenha boa
-                                drenagem e
-                                acesso fácil.</li>
-                            <li>Separe os resíduos: Separe os resíduos orgânicos da sua cozinha, como restos de frutas e
-                                legumes,
-                                borra de café, cascas de ovos, entre outros. Evite adicionar resíduos de origem animal,
-                                como
-                                carne e
-                                laticínios, pois podem atrair animais indesejados.</li>
-                            <li>Adicione materiais secos: Acrescente materiais secos, como folhas secas, palha, serragem
-                                ou
-                                papel
-                                picado, para ajudar a equilibrar a umidade e fornecer aeração à pilha. É importante
-                                manter
-                                uma
-                                proporção equilibrada de resíduos verdes (ricos em nitrogênio) e materiais secos (ricos
-                                em
-                                carbono)
-                                para um processo eficiente de compostagem.</li>
-                            <li>Misture os materiais: Misture os resíduos orgânicos com os materiais secos em camadas
-                                alternadas
-                                para garantir uma boa mistura. Você pode usar um garfo de jardim ou uma pá para ajudar
-                                na
-                                mistura.
-                                Mantenha a umidade adequada: A pilha de compostagem deve estar úmida, como uma esponja
-                                úmida,
-                                mas
-                                não encharcada. Se estiver muito seca, adicione um pouco de água. Se estiver muito
-                                úmida,
-                                adicione
-                                mais materiais secos para absorver o excesso de umidade.</li>
-                            <li>Vire a pilha: Para acelerar o processo de compostagem, vire a pilha a cada duas semanas
-                                aproximadamente. Isso ajuda a aerar a pilha e acelera a decomposição dos resíduos.</li>
-                            <li>Aguarde o processo: A compostagem leva tempo e pode variar de algumas semanas a vários
-                                meses,
-                                dependendo das condições e do tipo de resíduos utilizados. O composto estará pronto
-                                quando
-                                tiver
-                                uma
-                                aparência escura e ter uma textura semelhante a um solo rico e cheirar a terra.</li>
-                            <li>Use o composto: O composto orgânico pode ser usado em seu jardim como um fertilizante
-                                natural
-                                para
-                                enriquecer o solo. Aplique-o nas plantas, misturando-o suavemente no solo ou use-o como
-                                cobertura na
-                                superfície.</li>
-                            <li>Lembre-se de que a compostagem requer paciência e cuidados adequados. Evite adicionar
-                                resíduos
-                                não
-                                orgânicos, como plástico e metal, à pilha de compostagem. Também é importante não
-                                adicionar
-                                plantas
-                                doentes ou sementes de ervas daninhas, pois elas podem se espalhar pelo composto. Com um
-                                pouco
-                                de
-                                dedicação, você poderá aproveitar os benefícios da compostagem e reduzir a quantidade de
-                                resíduos
-                                orgânicos enviados para aterros sanitários.</li>
-                        </ol>
-                        </p>
-
-                    </div>
-
-                    <!--Botões-->
-                    <div class="row py-2 " style="margin-top: -2rem;">
-                        <!--Share-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
-                                    share
-                                </span>
-                                <span class="ps-2 d-none d-md-block">
-                                    Compartilhar
-                                </span>
-
-                            </div>
-                        </div>
-                        <!--Comment-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div data-bs-toggle="modal" data-bs-target="#modal-1">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                        mode_comment
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Comentar
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Like-->
-                        <div class="col d-flex justify-content-center botao-post">
-                            <div class="like-notfilled">
-                                <div class="d-flex align-items-center justify-content-start px-3 py-3">
-                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                        thumb_up
-                                    </span>
-                                    <span class="ps-2 d-none d-md-block">
-                                        Curtir
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
+            <!--Premiações da Semana-->
+
+            <div class="col">
+                <div class="card mt-3 mx-3 d-none d-sm-none d-md-block d-lg-none">
+                    <div class="card-body px-4">
+                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                            <div>
+                                <h4 class="card-title py-3" alt="Dinheiro com asas voando"
+                                    title="Dinheiro com asas voando">Premiações 💸</h4>
+                            </div>
+                            <div style="margin-left: auto;">
+                                <img src="../img/happy_icon.png" alt="moça alegre" title="Moça alegre" class="card-img"
+                                    style="max-height: 50px; object-fit: contain;">
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
+                            <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
+                            <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
+                        </ul>
+                        <div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
 
-
-
-        <div class="d-flex flex-column align-itens-center">
-            <!--Premiações da Semana-->
-            <div class="card mt-5 mx-5 d-none d-xl-block mb-auto" style="max-width: 400px;">
-                <div class="card-body px-4">
+        <!--Alinhamento dos Posts-->
+        <div id="divPost" class="col-md-10 col-lg-12 mx-auto">
+            <!--Primeiro Post-->
+            <div id="primeiroPost" class="card mx-3 mt-3" style="max-width: 700px;">
+                <div class="card-header" style="background-color:#E3FFE0">
                     <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                         <div>
-                            <h4 class="card-title py-3" alt="Notas de dinheiro com asas voando"
-                                title="Notas de dinheiro com asas voando">Premiações 💸</h4>
+                            <a href="../pages/profile_paulo.html">
+                                <img src="../img/perfil_paulo2.jpg" alt="Foto de perfil do Paulo"
+                                    title="Foto de perfil do Paulo" class="foto_perfil_post">
+                            </a>
                         </div>
-                        <div style="margin-left: auto;">
-                            <img src="../img/happy_icon.png" alt="Moça algre" title="Moça alegre" class="card-img"
-                                style="max-height: 50px; object-fit: contain;">
+                        <div class="px-3">
+                            <a href="../pages/profile_paulo.html" style="color: black; text-decoration: none;">
+                                <div>Paulo Silveira</div>
+                            </a>
+
+                        </div>
+                        <div class="px-3" style="margin-left: auto;">
+                            28/04 às 15:20
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
-                        <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
-                        <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
-                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="row py-1">
+                        <div class="col-10 col-sm-11">
+                            <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos</h5>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+
+                    <img src="../img/gato.jpg" alt="Gato malhado deitado" title="Gato malhado deitado" class="card-img"
+                        style="max-height: 200px; object-fit: cover;">
+                    <p class="card-text mt-2">
+                        Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais cheios de
+                        conservantes,
+                        você
+                        pode fazer seus próprios biscoitos de carne para gatos. Use carne moída orgânica, como carne
+                        de
+                        frango ou carne de peru. Misture com um pouco de farinha de trigo integral e água para
+                        formar
+                        uma
+                        massa. Modele pequenos biscoitos e asse no forno até que fiquem crocantes. Certifique-se de
+                        que
+                        a
+                        carne esteja completamente cozida antes de oferecer ao seu gato.
+                    </p>
+                </div>
+
+                <!--Botões-->
+                <div class="row py-2 " style="margin-top: -1rem;">
+                    <!--Share-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                share
+                            </span>
+                            <span class="ps-2 d-none d-md-block">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                    </div>
+                    <!--Comment-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                    mode_comment
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Comentar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Like-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="like-notfilled">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                    thumb_up
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Curtir
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Comentários-->
+            <!-- Modal-1 -->
+            <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="exampleModalLabel">Comentários</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column justify-content-center">
+                            <!--primeiro comentário-->
+                            <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+                                <div>
+                                    <a href="../pages/profile_bianca_salazar.html">
+                                        <img src="../img/perfil_bianca.jpg" alt="Foto da Bianca" title="Foto da Bianca"
+                                            class="foto_perfil_post">
+                                    </a>
+                                </div>
+                                <div>
+
+                                </div>
+                                <div class="px-3">
+                                    <div>
+                                        <a href="../pages/profile_bianca_salazar.html"
+                                            style="color: black; text-decoration: none;">
+                                            <div>Bianca Salazar</div>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            Nossa, adorei! Vou fazer para os meus!!!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--segundo comentário-->
+                            <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+                                <div>
+                                    <a href="../pages/profile_paulo.html">
+                                        <img src="../img/perfil_paulo2.jpg" alt="Foto da Bianca" title="Foto do Paulo"
+                                            class="foto_perfil_post">
+                                    </a>
+                                </div>
+                                <div>
+
+                                </div>
+                                <div class="px-3">
+                                    <div>
+                                        <a href="../pages/profile_paulo.html"
+                                            style="color: black; text-decoration: none;">
+                                            <div>Paulo Silveira</div>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            Boa!
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <div class="input-group col">
+                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+                            <div class="btn btn-primary col-2 pt-2">
+                                <span class="material-symbols-outlined">
+                                    send
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!--Teste a responsividade-->
-            <div class="mt-auto">
-                <div class="card mt-5 mx-5 d-none d-xl-block" style="max-width: 400px;">
-                    <div class="card-body px-4">
-                        <h4 class="card-title text-center pt-4"> Teste a responsividade do nosso site!</h4>
-                        <img class="card-img" src="../img/Mobile_feed.png"
-                            alt="Animação de uma mulher olhando um celular"
-                            title="Animação de uma mulher olhando um celular"
-                            style="max-height: 360px; object-fit: cover;">
-                        <div class="card-subtitle mb-2 text-muted">
-                            1. No Google Chrome, ative Inspecionar.<br> (Ctrl + Shift + I)<br>
-                            2. Clique no ícone com um celular sobrepondo um desktop.<br> (Ctrl + Shift + M)<br>
-                            3. Em dimensions, você pode escolher um dispositivo ou utilizar o modo responsivo e
-                            verificar as
-                            alterações do site para diferentes tamanhos em tempo real.
+            <!--Segundo Post-->
+            <div class="card mx-3 mt-3" style="max-width: 700px;">
+                <div class="card-header" style="background-color:#E3FFE0">
+                    <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                        <div>
+                            <a href="../pages/profile_maria_luiza.html">
+                                <img src="../img/perfil_maria.jpg" alt="Foto de perfil da Maria"
+                                    title="Foto de perfil da Maria" class="foto_perfil_post">
+                            </a>
+                        </div>
+                        <div class="px-3">
+                            <a href="../pages/profile_maria_luiza.html" style="color: black; text-decoration: none;">
+                                <div>Maria Luiza</div>
+                            </a>
+                        </div>
+                        <div class="px-3" style="margin-left: auto;">
+                            24/07 às 19:30
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row py-1">
+                        <div class="col-10 col-sm-11">
+                            <h5 class="card-title">Essa semana comecei a tomar banhos mais ecológicos</h5>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Aqui temos 3 dicas que me ajudaram muito: <br>
+                        1.<b><i>Reduza o tempo de banho: </i></b>Diminuir o tempo que você passa no chuveiro é uma
+                        das
+                        formas
+                        mais
+                        simples e eficazes de economizar água. Tente encurtar seus banhos, limitando o tempo de
+                        banho a
+                        cinco minutos ou menos. Isso reduzirá significativamente o consumo de água. <br>
+                        2.<b><i>Instale um redutor de vazão ou chuveiro econômico: </i></b>Utilize dispositivos como
+                        redutores
+                        de
+                        vazão ou chuveiros de baixo fluxo para limitar a quantidade de água que sai do chuveiro.
+                        Esses
+                        equipamentos ajudam a reduzir o consumo de água durante o banho sem comprometer o seu
+                        conforto.
+                        <br>
+                        3.<b><i>Reaproveite a água: </i></b>Ao tomar banho, você pode coletar a água que escorre
+                        enquanto
+                        espera
+                        que a temperatura se ajuste. Coloque um balde ou recipiente no chão do chuveiro para
+                        recolher
+                        essa
+                        água e use-a posteriormente para regar plantas, lavar o chão ou dar descarga no vaso
+                        sanitário.
+                        É
+                        uma forma inteligente de aproveitar a água que seria desperdiçada.
+                    </p>
+                    <img src="../img/bath.jpg" alt="Patinho de borracha com espuma de banho"
+                        title="Patinho de borracha com espuma de banho" class="card-img"
+                        style="max-height: 200px; object-fit: cover;">
+                </div>
+                <!--Botões-->
+                <div class="row py-2 " style="margin-top: -1rem;">
+                    <!--Share-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                share
+                            </span>
+                            <span class="ps-2 d-none d-md-block">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                    </div>
+                    <!--Comment-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                    mode_comment
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Comentar
+                                </span>
+                            </div>
                         </div>
                     </div>
 
+                    <!--Like-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="like-notfilled">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                    thumb_up
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Curtir
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Terceiro Post-->
+            <div class="card mx-3 mt-3" style="max-width: 700px;">
+                <div class="card-header" style="background-color:#E3FFE0">
+                    <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                        <div>
+                            <a href="../pages/profile_armando.html">
+                                <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
+                                    title="Foto de perfil do Armando" class="foto_perfil_post">
+                            </a>
+                        </div>
+                        <div class="px-3">
+                            <a href="../pages/profile_armando.html" style="color: black; text-decoration: none;">
+                                <div>Armando Silva</div>
+                            </a>
+                        </div>
+                        <div class="px-3" style="margin-left: auto;">
+                            21/04 às 15:20
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="row py-1">
+                        <div class="col-10 col-sm-11">
+                            <h5 class="card-title">Aqui uma receita de doce que aproveita casca de banana!</h5>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+
+                    <p class="card-text">
+                        A casca de banana pode ser aproveitada de maneira criativa na cozinha, inclusive para fazer
+                        doces
+                        deliciosos. Aqui está uma receita simples de doce de casca de banana que você pode
+                        experimentar:<br>
+                        <b>Ingredientes:</b>
+                    <ul>
+                        <li>Casca de 4 bananas maduras</li>
+                        <li>1 xícara de açúcar</li>
+                        <li>Suco de 1 limão</li>
+                        <li>1 xícara de água</li>
+                        <li>Canela em pau (opcional)</li>
+                    </ul>
+                    <img src="../img/casca_banana.jpg" alt="Casca de banana aberta e jogada"
+                        title="Casca de banana aberta e jogada" class="card-img"
+                        style="max-height: 200px; object-fit: cover;">
+                    <b>Instruções</b>
+                    <ol>
+                        <li>Lave bem as cascas de banana e remova qualquer sujeira ou resíduo. Corte as cascas em
+                            pedaços
+                            pequenos.</li>
+                        <li>Em uma panela, adicione as cascas de banana cortadas, o açúcar, o suco de limão e a
+                            água. Se
+                            desejar, adicione um pedaço de canela em pau para dar um sabor extra.</li>
+                        <li>Leve a panela ao fogo médio e deixe ferver. Em seguida, reduza o fogo para médio-baixo e
+                            cozinhe
+                            por
+                            cerca de 30 a 40 minutos, mexendo de vez em quando. As cascas de banana devem ficar
+                            macias e
+                            a
+                            calda
+                            deve engrossar.</li>
+                        <li>Retire a canela em pau, se utilizada, e deixe o doce de casca de banana esfriar um
+                            pouco.
+                            Transfira o doce para um liquidificador ou processador de alimentos e bata até obter uma
+                            consistência de purê. Se preferir, você pode deixar alguns pedaços maiores para uma
+                            textura
+                            mais
+                            rústica.</li>
+                        <li>Volte o doce à panela e leve ao fogo baixo por mais alguns minutos, mexendo sempre, para
+                            dar
+                            o
+                            ponto
+                            final.</li>
+                        <li>Desligue o fogo e deixe o doce esfriar completamente antes de transferir para um pote de
+                            vidro
+                            com
+                            tampa. Armazene na geladeira.</li>
+                        <li>O doce de casca de banana pode ser consumido puro, como acompanhamento para pães,
+                            torradas
+                            ou
+                            até
+                            mesmo como recheio de bolos e tortas. É uma forma criativa de aproveitar as cascas de
+                            banana,
+                            reduzindo o desperdício alimentar.</li>
+                    </ol>
+                    <img src="../img/doce_de_banana.jpg" alt="Doce de casca de banana" title="Doce de casca de banana"
+                        class="card-img" style="max-height: 200px; object-fit: cover;">
+                    </p>
+                </div>
+
+                <!--Botões-->
+                <div class="row py-2" style="margin-top: -2rem;">
+                    <!--Share-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                share
+                            </span>
+                            <span class="ps-2 d-none d-md-block">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                    </div>
+                    <!--Comment-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                    mode_comment
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Comentar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Like-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="like-notfilled">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                    thumb_up
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Curtir
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Quarto Post-->
+            <div class="card mx-3 mt-3" style="max-width: 700px;">
+                <div class="card-header" style="background-color:#E3FFE0">
+                    <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                        <div>
+                            <a href="../pages/profile_maria_luiza.html">
+                                <img src="../img/perfil_maria.jpg" alt="Foto de perfil de Maria"
+                                    title="Foto de perfil de Maria" class="foto_perfil_post">
+                            </a>
+                        </div>
+                        <div class="px-3">
+                            <a href="../pages/profile_maria_luiza.html" style="color: black; text-decoration: none;">
+                                <div>Maria Luiza</div>
+                            </a>
+                        </div>
+                        <div class="px-3" style="margin-left: auto;">
+                            20/04 às 12:30
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row py-1">
+                        <div class="col-10 col-sm-11">
+                            <h5 class="card-title">Meu ponto de vista sobre casas inteligentes</h5>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+
+                    <img src="../img/smart_house.jpg" alt="Painel de controle de temperatura automático"
+                        title="Painel de controle de temperatura automático" class="card-img"
+                        style="max-height: 200px; object-fit: cover;">
+                    <p class="card-text mt-2">
+                        O custo de uma casa inteligente ecológica pode variar significativamente, dependendo de
+                        diversos
+                        fatores, como o tamanho da casa, o nível de automação desejado, os recursos de eficiência
+                        energética
+                        implementados e a região onde a construção ocorre. Além disso, o preço também pode ser
+                        influenciado
+                        pelos materiais de construção escolhidos, a contratação de profissionais especializados e as
+                        tecnologias específicas incorporadas ao projeto.
+                        Em geral, uma casa inteligente ecológica pode envolver investimentos adicionais em
+                        comparação
+                        com
+                        uma construção convencional devido às tecnologias e soluções sustentáveis empregadas. É
+                        possível
+                        que
+                        os custos iniciais sejam mais altos, mas podem ser compensados ao longo do tempo por meio da
+                        redução
+                        de despesas com energia e água.
+                        Embora seja difícil fornecer um valor exato, estima-se que o custo de uma casa inteligente
+                        ecológica
+                        possa variar de algumas dezenas de milhares de dólares até centenas de milhares de dólares,
+                        dependendo do escopo do projeto. É recomendado consultar profissionais da área, como
+                        arquitetos,
+                        construtores e especialistas em automação residencial, para obter estimativas mais precisas
+                        com
+                        base
+                        nas suas necessidades e localização geográfica.
+                        Lembre-se de considerar o retorno do investimento a longo prazo, bem como os benefícios
+                        ambientais e
+                        econômicos que uma casa inteligente ecológica pode proporcionar. Além disso, existem
+                        incentivos
+                        fiscais e programas de financiamento sustentável disponíveis em algumas regiões, que podem
+                        ajudar a
+                        reduzir os custos e tornar a construção mais acessível.
+                    </p>
+                </div>
+
+                <!--Botões-->
+                <div class="row py-2 " style="margin-top: -1rem;">
+                    <!--Share-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                share
+                            </span>
+                            <span class="ps-2 d-none d-md-block">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                    </div>
+                    <!--Comment-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                    mode_comment
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Comentar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Like-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="like-notfilled">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                    thumb_up
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Curtir
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Quinto Post-->
+            <div class="card mx-3 mt-3" style="max-width: 700px;">
+                <div class="card-header" style="background-color:#E3FFE0">
+                    <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                        <div>
+                            <a href="">
+                                <img src="../img/perfil_bianca.jpg" alt="Foto de perfil de Bianca"
+                                    title="Foto de perfil de Bianca" class="foto_perfil_post">
+                            </a>
+                        </div>
+                        <div class="px-3">
+                            <a href="../pages/profile_bianca_salazar.html" style="color: black; text-decoration: none;">
+                                <div>Bianca Salazar</div>
+                            </a>
+                        </div>
+                        <div class="px-3" style="margin-left: auto;">
+                            20/04 às 11:15
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row py-1">
+                        <div class="col-10 col-sm-11">
+                            <h5 class="card-title">Sustentabilidade no Cinema</h5>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+
+                    <p class="card-text">
+
+                        A sustentabilidade no cinema refere-se à adoção de práticas ecológicas e socialmente
+                        responsáveis em
+                        todas as etapas da produção cinematográfica, desde a pré-produção até a pós-produção e
+                        distribuição.
+                        Isso envolve minimizar o impacto ambiental da produção, promover a conscientização sobre
+                        questões
+                        sociais e ambientais por meio das narrativas, e inspirar mudanças positivas na indústria do
+                        entretenimento e na sociedade em geral. Aqui estão algumas maneiras pelas quais a
+                        sustentabilidade
+                        pode ser incorporada ao cinema:<br>
+                    <ol>
+                        <li>Práticas de produção ecológicas: As produções podem adotar medidas para reduzir o
+                            consumo de
+                            energia, água e recursos naturais, bem como minimizar a geração de resíduos. Isso inclui
+                            o
+                            uso
+                            de
+                            fontes de energia renovável, redução do uso de plásticos descartáveis, reciclagem e
+                            reutilização
+                            de
+                            materiais, e escolha de locações que tenham menor impacto ambiental.</li>
+                        <li>Transporte consciente: A minimização das emissões de carbono relacionadas ao transporte
+                            é
+                            fundamental. As equipes de produção podem optar por veículos elétricos ou híbridos e
+                            incentivar
+                            o
+                            uso de transportes públicos sempre que possível.</li>
+                        <li>Alimentação sustentável: Durante as filmagens, escolher alimentos orgânicos e locais
+                            para a
+                            equipe
+                            pode ajudar a reduzir a pegada de carbono e apoiar a agricultura sustentável.</li>
+                        <li>Cenografia e figurino: A reutilização de adereços, cenários e figurinos pode reduzir a
+                            necessidade
+                            de produção de novos materiais, diminuindo o desperdício e o consumo de recursos.</li>
+                        <li>Conscientização nas narrativas: Filmes podem abordar temas relacionados à
+                            sustentabilidade,
+                            como
+                            mudanças climáticas, conservação da natureza, justiça social e direitos humanos. Essas
+                            narrativas
+                            podem aumentar a conscientização do público sobre questões críticas e inspirar ação.
+                        </li>
+                        <li>Distribuição e exibição sustentável: A distribuição digital de filmes tem um menor
+                            impacto
+                            ambiental
+                            em comparação com as cópias físicas. Além disso, teatros e festivais de cinema podem
+                            adotar
+                            práticas
+                            mais sustentáveis, como a redução do uso de papel para ingressos e materiais
+                            promocionais.
+                        </li>
+                        <li>Conscientização e responsabilidade social: Filmes e equipes de produção podem colaborar
+                            com
+                            organizações sem fins lucrativos e instituições de caridade que trabalham em prol da
+                            sustentabilidade e da justiça social. Isso pode envolver doações, parcerias e campanhas
+                            de
+                            conscientização.</li>
+                        <li>Educação e engajamento: Os cineastas podem usar seu trabalho para educar o público sobre
+                            questões
+                            ambientais e sociais, incentivando a reflexão e a ação. Isso pode ser feito por meio de
+                            documentários, filmes educativos e histórias envolventes.</li>
+                    </ol>
+                    A indústria cinematográfica tem um papel importante na disseminação de mensagens e valores, e
+                    pode
+                    desempenhar um papel significativo na promoção da sustentabilidade e na conscientização sobre
+                    questões globais. À medida que a conscientização sobre a importância da sustentabilidade
+                    continua a
+                    crescer, espera-se que mais cineastas e equipes de produção adotem práticas ecológicas e
+                    socialmente
+                    responsáveis em suas obras.
+
+                    </p>
+                    <img src="../img/cinema.jpg" alt="Sala de cinema com cadeiras vazias"
+                        title="Sala de cinema com cadeiras vazias" class="card-img"
+                        style="max-height: 200px; object-fit: cover;">
+                </div>
+
+                <!--Botões-->
+                <div class="row py-2 " style="margin-top: -1rem;">
+                    <!--Share-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                share
+                            </span>
+                            <span class="ps-2 d-none d-md-block">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                    </div>
+                    <!--Comment-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                    mode_comment
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Comentar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Like-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="like-notfilled">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                    thumb_up
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Curtir
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Sexto Post-->
+            <div class="card mx-3 mt-3" style="max-width: 700px;">
+                <div class="card-header" style="background-color:#E3FFE0">
+                    <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                        <div>
+                            <a href="../pages/profile_armando.html">
+                                <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
+                                    title="Foto de perfil do Armando" class="foto_perfil_post">
+                            </a>
+                        </div>
+                        <div class="px-3">
+                            <a href="../pages/profile_armando.html" style="color: black; text-decoration: none;">
+                                <div>Armando Silva</div>
+                            </a>
+                        </div>
+                        <div class="px-3" style="margin-left: auto;">
+                            15/04 às 10:12
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row py-1">
+                        <div class="col-10 col-sm-11">
+                            <h5 class="card-title">Minhas lições de 6 meses de compostagem</h5>
+                        </div>
+                        <div class="col-2 col-sm-1">
+                            <i class="bi bi-star"></i>
+                        </div>
+                    </div>
+                    <img src="../img/compostagem.jpg" alt="Mãos segurando terra" title="Mãos segurando terra"
+                        class="card-img" style="max-height: 200px; object-fit: cover;">
+                    <p class="card-text mt-2">
+                        A compostagem é um processo natural que transforma resíduos orgânicos em composto orgânico
+                        rico
+                        em
+                        nutrientes para o solo. Aqui estão as etapas básicas para fazer compostagem em casa:<br>
+                    <ol>
+                        <li>Escolha um local: Encontre um local adequado em seu jardim ou quintal para montar uma
+                            pilha
+                            de
+                            compostagem ou use uma composteira específica. Certifique-se de que o local tenha boa
+                            drenagem e
+                            acesso fácil.</li>
+                        <li>Separe os resíduos: Separe os resíduos orgânicos da sua cozinha, como restos de frutas e
+                            legumes,
+                            borra de café, cascas de ovos, entre outros. Evite adicionar resíduos de origem animal,
+                            como
+                            carne e
+                            laticínios, pois podem atrair animais indesejados.</li>
+                        <li>Adicione materiais secos: Acrescente materiais secos, como folhas secas, palha, serragem
+                            ou
+                            papel
+                            picado, para ajudar a equilibrar a umidade e fornecer aeração à pilha. É importante
+                            manter
+                            uma
+                            proporção equilibrada de resíduos verdes (ricos em nitrogênio) e materiais secos (ricos
+                            em
+                            carbono)
+                            para um processo eficiente de compostagem.</li>
+                        <li>Misture os materiais: Misture os resíduos orgânicos com os materiais secos em camadas
+                            alternadas
+                            para garantir uma boa mistura. Você pode usar um garfo de jardim ou uma pá para ajudar
+                            na
+                            mistura.
+                            Mantenha a umidade adequada: A pilha de compostagem deve estar úmida, como uma esponja
+                            úmida,
+                            mas
+                            não encharcada. Se estiver muito seca, adicione um pouco de água. Se estiver muito
+                            úmida,
+                            adicione
+                            mais materiais secos para absorver o excesso de umidade.</li>
+                        <li>Vire a pilha: Para acelerar o processo de compostagem, vire a pilha a cada duas semanas
+                            aproximadamente. Isso ajuda a aerar a pilha e acelera a decomposição dos resíduos.</li>
+                        <li>Aguarde o processo: A compostagem leva tempo e pode variar de algumas semanas a vários
+                            meses,
+                            dependendo das condições e do tipo de resíduos utilizados. O composto estará pronto
+                            quando
+                            tiver
+                            uma
+                            aparência escura e ter uma textura semelhante a um solo rico e cheirar a terra.</li>
+                        <li>Use o composto: O composto orgânico pode ser usado em seu jardim como um fertilizante
+                            natural
+                            para
+                            enriquecer o solo. Aplique-o nas plantas, misturando-o suavemente no solo ou use-o como
+                            cobertura na
+                            superfície.</li>
+                        <li>Lembre-se de que a compostagem requer paciência e cuidados adequados. Evite adicionar
+                            resíduos
+                            não
+                            orgânicos, como plástico e metal, à pilha de compostagem. Também é importante não
+                            adicionar
+                            plantas
+                            doentes ou sementes de ervas daninhas, pois elas podem se espalhar pelo composto. Com um
+                            pouco
+                            de
+                            dedicação, você poderá aproveitar os benefícios da compostagem e reduzir a quantidade de
+                            resíduos
+                            orgânicos enviados para aterros sanitários.</li>
+                    </ol>
+                    </p>
+
+                </div>
+
+                <!--Botões-->
+                <div class="row py-2 " style="margin-top: -2rem;">
+                    <!--Share-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                share
+                            </span>
+                            <span class="ps-2 d-none d-md-block">
+                                Compartilhar
+                            </span>
+
+                        </div>
+                    </div>
+                    <!--Comment-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div data-bs-toggle="modal" data-bs-target="#modal-1">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
+                                    mode_comment
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Comentar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Like-->
+                    <div class="col d-flex justify-content-center botao-post">
+                        <div class="like-notfilled">
+                            <div class="d-flex align-items-center justify-content-start px-3 py-3">
+                                <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
+                                    thumb_up
+                                </span>
+                                <span class="ps-2 d-none d-md-block">
+                                    Curtir
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+    </div>
+
+
+
+
+    <div class="d-flex flex-column align-itens-center">
+        <!--Premiações da Semana-->
+        <div class="card mt-5 mx-5 d-none d-xl-block mb-auto" style="max-width: 400px;">
+            <div class="card-body px-4">
+                <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                    <div>
+                        <h4 class="card-title py-3" alt="Notas de dinheiro com asas voando"
+                            title="Notas de dinheiro com asas voando">Premiações 💸</h4>
+                    </div>
+                    <div style="margin-left: auto;">
+                        <img src="../img/happy_icon.png" alt="Moça algre" title="Moça alegre" class="card-img"
+                            style="max-height: 50px; object-fit: contain;">
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>#1 </b>R$150,00 em vale Alimentação</li>
+                    <li class="list-group-item"><b>#2 </b>R$70,00 em vale Alimentação</li>
+                    <li class="list-group-item"><b>#3 </b>10% de cashback em loja parceira</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Teste a responsividade-->
+        <div class="mt-auto">
+            <div class="card mt-5 mx-5 d-none d-xl-block" style="max-width: 400px;">
+                <div class="card-body px-4">
+                    <h4 class="card-title text-center pt-4"> Teste a responsividade do nosso site!</h4>
+                    <img class="card-img" src="../img/Mobile_feed.png" alt="Animação de uma mulher olhando um celular"
+                        title="Animação de uma mulher olhando um celular" style="max-height: 360px; object-fit: cover;">
+                    <div class="card-subtitle mb-2 text-muted">
+                        1. No Google Chrome, ative Inspecionar.<br> (Ctrl + Shift + I)<br>
+                        2. Clique no ícone com um celular sobrepondo um desktop.<br> (Ctrl + Shift + M)<br>
+                        3. Em dimensions, você pode escolher um dispositivo ou utilizar o modo responsivo e
+                        verificar as
+                        alterações do site para diferentes tamanhos em tempo real.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     </div>
 
 
