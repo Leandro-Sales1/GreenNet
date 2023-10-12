@@ -10,7 +10,10 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
         <link rel="stylesheet" href="../styles/estatisticas.css">
         <title>GreenNet</title>
-
+        <script type="module">
+            import { validaLogin } from "../js/Aplications/utils.js";
+            validaLogin();
+        </script>
     </head>
 
     <body>
@@ -37,7 +40,8 @@
                         <div class="col-12">
                             <div class="img_area adm_head" alt="Mulher resolvendo blocos de quebra-cabeça"
                                 title="Mulher resolvendo blocos de quebra-cabeça">
-                                <h3 class="adm_title">Bem vindo à tela de estatísticas! Aqui você acompanha em tempo real o
+                                <h3 class="adm_title">Bem vindo à tela de estatísticas! Aqui você acompanha em tempo
+                                    real o
                                     engajamento, a progressão nos games e quizes, o número de postagens e afins!</h3>
                             </div>
                         </div>
@@ -120,7 +124,7 @@
             </section>
 
 
-            <section class="mb-5" >
+            <section class="mb-5">
                 <div class="row">
                     <div class="col-12 mt-3 mb-1">
                         <h4 class="text-uppercase">Estatísticas dos jogos e das premiações</h4>
@@ -129,7 +133,7 @@
                 </div>
 
                 <div class="row mb-4">
-                    <div class="col-xl-6 col-md-12 mb-4" >
+                    <div class="col-xl-6 col-md-12 mb-4">
                         <div class="card overflow-hidden">
                             <div class="card-body clearfix">
                                 <div class="align-items-stretch">
@@ -350,7 +354,6 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             montaGrafico();
-
             count();
         </script>
     </body>

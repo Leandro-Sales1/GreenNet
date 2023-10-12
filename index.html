@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>GreenNet</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
-</head>
-<body>
-    <header>
-        <section class="banner_top">
-            <h3><b>GreenNet</b></h3>
-        </section>
-    </header>
-    <main class="mx-auto" style="max-width:960px">
-        <div class="col-12 col-md-8 col-lg-6 mx-auto px-3">
-            <section class="text-center">
-                <div>
-                    <img class="login_img my-5" src="./img/perfil_armando.jpg" alt="login_img" title="Foto de perfil do Armando">
-                </div>
-                <div>
-                    <p class="fs-2 ">Armando Silva</p>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-                    <label for="floatingPassword">Senha</label>
-                  </div>
-                <div class="password_forgot_container">
-                    <a href="./pages/password.html" class="password_forgot fs-6">Esqueceu sua senha?</a>
-                </div>
-                <div>
-                    <a href="./pages/feed.html" class="btn px-5" style="background-color: #3DCD58; margin: 0px; color: #fff;">Entrar</a>
-                </div>
-            </section>  
-        </div>
-    </main>
 
-    
-    <div class="mx-auto fixed-bottom" style="max-width:960px;">
-        <div class="d-flex flex-align-row justify-content-center align-items-center pt-3" >
-            <div class="px-3">
-                <img src="./img/schneider.png" alt="Logo da Schneider Electric" title="Logo da Schneider Electric" class="img-fluid" style="max-height: 60px;"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>GreenNet</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="./favicon_io/site.webmanifest">
+    </head>
+
+    <body>
+        <header>
+            <section class="banner_top">
+                <h3><b>GreenNet</b></h3>
+            </section>
+        </header>
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col col-xl-10">
+                    <div class="card mt-5">
+                        <div class="row g-0">
+
+                            <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                <img src="img/login-bro.png" alt="login form" class="img-fluid" />
+                            </div>
+                            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                <div class="card-body p-4 p-lg-5 ">
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                        <span class="h1 fw-bold mb-0">Seja bem vindo!</span>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control" id="Email" placeholder="Email">
+                                        <label for="Email">Email</label>
+                                    </div>
+
+                                    <div class="form-floating mb-4">
+                                        <input type="password" class="form-control" id="Password" placeholder="Senha">
+                                        <label for="Password">Senha</label>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <button type="submit" onclick="login()" class="btn px-5"
+                                            style="background-color: #3DCD58; margin: 0px; color: #fff;">Entrar</button>
+                                    </div>
+                                    <a href="./pages/password.html" class="password_forgot fs-6">Esqueceu sua senha?</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="px-3">
-                <img src="./img/fiap.png" alt="Logo da FIAP" title="Logo da FIAP" class="img-fluid" style="max-height: 60px;">
+        </div>
+
+
+        <div class="mx-auto fixed-bottom" style="max-width:960px;">
+            <div class="d-flex flex-align-row justify-content-around align-items-center pt-3 mt-3 mb-4">
+                <div class="px-3">
+                    <img src="../img/schneider.png" alt="Logo da Schneider Electric" title="Logo da Schneider Electric"
+                        class="img-fluid" style="max-height: 60px;">
+                </div>
+                <div class="px-3">
+                    <img src="../img/fiap.png" alt="Logo da FIAP" title="Logo da FIAP" class="img-fluid" style="max-height: 60px;">
+                </div>
             </div>
         </div>
 
-        <div class="my-3"></div>
-    </div>
+    </body>
+    <script type="module">
+        import { login } from "/js/index.js";
+        window.login = login;
+    </script>
 
-</body>
 </html>
