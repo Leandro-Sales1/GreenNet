@@ -14,7 +14,6 @@ async function getImage(postId) {
     let list = [];
     let fileRef = ref(storage, `posts/${postId}/`);
     let fileList = Object.values((await listAll(fileRef)).items);
-    console.log(fileList)
 
     for (const file of fileList) {
         list.push(await getDownloadURL(file));

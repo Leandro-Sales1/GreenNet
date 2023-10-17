@@ -48,20 +48,21 @@ function submitPost() {
 
 async function loadFeed() {
     let count = 0;
-    console.time('timer');
     (await montaPost()).forEach(post =>{
+
+        for (let i = 0; i < post.imgList.length; i++) {
+            let img = document.createElement('img');
+            img.setAttribute('src', post.imgList[i]);
+
+            post.body = post.body.replace(`<sub id="${i + 1}">-</sub>`, img.outerHTML);
+        }
+        
+
         let nodePost = document.createRange().createContextualFragment(criaPost(post, count));
         document.getElementById("divPosts").appendChild(nodePost);
 
-        let subList = document.getElementById(`body-${count}`).getElementsByTagName('sub');
-        for(let i = 0; i <= subList.length; i++){
-            let img = document.createElement('img');
-            img.setAttribute('src', post.img[i]);
-            subList[i].parentNode.innerHTML = subList[i].parentNode.innerHTML.replace(subList[i].outerHTML, img.outerHTML)
-        }
         count++;
     });  
-    console.timeEnd('timer');
 }
 
 function criaPost(post, count) {
@@ -130,7 +131,7 @@ function criaPost(post, count) {
                             </div>
                         </div>
                     </div>
-                </div>`
+            </div>`
 }
 
 

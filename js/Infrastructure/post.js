@@ -20,7 +20,7 @@ async function montaPost() {
             profileImg: user.profileImg,
             hour: post.hour,
             body: post.body,
-            img: image
+            imgList: image
         });
     }
     return result;
