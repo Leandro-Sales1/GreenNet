@@ -1,6 +1,6 @@
 import { validaLogin, newGuid } from "../Infrastructure/utils.js";
-import { getPost, setPost, montaPost} from "../Infrastructure/post.js";
-import { setImage } from "../Infrastructure/image.js";
+import { setPost, getPost} from "../Infrastructure/post.js";
+import { getImageURL, setImage } from "../Infrastructure/image.js";
 
 
 function onEnterPage() {
@@ -15,49 +15,33 @@ function alterarFotoPerfil() {
     });
 }
 
-function submitPost() {
-
+async function submitPost() {
     let postId = newGuid();
-    let listImg = Object.values(document.getElementsByClassName("ql-editor").item(0).getElementsByTagName("img"));
+    let editor = document.getElementsByClassName("ql-editor").item(0);
+
+    let listImg = Object.values(editor.getElementsByTagName("img"));
 
     let count = 1;
-    listImg.forEach(oldImg => {
-        setImage(postId, count, oldImg.src);
-        let sub = `<sub id = '${count}'>-</sub>`;
-
-        let parente = oldImg.parentNode;
-        parente.innerHTML = parente.innerHTML.replace(oldImg.outerHTML, sub);
+    for (const img of listImg){
+        await setImage(postId, count, img.src);
+        img.src = await getImageURL(postId, count);
         count++;
-    });
-
-    let body = [];
-    Object.values(document.getElementsByClassName("ql-editor").item(0).children).forEach(x => {
-        body.push(x.outerHTML);
-    });
-    if (!body.join("").match("<p><br></p>")) {
-        setPost({
-            id: postId,
-            body: body.join(""),
-            hour: new Date().toLocaleString(),
-            userId: JSON.parse(localStorage.getItem("user")).id
-        });
-        document.getElementsByClassName("ql-editor").item(0).innerHTML = "";
     }
 
+    let user = JSON.parse(localStorage.getItem("user"));
+    setPost({
+        id: postId,
+        body: editor.innerHTML,
+        hour: new Date().toLocaleString(),
+        name: user.nome,
+        profileImg: user.profileImg,
+    });
+    editor.innerHTML = "";
 }
 
 async function loadFeed() {
     let count = 0;
-    (await montaPost()).forEach(post =>{
-
-        for (let i = 0; i < post.imgList.length; i++) {
-            let img = document.createElement('img');
-            img.setAttribute('src', post.imgList[i]);
-
-            post.body = post.body.replace(`<sub id="${i + 1}">-</sub>`, img.outerHTML);
-        }
-        
-
+    (await getPost()).forEach(post =>{
         let nodePost = document.createRange().createContextualFragment(criaPost(post, count));
         document.getElementById("divPosts").appendChild(nodePost);
 

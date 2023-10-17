@@ -22,4 +22,9 @@ async function getImage(postId) {
     return list;
 }
 
-export { setImage, getImage }
+async function getImageURL(postId, imgId) {
+    let fileRef = ref(storage, `posts/${postId}/${imgId}`);
+    return await getDownloadURL(fileRef);
+}
+
+export { setImage, getImage, getImageURL}
