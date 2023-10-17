@@ -1,4 +1,4 @@
-import { alterarSenha } from "./Aplications/user.js";
+import { alterarSenha } from "../Infrastructure/user.js";
 
 function newPassword(){
     let email = document.getElementById("Email");

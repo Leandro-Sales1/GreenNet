@@ -1,4 +1,4 @@
-import {getAllUser} from "./Aplications/user.js";
+import {getAllUser} from "../Infrastructure/user.js";
 
 async function login() {
     let email = document.getElementById("Email");
