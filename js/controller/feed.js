@@ -25,6 +25,7 @@ async function submitPost() {
     for (const img of listImg){
         await setImage(postId, count, img.src);
         img.src = await getImageURL(postId, count);
+        img.style.maxWidth = '100%';
         count++;
     }
 
