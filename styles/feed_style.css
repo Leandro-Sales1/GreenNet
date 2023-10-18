@@ -118,10 +118,12 @@ input[type="file"] {
 .bi-star{
     font-size: 1.5rem;
     color:black;
+    cursor: pointer;
 }
 .bi-star-fill{
     font-size: 1.5rem;
     color:#FFEB35;
+    cursor: pointer;
 }
 
 

@@ -1,5 +1,5 @@
 import { validaLogin, newGuid } from "../Infrastructure/utils.js";
-import { setPost, getPost} from "../Infrastructure/post.js";
+import { setPost, getPost } from "../Infrastructure/post.js";
 import { getImageURL, setImage } from "../Infrastructure/image.js";
 
 
@@ -22,7 +22,7 @@ async function submitPost() {
     let listImg = Object.values(editor.getElementsByTagName("img"));
 
     let count = 1;
-    for (const img of listImg){
+    for (const img of listImg) {
         await setImage(postId, count, img.src);
         img.src = await getImageURL(postId, count);
         img.style.maxWidth = '100%';
@@ -33,7 +33,8 @@ async function submitPost() {
     setPost({
         id: postId,
         body: editor.innerHTML,
-        hour: new Date().toLocaleString(),
+        hour: new Date().toLocaleDateString(),
+        userId: user.id,
         name: user.nome,
         profileImg: user.profileImg,
     });
@@ -42,12 +43,13 @@ async function submitPost() {
 
 async function loadFeed() {
     let count = 0;
-    (await getPost()).forEach(post =>{
+    (await getPost()).forEach(post => {
         let nodePost = document.createRange().createContextualFragment(criaPost(post, count));
         document.getElementById("divPosts").appendChild(nodePost);
 
         count++;
-    });  
+    });
+    itemsAnimation();
 }
 
 function criaPost(post, count) {
@@ -55,13 +57,13 @@ function criaPost(post, count) {
                     <div class="card-header" style="background-color:#E3FFE0">
                         <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                             <div>
-                                <a id="profileLink" href="#">
+                                <a id="profileLink" href="./perfil_usuario.html?key1=${post.userId}">
                                     <img src="${post.profileImg}" alt="Foto de Perfil" title="Foto de perfil"
                                         class="foto_perfil_post">
                                 </a>
                             </div>
                             <div class="px-3">
-                                <a class="profileLinkName" href="#"
+                                <a class="profileLinkName" href="./perfil_usuario.html?key1=${post.userId}"
                                     style="color: black; text-decoration: none;">
                                     <div class="name">${post.name}</div>
                                 </a>
@@ -69,6 +71,7 @@ function criaPost(post, count) {
                             <div id="hour" class="px-3" style="margin-left: auto;">
                                 ${post.hour}
                             </div>
+                            <i class="bi bi-star"></i>
                         </div>
                     </div>
                     <div class="card-body">
