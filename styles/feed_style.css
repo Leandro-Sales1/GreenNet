@@ -111,9 +111,7 @@ input[type="file"] {
 }
 /*Hover dos Botoes de Feed*/
 .botao-post :hover{
-    background-color: #0d6efd;
-    color: rgb(255, 255, 255);
-    border-radius: 15px;
+    cursor: pointer;
 }
 
 /*Estrela do Feed*/

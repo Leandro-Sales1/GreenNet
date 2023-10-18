@@ -47,8 +47,6 @@ function atualizar(){
 }
 
 const thumbs_up = document.querySelectorAll(".like-notfilled")
-console.log(thumbs_up)
-
 thumbs_up.forEach((element) => {
     element.addEventListener('click', () => {
         if (element.classList.contains('like-notfilled')) {
