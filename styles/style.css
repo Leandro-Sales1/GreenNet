@@ -92,6 +92,15 @@ body{
 
 
 /*Perfil do Armando*/
+.imagem_de_fundo{
+    background-size: 960px 300px;
+    background-repeat: no-repeat;
+    display: block;
+    object-fit: cover;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .imagem_de_fundo_1{
     background-image: url(../img/arvore.jpg);
     background-size: 960px 300px;

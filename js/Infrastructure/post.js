@@ -1,11 +1,11 @@
-import { getDatabase, set, get, query, ref } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { getDatabase, set, get, query, ref, equalTo, orderByChild} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import app from "./dbConfig.js";
 
 const db = getDatabase(app);
 
 async function getPost() {
     let postRef = ref(db, '/post');
-    return Object.values((await get(query(postRef))).val());
+    return Object.values((await get(query(postRef))).val()).sort((a, b) => (a.hour - b.hour));
 }
 
 
@@ -14,5 +14,10 @@ async function setPost(post) {
     await set(newPostRef, post);
 }
 
+async function getPostByUser(userId){
+    let list = await get(query(ref(db, '/post'), orderByChild("userId"), equalTo(userId)));
+    return Object.values(list.val()).sort((a, b) => (a.hour - b.hour));
+}
 
-export { getPost, setPost }
+
+export { getPost, setPost, getPostByUser }

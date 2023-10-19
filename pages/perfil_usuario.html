@@ -19,10 +19,9 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="../favicon_io/site.webmanifest">
         <script type="module">
-            import { validaLogin } from "../js/Infrastructure/utils.js";
-            validaLogin();
+            import { loadUser } from "../js/controller/perfil.js";
+            loadUser();
         </script>
     </head>
 
@@ -42,30 +41,27 @@
             </section>
         </div>
 
-        <div class="imagem_de_fundo_1 pt-3">
+        <div id="background" class="imagem_de_fundo pt-3">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <div>
-                    <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
-                        title="Foto de perfil do Armando" class="rounded-circle" alt="imagem do perfil"
+                    <img id="fotoPerfil" src="../img/perfil.png" alt="Foto de perfil"
+                        title="Foto de perfil" class="rounded-circle" alt="imagem do perfil"
                         style="max-width: 100px; border: 1px solid black;">
                 </div>
                 <div>
-                    <h1 id="nome_perfil">Armando Silva</h1>
+                    <h1 style="color: white;" id="nome"></h1>
                 </div>
             </div>
         </div>
         <main class="px-3  py-3 ">
-            <div><b>Idade: <span id="idade_nova"> 27 anos</span></b></div>
-            <div><b>Pronomes: <span id="pronome_novo"> Ele/Dele</span></b></div>
-            <div><b>Cidade: <span id="cidade_nova"> Rio de Janeiro</span></b></div>
-            <div><b>Função: <span id="funcao_nova"> Suporte de TI</span></b></div>
-            <div><b>Tempo de Schneider: <span id="tempo_novo"> 5 anos</span></b></div>
-            <div><b>Interesses: <span id="interesses_novos"> Programação e Jogos</span></b></div>
+            <div><b>Idade: </b><span id="idade"></span></div>
+            <div><b>Pronomes: </b><span id="pronome"></span></div>
+            <div><b>Cidade: </b><span id="cidade"></span></div>
+            <div><b>Função: </b><span id="funcao"></span></div>
+            <div><b>Tempo de Schneider: </b><span id="tempoEmpresa"></span></div>
             <div>
                 <b>Descrição:</b>
-                <span id="descricao_nova"> Sou apaixonado pelo mundo dos games há muito tempo e desde a minha infância
-                    venho colecionando jogos, produtos e acessórios ao longo desses anos. Apesar de eu não me dedicar
-                    tanto a essa paixão, ainda sou um gamer entusiasta.</span>
+                <span id="descricao"></span>
             </div>
             <a href="../pages/alterar_perfil_usuario.html">
                 <button type="button" class="btn btn-success btn-lg mt-3"
@@ -77,7 +73,7 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
                             data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                            aria-selected="true">Publicação</button>
+                            aria-selected="true">Publicações</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
@@ -98,348 +94,8 @@
                         <!-- Alinhamento dos posts -->
                         <div class="d-flex justify-content-center">
                             <div style="max-width: 960px;">
-                                <div class="col-md-10 col-lg-12 mx-auto">
-                                    <!-- Primeiro Post -->
-                                    <div class="card mx-3 mt-3" style="max-width: 700px;">
-                                        <div class="card-header" style="background-color:#E3FFE0">
-                                            <div
-                                                class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                                                <div>
-                                                    <a href="../pages/profile_armando.html">
-                                                        <img src="../img/perfil_armando.jpg"
-                                                            alt="Foto de perfil do Armando"
-                                                            title="Foto de perfil do Armando" class="foto_perfil_post">
-                                                    </a>
-                                                </div>
-                                                <div class="px-3">
-                                                    <a href="../pages/profile_armando.html"
-                                                        style="color: black; text-decoration: none;">
-                                                        <div>Armando Silva</div>
-                                                    </a>
-                                                </div>
-                                                <div class="px-3" style="margin-left: auto;">
-                                                    21/04 às 15:20
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card-body">
-                                            <div class="row py-1">
-                                                <div class="col-10 col-sm-11">
-                                                    <h5 class="card-title">Aqui uma receita de doce que aproveita casca
-                                                        de
-                                                        banana!</h5>
-                                                </div>
-                                                <div class="col-2 col-sm-1">
-                                                    <i class="bi bi-star"></i>
-                                                </div>
-                                            </div>
-
-                                            <p class="card-text">
-                                                A casca de banana pode ser aproveitada de maneira criativa na cozinha,
-                                                inclusive
-                                                para fazer
-                                                doces
-                                                deliciosos. Aqui está uma receita simples de doce de casca de banana que
-                                                você
-                                                pode
-                                                experimentar:<br>
-                                                <b>Ingredientes:</b>
-                                            <ul>
-                                                <li>Casca de 4 bananas maduras</li>
-                                                <li>1 xícara de açúcar</li>
-                                                <li>Suco de 1 limão</li>
-                                                <li>1 xícara de água</li>
-                                                <li>Canela em pau (opcional)</li>
-                                            </ul>
-                                            <img src="../img/casca_banana.jpg" alt="Casca de banana aberta e jogada"
-                                                title="Casca de banana aberta e jogada" class="card-img"
-                                                style="max-height: 200px; object-fit: cover;">
-                                            <b>Instruções</b>
-                                            <ol>
-                                                <li>Lave bem as cascas de banana e remova qualquer sujeira ou resíduo.
-                                                    Corte as
-                                                    cascas em
-                                                    pedaços
-                                                    pequenos.</li>
-                                                <li>Em uma panela, adicione as cascas de banana cortadas, o açúcar, o
-                                                    suco de
-                                                    limão e a
-                                                    água. Se
-                                                    desejar, adicione um pedaço de canela em pau para dar um sabor
-                                                    extra.</li>
-                                                <li>Leve a panela ao fogo médio e deixe ferver. Em seguida, reduza o
-                                                    fogo para
-                                                    médio-baixo e
-                                                    cozinhe
-                                                    por
-                                                    cerca de 30 a 40 minutos, mexendo de vez em quando. As cascas de
-                                                    banana
-                                                    devem ficar
-                                                    macias e
-                                                    a
-                                                    calda
-                                                    deve engrossar.</li>
-                                                <li>Retire a canela em pau, se utilizada, e deixe o doce de casca de
-                                                    banana
-                                                    esfriar um
-                                                    pouco.
-                                                    Transfira o doce para um liquidificador ou processador de alimentos
-                                                    e bata
-                                                    até obter uma
-                                                    consistência de purê. Se preferir, você pode deixar alguns pedaços
-                                                    maiores
-                                                    para uma
-                                                    textura
-                                                    mais
-                                                    rústica.</li>
-                                                <li>Volte o doce à panela e leve ao fogo baixo por mais alguns minutos,
-                                                    mexendo
-                                                    sempre, para
-                                                    dar
-                                                    o
-                                                    ponto
-                                                    final.</li>
-                                                <li>Desligue o fogo e deixe o doce esfriar completamente antes de
-                                                    transferir
-                                                    para um pote de
-                                                    vidro
-                                                    com
-                                                    tampa. Armazene na geladeira.</li>
-                                                <li>O doce de casca de banana pode ser consumido puro, como
-                                                    acompanhamento para
-                                                    pães,
-                                                    torradas
-                                                    ou
-                                                    até
-                                                    mesmo como recheio de bolos e tortas. É uma forma criativa de
-                                                    aproveitar as
-                                                    cascas de
-                                                    banana,
-                                                    reduzindo o desperdício alimentar.</li>
-                                            </ol>
-                                            <img src="../img/doce_de_banana.jpg" alt="Doce de casca de banana"
-                                                title="Doce de casca de banana" class="card-img"
-                                                style="max-height: 200px; object-fit: cover;">
-                                            </p>
-                                        </div>
-
-                                        <div class="d-flex flex-align-row justify-content-around pb-3">
-                                            <div class="d-flex align-items-center justify-content-start">
-                                                <span class="material-symbols-outlined" alt="Compartilhar"
-                                                    title="Compartilhar">
-                                                    share
-                                                </span>
-                                                <span class="ps-2 d-none d-md-block">
-                                                    Compartilhar
-                                                </span>
-
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-start">
-                                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                                    mode_comment
-                                                </span>
-                                                <span class="ps-2 d-none d-md-block">
-                                                    Comentar
-                                                </span>
-                                            </div>
-                                            <div class="like-notfilled">
-                                                <div class="d-flex align-items-center justify-content-start">
-                                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                                        thumb_up
-                                                    </span>
-                                                    <span class="ps-2 d-none d-md-block">
-                                                        Curtir
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Segundo Posts -->
-                                    <div class="card mx-3 mt-3" style="max-width: 700px;">
-                                        <div class="card-header" style="background-color:#E3FFE0">
-                                            <div
-                                                class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
-                                                <div>
-                                                    <a href="../pages/profile_armando.html">
-                                                        <img src="../img/perfil_armando.jpg"
-                                                            alt="Foto de perfil do Armando"
-                                                            title="Foto de perfil do Armando" class="foto_perfil_post">
-                                                    </a>
-                                                </div>
-                                                <div class="px-3">
-                                                    <a href="../pages/profile_armando.html"
-                                                        style="color: black; text-decoration: none;">
-                                                        <div>Armando Silva</div>
-                                                    </a>
-                                                </div>
-                                                <div class="px-3" style="margin-left: auto;">
-                                                    15/04 às 10:12
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row py-1">
-                                                <div class="col-10 col-sm-11">
-                                                    <h5 class="card-title">Minhas lições de 6 meses de compostagem</h5>
-                                                </div>
-                                                <div class="col-2 col-sm-1">
-                                                    <i class="bi bi-star"></i>
-                                                </div>
-                                            </div>
-                                            <img src="../img/compostagem.jpg" alt="Mãos segurando terra"
-                                                title="Mãos segurando terra" class="card-img"
-                                                style="max-height: 200px; object-fit: cover;">
-                                            <p class="card-text mt-2">
-                                                A compostagem é um processo natural que transforma resíduos orgânicos em
-                                                composto orgânico
-                                                rico
-                                                em
-                                                nutrientes para o solo. Aqui estão as etapas básicas para fazer
-                                                compostagem em
-                                                casa:<br>
-                                            <ol>
-                                                <li>Escolha um local: Encontre um local adequado em seu jardim ou
-                                                    quintal para
-                                                    montar uma
-                                                    pilha
-                                                    de
-                                                    compostagem ou use uma composteira específica. Certifique-se de que
-                                                    o local
-                                                    tenha boa
-                                                    drenagem e
-                                                    acesso fácil.</li>
-                                                <li>Separe os resíduos: Separe os resíduos orgânicos da sua cozinha,
-                                                    como restos
-                                                    de frutas e
-                                                    legumes,
-                                                    borra de café, cascas de ovos, entre outros. Evite adicionar
-                                                    resíduos de
-                                                    origem animal,
-                                                    como
-                                                    carne e
-                                                    laticínios, pois podem atrair animais indesejados.</li>
-                                                <li>Adicione materiais secos: Acrescente materiais secos, como folhas
-                                                    secas,
-                                                    palha, serragem
-                                                    ou
-                                                    papel
-                                                    picado, para ajudar a equilibrar a umidade e fornecer aeração à
-                                                    pilha. É
-                                                    importante
-                                                    manter
-                                                    uma
-                                                    proporção equilibrada de resíduos verdes (ricos em nitrogênio) e
-                                                    materiais
-                                                    secos (ricos
-                                                    em
-                                                    carbono)
-                                                    para um processo eficiente de compostagem.</li>
-                                                <li>Misture os materiais: Misture os resíduos orgânicos com os materiais
-                                                    secos
-                                                    em camadas
-                                                    alternadas
-                                                    para garantir uma boa mistura. Você pode usar um garfo de jardim ou
-                                                    uma pá
-                                                    para ajudar
-                                                    na
-                                                    mistura.
-                                                    Mantenha a umidade adequada: A pilha de compostagem deve estar
-                                                    úmida, como
-                                                    uma esponja
-                                                    úmida,
-                                                    mas
-                                                    não encharcada. Se estiver muito seca, adicione um pouco de água. Se
-                                                    estiver
-                                                    muito
-                                                    úmida,
-                                                    adicione
-                                                    mais materiais secos para absorver o excesso de umidade.</li>
-                                                <li>Vire a pilha: Para acelerar o processo de compostagem, vire a pilha
-                                                    a cada
-                                                    duas semanas
-                                                    aproximadamente. Isso ajuda a aerar a pilha e acelera a decomposição
-                                                    dos
-                                                    resíduos.</li>
-                                                <li>Aguarde o processo: A compostagem leva tempo e pode variar de
-                                                    algumas
-                                                    semanas a vários
-                                                    meses,
-                                                    dependendo das condições e do tipo de resíduos utilizados. O
-                                                    composto estará
-                                                    pronto
-                                                    quando
-                                                    tiver
-                                                    uma
-                                                    aparência escura e ter uma textura semelhante a um solo rico e
-                                                    cheirar a
-                                                    terra.</li>
-                                                <li>Use o composto: O composto orgânico pode ser usado em seu jardim
-                                                    como um
-                                                    fertilizante
-                                                    natural
-                                                    para
-                                                    enriquecer o solo. Aplique-o nas plantas, misturando-o suavemente no
-                                                    solo ou
-                                                    use-o como
-                                                    cobertura na
-                                                    superfície.</li>
-                                                <li>Lembre-se de que a compostagem requer paciência e cuidados
-                                                    adequados. Evite
-                                                    adicionar
-                                                    resíduos
-                                                    não
-                                                    orgânicos, como plástico e metal, à pilha de compostagem. Também é
-                                                    importante não
-                                                    adicionar
-                                                    plantas
-                                                    doentes ou sementes de ervas daninhas, pois elas podem se espalhar
-                                                    pelo
-                                                    composto. Com um
-                                                    pouco
-                                                    de
-                                                    dedicação, você poderá aproveitar os benefícios da compostagem e
-                                                    reduzir a
-                                                    quantidade de
-                                                    resíduos
-                                                    orgânicos enviados para aterros sanitários.</li>
-                                            </ol>
-                                            </p>
-
-                                        </div>
-
-                                        <div class="d-flex flex-align-row justify-content-around pb-3">
-                                            <div class="d-flex align-items-center justify-content-start">
-                                                <span class="material-symbols-outlined" alt="Compartilhar"
-                                                    title="Compartilhar">
-                                                    share
-                                                </span>
-                                                <span class="ps-2 d-none d-md-block">
-                                                    Compartilhar
-                                                </span>
-
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-start">
-                                                <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
-                                                    mode_comment
-                                                </span>
-                                                <span class="ps-2 d-none d-md-block">
-                                                    Comentar
-                                                </span>
-                                            </div>
-                                            <div class="like-notfilled">
-                                                <div class="d-flex align-items-center justify-content-start">
-                                                    <span class="material-symbols-outlined" alt="Curtir" title="Curtir">
-                                                        thumb_up
-                                                    </span>
-                                                    <span class="ps-2 d-none d-md-block">
-                                                        Curtir
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div id="divPosts" class="col-md-10 col-lg-12 mx-auto">
+                                    <!-- Posts -->
                                 </div>
                             </div>
                         </div>
@@ -655,9 +311,9 @@
                         <!-- Alinhamento dos posts -->
                         <div class="d-flex justify-content-center">
                             <div style="max-width: 960px;">
-                                <div class="col-md-10 col-lg-12 mx-auto">
+                                <div id="divFavoritos" class="col-md-10 col-lg-12 mx-auto">
                                     <!-- Post favoritado -->
-                                    <div class="card mx-3 mt-3" style="max-width: 700px;">
+<div class="card mx-3 mt-3" style="max-width: 700px;">
                                         <div class="card-header" style="background-color:#E3FFE0">
                                             <div
                                                 class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">

@@ -13,6 +13,9 @@ function alterarFotoPerfil() {
     Object.values(document.getElementsByClassName("imagem_perfil")).forEach(item => {
         item.src = user.profileImg;
     });
+    Object.values(document.getElementsByName('profileLink')).forEach(item =>{
+        item.href = `../pages/perfil_usuario.html?key1=${user.id}`;
+    });
 }
 
 async function submitPost() {
@@ -33,7 +36,7 @@ async function submitPost() {
     setPost({
         id: postId,
         body: editor.innerHTML,
-        hour: new Date().toLocaleDateString(),
+        hour: new Date().getTime(),
         userId: user.id,
         name: user.nome,
         profileImg: user.profileImg,
@@ -69,7 +72,7 @@ function criaPost(post, count) {
                                 </a>
                             </div>
                             <div id="hour" class="px-3" style="margin-left: auto;">
-                                ${post.hour}
+                                ${new Date(post.hour).toLocaleDateString()}
                             </div>
                             <i class="bi bi-star"></i>
                         </div>
