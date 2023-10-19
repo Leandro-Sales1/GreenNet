@@ -6,7 +6,7 @@ validaLogin();
 async function loadUser(){
     let urlParams = new URLSearchParams(window.location.search);
     let user = await getUser(urlParams.get('key1'));
-    document.getElementById('background').style.backgroundImage = "url(../img/arvore.jpg)";
+    document.getElementById('background').style.backgroundImage = `url(${user.backgroundImage})`;
     document.getElementById('fotoPerfil').src = user.profileImg;
     document.getElementById('nome').innerHTML = user.nome;
     document.getElementById('idade').innerHTML = (new Date().getFullYear() - new Date(user.dataNascimento).getFullYear());

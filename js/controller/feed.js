@@ -42,9 +42,11 @@ async function submitPost() {
         profileImg: user.profileImg,
     });
     editor.innerHTML = "";
+    loadFeed();
 }
 
 async function loadFeed() {
+    document.getElementById("divPosts").innerHTML = "";
     let count = 0;
     (await getPost()).forEach(post => {
         let nodePost = document.createRange().createContextualFragment(criaPost(post, count));
