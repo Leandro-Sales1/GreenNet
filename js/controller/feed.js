@@ -170,39 +170,38 @@ export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed }
 
 
 const postPai = document.querySelector('#comentPai')
-const postFilho = document.createElement('section')
 const formPost = document.querySelector('#form_coment')
-const primeiroPost = document.querySelector('#primeiroComent')
-const listaComent = []
 
 formPost.addEventListener('submit', event => {
-    event.preventDefault()
-    console.log(event.target)
-    const texto = event.target[0].value
-    postFilho.innerHTML = `
+    event.preventDefault();
+    const texto = event.target[0].value;
+    document.getElementById("comment").value = "";
+    const user = JSON.parse(localStorage.getItem("user"))
+    const postFilho = `
     <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
         <div>
-            <a href="../pages/profile_armando.html">
-                <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
-                        title="Foto de perfil do Armando" class="foto_perfil_post">
+            <a href="./perfil_usuario.html?key1=${user.id}">
+                <img src="${user.profileImg}" alt="Foto da Bianca" title="Foto da Bianca"
+                    class="foto_perfil_post">
             </a>
         </div>
         <div class="px-3">
-            <a href="../pages/profile_armando.html" style="color: black; text-decoration: none;">
-                <div>Armando Silva</div>
-            </a>   
+            <div>
+                <a href="./perfil_usuario.html?key1=${user.id}" style="color: black; text-decoration: none;">
+                    <div>${user.nome}</div>
+                </a>
+            </div>
+            <div>
+                <small>
+                    ${texto}
+                </small>
+            </div>
         </div>
-    </div>
-        <div>
-            <small>
-               ${texto}
-            </small>
-        </div>`
-  
-
-    listaComent.unshift(postFilho)
-    listaComent.forEach(item =>
-        postPai.appendChild(item))
-
-    postPai.insertBefore(postFilho, primeiroPost)
+    </div>`
+    postPai.append(document.createRange().createContextualFragment(postFilho));
+    let list = Object.values(postPai.children);
+    postPai.innerHTML = "";
+    list.reverse().forEach(item =>{
+        postPai.append(item)
+    })
 })
