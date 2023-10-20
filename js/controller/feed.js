@@ -177,8 +177,9 @@ formPost.addEventListener('submit', event => {
     const texto = event.target[0].value;
     document.getElementById("comment").value = "";
     const user = JSON.parse(localStorage.getItem("user"))
+    let count = postPai.childElementCount + 1;
     const postFilho = `
-    <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+    <div name="${count}" class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
         <div>
             <a href="./perfil_usuario.html?key1=${user.id}">
                 <img src="${user.profileImg}" alt="Foto da Bianca" title="Foto da Bianca"
@@ -200,8 +201,11 @@ formPost.addEventListener('submit', event => {
     </div>`
     postPai.append(document.createRange().createContextualFragment(postFilho));
     let list = Object.values(postPai.children);
+    list.sort((a, b) => parseInt(a.getAttribute("name") - parseInt(b.getAttribute("name")))).reverse();
+
     postPai.innerHTML = "";
-    list.reverse().forEach(item =>{
+    list.forEach(item =>{
         postPai.append(item)
     })
+    console.log(list);
 })
