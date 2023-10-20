@@ -25,20 +25,69 @@
 
     <body>
 
-        <div class="topbar">
-            <section class="banner_top">
-                <div class="ps-2" alt="Seta para retornar para a página anterior"
-                    title="Seta para retornar para a página anterior">
-                    <a href="../pages/feed.html"><img src="../img/seta.svg"
-                            alt="Seta para retornar para a página anterior"
-                            title="Seta para retornar para a página anterior"></a>
+        <!--Header: Navbar-->
+        <div style="background-color:#3DCD58;">
+            <nav class="navbar bg-body-tertiary container-fluid d-flex flex-align-row justify-content-center align-items-center navbar-expand-xl"
+                style="max-width: 54.375rem;">
+                <div class="container-fluid "
+                    style="background-color:#3DCD58; min-height: 75px; margin-bottom: -1rem; margin-top: -1rem;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-brand mx-auto">
+                        <div>
+                            <h1 style="font-size: 25px; font-weight: 700;">GreenNet</h1>
+                        </div>
+                    </div>
+
+                    <div class="navbar-brand">
+                        <div class="d-lg-none">
+                            <a name="profileLink" href="#">
+                                <img src="../img/perfil.png" alt="imagem do perfil" title="Foto de perfil"
+                                    class="imagem_perfil">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header" style="background-color:#3DCD58; border-bottom: 1px solid black;">
+                            <div>
+                                <h1 style="font-size: 25px; font-weight: 700; ">GreenNet</h1>
+                            </div>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                    <a class="nav-link" aria-current="page" href="../pages/feed.html">Feed</a>
+                                </li>
+                                <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                    <a class="nav-link" href="../pages/games.html">Game</a>
+                                </li>
+                                <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                    <a class="nav-link" href="../pages/sobre_o_projeto.html">Sobre o Projeto</a>
+                                </li>
+                                <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                    <a class="nav-link" href="../pages/estatisticas.html">Estatísticas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-brand">
+                        <div class="d-none d-lg-block">
+                            <a name="profileLink" href="#">
+                                <img src="../img/perfil.png" alt="imagem do perfil" title="Foto de perfil"
+                                    class="imagem_perfil">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h1 class="banner_titulo ">GreenNet</h1>
-                </div>
-                <div class="pe-3">
-                </div>
-            </section>
+            </nav>
         </div>
 
         <div class="col-lg-6 mx-auto px-3" id="container-tamanho">
