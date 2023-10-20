@@ -19,6 +19,9 @@ body{
 
 
 
+.navbar{
+    --bs-navbar-padding-y: 0;
+}
 
 .banner_top{
     display: flex;

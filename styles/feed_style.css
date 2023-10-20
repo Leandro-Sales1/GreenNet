@@ -20,6 +20,11 @@ body{
     color: var(--cor_fonte_principal);
 }
 
+
+.navbar{
+    --bs-navbar-padding-y: 0;
+}
+
 .offcanvas{
     --bs-offcanvas-padding-y: 0.65rem;
 }
