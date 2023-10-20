@@ -177,6 +177,7 @@ const listaComent = []
 
 formPost.addEventListener('submit', event => {
     event.preventDefault()
+    console.log(event.target)
     const texto = event.target[0].value
     postFilho.innerHTML = `
     <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
