@@ -26,7 +26,7 @@ body{
 }
 
 .offcanvas{
-    --bs-offcanvas-padding-y: 0.65rem;
+    --bs-offcanvas-padding-y: 1.125rem;
 }
 
 
