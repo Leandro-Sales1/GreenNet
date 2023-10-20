@@ -13,7 +13,7 @@ function alterarFotoPerfil() {
     Object.values(document.getElementsByClassName("imagem_perfil")).forEach(item => {
         item.src = user.profileImg;
     });
-    Object.values(document.getElementsByName('profileLink')).forEach(item =>{
+    Object.values(document.getElementsByName('profileLink')).forEach(item => {
         item.href = `../pages/perfil_usuario.html?key1=${user.id}`;
     });
 }
@@ -167,3 +167,41 @@ function scrollToTopBtn() {
 }
 
 export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed }
+
+
+const postPai = document.querySelector('#comentPai')
+const postFilho = document.createElement('section')
+const formPost = document.querySelector('#form_coment')
+const primeiroPost = document.querySelector('#primeiroComent')
+const listaComent = []
+
+formPost.addEventListener('submit', event => {
+    event.preventDefault()
+    const texto = event.target[0].value
+    postFilho.innerHTML = `
+    <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+        <div>
+            <a href="../pages/profile_armando.html">
+                <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
+                        title="Foto de perfil do Armando" class="foto_perfil_post">
+            </a>
+        </div>
+        <div class="px-3">
+            <a href="../pages/profile_armando.html" style="color: black; text-decoration: none;">
+                <div>Armando Silva</div>
+            </a>   
+        </div>
+    </div>
+        <div>
+            <small>
+               ${texto}
+            </small>
+        </div>`
+  
+
+    listaComent.unshift(postFilho)
+    listaComent.forEach(item =>
+        postPai.appendChild(item))
+
+    postPai.insertBefore(postFilho, primeiroPost)
+})
