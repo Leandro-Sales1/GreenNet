@@ -5,7 +5,7 @@ const db = getDatabase(app);
 
 async function getPost() {
     let postRef = ref(db, '/post');
-    return Object.values((await get(query(postRef))).val()).sort((a, b) => (a.hour - b.hour));
+    return Object.values((await get(query(postRef))).val()).sort((a, b) => (a.hour - b.hour)).reverse();
 }
 
 
@@ -16,7 +16,7 @@ async function setPost(post) {
 
 async function getPostByUser(userId){
     let list = await get(query(ref(db, '/post'), orderByChild("userId"), equalTo(userId)));
-    return Object.values(list.val()).sort((a, b) => (a.hour - b.hour));
+    return Object.values(list.val()).sort((a, b) => (a.hour - b.hour)).reverse();
 }
 
 

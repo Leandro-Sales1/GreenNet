@@ -74,7 +74,7 @@ function criaPost(post, count) {
                                 </a>
                             </div>
                             <div id="hour" class="px-3" style="margin-left: auto;">
-                                ${new Date(post.hour).toLocaleDateString()}
+                                ${new Date(post.hour).toLocaleDateString()} às ${new Date(post.hour).getHours()}:${new Date(post.hour).getMinutes()}
                             </div>
                             <i class="bi bi-star"></i>
                         </div>
