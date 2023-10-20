@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/feed_style.css">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -23,32 +23,69 @@
 </head>
 
 <body>
-    
-    <div class="topbar">
-        <section class="banner_top">
-            <div class="ps-2">
-                <a href="../pages/feed.html"><img src="../img/seta.svg" alt="Seta para retornar para página anterior" title="Seta para retornar para página anterior"></a>
+
+    <!--Header: Navbar-->
+    <div style="background-color:#3DCD58;">
+        <nav class="navbar bg-body-tertiary container-fluid d-flex flex-align-row justify-content-center align-items-center navbar-expand-xl"
+            style="max-width: 54.375rem;">
+            <div class="container-fluid "
+                style="background-color:#3DCD58; min-height: 75px;">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand mx-auto">
+                    <div>
+                        <h1 style="font-size: 25px; font-weight: 700;">GreenNet</h1>
+                    </div>
+                </div>
+                
+                <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header" style="background-color:#3DCD58; border-bottom: 1px solid black;">
+                        <div>
+                            <h1 style="font-size: 25px; font-weight: 700; ">GreenNet</h1>
+                        </div>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" aria-current="page" href="../pages/feed.html">Feed</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="../pages/games.html">Game</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="../pages/sobre_o_projeto.html">Sobre o Projeto</a>
+                            </li>
+                            <li class="nav-item px-2" style="font-size: 18px; font-weight: 600;">
+                                <a class="nav-link" href="../pages/estatisticas.html">Estatísticas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h1 class="banner_titulo ">GreenNet</h1>
-            </div>
-            <div class="pe-3">
-            </div>
-        </section>
+        </nav>
     </div>
 
     <div class="imagem_de_fundo_1 pt-3">
         <div class="d-flex flex-column align-items-center justify-content-center">
             <div>
-                <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando" title="Foto de perfil do Armando" class="rounded-circle" alt="imagem do perfil" style="max-width: 200px; border: 1px solid black;">
+                <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando" title="Foto de perfil do Armando"
+                    class="rounded-circle" alt="imagem do perfil" style="max-width: 200px; border: 1px solid black;">
             </div>
             <div>
-              <h1 id="nome_perfil">Armando Silva</h1>
+                <h1 id="nome_perfil">Armando Silva</h1>
             </div>
         </div>
     </div>
     <main class="px-3  py-3">
-        <div class="d-flex justify-content-between align-items-center"> 
+        <div class="d-flex justify-content-between align-items-center">
             <div><b> 27 anos </b><span class="text-muted"> (ele/dele) </span></div>
             <div>
                 <span class="badge rounded-pill bg-success"> Streak: 150 pts</span>
@@ -57,9 +94,11 @@
         <div><b>Suporte de TI, 5 anos de Schneider</b></div>
         <div><b>Interessado em Jogos e Programacão</b></div>
         <div>
-            <b>Descrição:</b> Sou apaixonado pelo mundo dos games há muito tempo e desde a minha infância venho colecionando jogos, produtos e acessórios ao longo desses anos. Apesar de eu não me dedicar tanto a essa paixão, ainda sou um gamer entusiasta.
+            <b>Descrição:</b> Sou apaixonado pelo mundo dos games há muito tempo e desde a minha infância venho
+            colecionando jogos, produtos e acessórios ao longo desses anos. Apesar de eu não me dedicar tanto a essa
+            paixão, ainda sou um gamer entusiasta.
         </div>
-        
+
         <div class="mt-4">
             <ul class="nav nav-tabs d-flex justify-content-evenly" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -68,15 +107,17 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Curtidos</button>
+                        type="button" role="tab" aria-controls="profile-tab-pane"
+                        aria-selected="false">Curtidos</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                        type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Favoritos</button>
+                        type="button" role="tab" aria-controls="contact-tab-pane"
+                        aria-selected="false">Favoritos</button>
                 </li>
             </ul>
-        
-        
+
+
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                     tabindex="0">
@@ -87,7 +128,8 @@
                                 <!-- Primeiro Post -->
                                 <div class="card mx-3 mt-3" style="max-width: 700px;">
                                     <div class="card-header" style="background-color:#E3FFE0">
-                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div
+                                            class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                             <div>
                                                 <a href="../pages/profile_armando.html">
                                                     <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
@@ -105,7 +147,7 @@
                                             </div>
                                         </div>
                                     </div>
-        
+
                                     <div class="card-body">
                                         <div class="row py-1">
                                             <div class="col-10 col-sm-11">
@@ -117,7 +159,7 @@
                                                 <i class="bi bi-star"></i>
                                             </div>
                                         </div>
-        
+
                                         <p class="card-text">
                                             A casca de banana pode ser aproveitada de maneira criativa na cozinha,
                                             inclusive
@@ -206,16 +248,17 @@
                                             style="max-height: 200px; object-fit: cover;">
                                         </p>
                                     </div>
-        
+
                                     <div class="d-flex flex-align-row justify-content-around pb-3">
                                         <div class="d-flex align-items-center justify-content-start">
-                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                            <span class="material-symbols-outlined" alt="Compartilhar"
+                                                title="Compartilhar">
                                                 share
                                             </span>
                                             <span class="ps-2 d-none d-md-block">
                                                 Compartilhar
                                             </span>
-        
+
                                         </div>
                                         <div class="d-flex align-items-center justify-content-start">
                                             <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
@@ -237,11 +280,12 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <!-- Segundo Posts -->
                                 <div class="card mx-3 mt-3" style="max-width: 700px;">
                                     <div class="card-header" style="background-color:#E3FFE0">
-                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div
+                                            class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                             <div>
                                                 <a href="../pages/profile_armando.html">
                                                     <img src="../img/perfil_armando.jpg" alt="Foto de perfil do Armando"
@@ -386,18 +430,19 @@
                                                 orgânicos enviados para aterros sanitários.</li>
                                         </ol>
                                         </p>
-        
+
                                     </div>
-        
+
                                     <div class="d-flex flex-align-row justify-content-around pb-3">
                                         <div class="d-flex align-items-center justify-content-start">
-                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                            <span class="material-symbols-outlined" alt="Compartilhar"
+                                                title="Compartilhar">
                                                 share
                                             </span>
                                             <span class="ps-2 d-none d-md-block">
                                                 Compartilhar
                                             </span>
-        
+
                                         </div>
                                         <div class="d-flex align-items-center justify-content-start">
                                             <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
@@ -423,7 +468,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
                     <!-- Alinhamento dos posts -->
                     <div class="d-flex justify-content-center">
                         <div style="max-width: 960px;">
@@ -431,7 +477,8 @@
                                 <!-- Primeiro curtido -->
                                 <div class="card mx-3 mt-3" style="max-width: 700px;">
                                     <div class="card-header" style="background-color:#E3FFE0">
-                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div
+                                            class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                             <div>
                                                 <a href="../pages/profile_paulo.html">
                                                     <img src="../img/perfil_paulo2.jpg" alt="Foto de perfil do Paulo"
@@ -443,7 +490,7 @@
                                                     style="color: black; text-decoration: none;">
                                                     <div>Paulo Silveira</div>
                                                 </a>
-        
+
                                             </div>
                                             <div class="px-3" style="margin-left: auto;">
                                                 28/04 às 15:20
@@ -453,23 +500,28 @@
                                     <div class="card-body">
                                         <div class="row py-1">
                                             <div class="col-10 col-sm-11">
-                                                <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos</h5>
+                                                <h5 class="card-title">Hoje fiz petiscos ecológicos para os meus gatos
+                                                </h5>
                                             </div>
                                             <div class="col-2 col-sm-1">
                                                 <i class="bi bi-star"></i>
                                             </div>
                                         </div>
-        
-                                        <img src="../img/gato.jpg" alt="Gato malhado deitado" title="Gato malhado deitado"
-                                            class="card-img" style="max-height: 200px; object-fit: cover;">
+
+                                        <img src="../img/gato.jpg" alt="Gato malhado deitado"
+                                            title="Gato malhado deitado" class="card-img"
+                                            style="max-height: 200px; object-fit: cover;">
                                         <p class="card-text mt-2">
-                                            Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais cheios de
+                                            Aprendi uma receita de biscoito de carne fenomenal ao invés comerciais
+                                            cheios de
                                             conservantes,
                                             você
-                                            pode fazer seus próprios biscoitos de carne para gatos. Use carne moída orgânica,
+                                            pode fazer seus próprios biscoitos de carne para gatos. Use carne moída
+                                            orgânica,
                                             como carne
                                             de
-                                            frango ou carne de peru. Misture com um pouco de farinha de trigo integral e água
+                                            frango ou carne de peru. Misture com um pouco de farinha de trigo integral e
+                                            água
                                             para
                                             formar
                                             uma
@@ -480,16 +532,17 @@
                                             carne esteja completamente cozida antes de oferecer ao seu gato.
                                         </p>
                                     </div>
-        
+
                                     <div class="d-flex flex-align-row justify-content-around pb-3">
                                         <div class="d-flex align-items-center justify-content-start">
-                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                            <span class="material-symbols-outlined" alt="Compartilhar"
+                                                title="Compartilhar">
                                                 share
                                             </span>
                                             <span class="ps-2 d-none d-md-block">
                                                 Compartilhar
                                             </span>
-        
+
                                         </div>
                                         <div class="d-flex align-items-center justify-content-start">
                                             <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
@@ -512,11 +565,12 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <!-- Segundo curtido -->
                                 <div class="card mx-3 mt-3" style="max-width: 700px;">
                                     <div class="card-header" style="background-color:#E3FFE0">
-                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div
+                                            class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                             <div>
                                                 <a href="../pages/profile_maria_luiza.html">
                                                     <img src="../img/perfil_maria.jpg" alt="Foto de perfil da Maria"
@@ -585,16 +639,17 @@
                                             title="Patinho de borracha com espuma de banho" class="card-img"
                                             style="max-height: 200px; object-fit: cover;">
                                     </div>
-        
+
                                     <div class="d-flex flex-align-row justify-content-around pb-3">
                                         <div class="d-flex align-items-center justify-content-start">
-                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                            <span class="material-symbols-outlined" alt="Compartilhar"
+                                                title="Compartilhar">
                                                 share
                                             </span>
                                             <span class="ps-2 d-none d-md-block">
                                                 Compartilhar
                                             </span>
-        
+
                                         </div>
                                         <div class="d-flex align-items-center justify-content-start">
                                             <span class="material-symbols-outlined" alt="Comentar" title="Comentar">
@@ -620,7 +675,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                    tabindex="0">
                     <!-- Alinhamento dos posts -->
                     <div class="d-flex justify-content-center">
                         <div style="max-width: 960px;">
@@ -628,7 +684,8 @@
                                 <!-- Post favoritado -->
                                 <div class="card mx-3 mt-3" style="max-width: 700px;">
                                     <div class="card-header" style="background-color:#E3FFE0">
-                                        <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
+                                        <div
+                                            class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
                                             <div>
                                                 <a href="../pages/profile_maria_luiza.html">
                                                     <img src="../img/perfil_maria.jpg" alt="Foto de perfil de Maria"
@@ -656,8 +713,9 @@
                                                 <i class="bi bi-star-fill"></i>
                                             </div>
                                         </div>
-        
-                                        <img src="../img/smart_house.jpg" alt="Painel de controle de temperatura automático"
+
+                                        <img src="../img/smart_house.jpg"
+                                            alt="Painel de controle de temperatura automático"
                                             title="Painel de controle de temperatura automático" class="card-img"
                                             style="max-height: 200px; object-fit: cover;">
                                         <p class="card-text mt-2">
@@ -710,16 +768,17 @@
                                             reduzir os custos e tornar a construção mais acessível.
                                         </p>
                                     </div>
-        
+
                                     <div class="d-flex flex-align-row justify-content-around pb-3">
                                         <div class="d-flex align-items-center justify-content-start">
-                                            <span class="material-symbols-outlined" alt="Compartilhar" title="Compartilhar">
+                                            <span class="material-symbols-outlined" alt="Compartilhar"
+                                                title="Compartilhar">
                                                 share
                                             </span>
                                             <span class="ps-2 d-none d-md-block">
                                                 Compartilhar
                                             </span>
-        
+
                                         </div>
                                         <div class="d-flex align-items-center justify-content-start">
                                             <span class="material-symbols-outlined" alt="Comentar" title="Comentar">

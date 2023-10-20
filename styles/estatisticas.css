@@ -5,6 +5,10 @@
     background-image: url(../img/Statistics.png);
 }
 
+.navbar{
+    --bs-navbar-padding-y: 0;
+}
+
 .adm_title{
     margin: 0px;
     padding: 5px;
