@@ -463,9 +463,9 @@
                             <h2 class="modal-title fs-5" id="exampleModalLabel">Comentários</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body d-flex flex-column justify-content-center">
+                        <div id="comentPai" class="modal-body d-flex flex-column justify-content-center">
                             <!--primeiro comentário-->
-                            <div class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
+                            <div id="primeiroComent" class="d-flex flex-align-row align-items-top justify-content-start pb-2 mt-2">
                                 <div>
                                     <a href="../pages/profile_bianca_salazar.html">
                                         <img src="../img/perfil_bianca.jpg" alt="Foto da Bianca" title="Foto da Bianca"
@@ -514,6 +514,7 @@
                             </div>
                         </div>
                         <div class="modal-footer justify-content-center">
+                            <form id="form_coment">
                             <div class="input-group col">
                                 <textarea class="form-control" aria-label="With textarea"></textarea>
                             </div>
@@ -522,6 +523,7 @@
                                     send
                                 </span>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
