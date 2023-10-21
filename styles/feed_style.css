@@ -150,10 +150,11 @@ input[type="file"] {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        width: 477px;
     }
     .accordion_tablet{
-        margin: 0 auto;
-        max-width: 400px;
+        margin: 0 auto !important;
+        max-width: 477px;
     }
 }
 
