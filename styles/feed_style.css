@@ -156,8 +156,12 @@ input[type="file"] {
         width: 445.16px;
     }
     .accordion_tablet{
-        margin: 1 auto !important;
+        margin: 1rem auto !important;
         max-width: 477px;
+    }
+    .botao-post{
+        padding-right: 0 !important;
+        padding-left: 10px !important;
     }
 }
 
