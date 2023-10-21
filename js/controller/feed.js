@@ -32,17 +32,19 @@ async function submitPost() {
         count++;
     }
 
-    let user = JSON.parse(localStorage.getItem("user"));
-    setPost({
-        id: postId,
-        body: editor.innerHTML,
-        hour: new Date().getTime(),
-        userId: user.id,
-        name: user.nome,
-        profileImg: user.profileImg,
-    });
-    editor.innerHTML = "";
-    loadFeed();
+    if (editor.innerHTML != "<p><br></p>"){
+        let user = JSON.parse(localStorage.getItem("user"));
+        setPost({
+            id: postId,
+            body: editor.innerHTML,
+            hour: new Date().getTime(),
+            userId: user.id,
+            name: user.nome,
+            profileImg: user.profileImg,
+        });
+        editor.innerHTML = "";
+        loadFeed();
+    }
 }
 
 async function loadFeed() {
