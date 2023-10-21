@@ -145,6 +145,16 @@ input[type="file"] {
     .lista_menu{
     left: -5%;
     }    
+    .accordion-body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .accordion_tablet{
+        margin: 0 auto;
+        max-width: 400px;
+    }
 }
 
 
