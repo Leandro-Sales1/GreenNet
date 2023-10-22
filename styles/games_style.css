@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+    --cor_principal: #FCFFFA;
+    --cor_banner: #3DCD58;
+    --cor_banner_opacity: #3dcd5765;
+    --cor_botao: #4CDE17;
+    --cor_fundo_menu: #2F2F2F;
+    --cor_fonte_principal: #000000;
+    --cor_fonte_menu: #FCEEFA;
+    --cor_fundo_post: #E3FFE0;
+    --fonte_principal:'Inter', sans-serif;
+    --option_error: #cf1212;
+    --option_error_opacity: #cf12127a;
+}
+
+body{
+    background-color: var(--cor_principal);
+    font-family: var(--fonte_principal);
+    color: var(--cor_fonte_principal);
+}
+.accordion{
+    --bs-accordion-btn-focus-box-shadow: 0;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--cor_fonte_principal);
+    background-color: #E3FFE0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cor_banner);
+
+}
+main{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Games */
+.option{
+    padding: 5px;
+    border: 1px solid #3f3f3f4f;
+    border-radius: 5px;
+}
+.option:hover{
+    background-color: var(--cor_banner_opacity);
+    border-color: var(--cor_banner);
+    transition-duration: 1s;
+}
+.option.option_success{
+    background-color: var(--cor_banner_opacity);
+    border-color: var(--cor_banner);
+}
+
+.option.option_error{
+    background-color: var(--option_error_opacity);
+    border-color: var(--option_error);
+}
+
+.option.disable_hover{
+    pointer-events: none;  
+    opacity: 0.2;
+}
+
+.img_area{
+    padding: 0%;
+    margin: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game_title{
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    background-color: #e4e4e46b;
+    border-radius: 10px;
+}
+.img_area.game_foot{
+    background-image: url(../img/EcoEducation.png);
+}
+.img_area.game_head{
+    background-image: url(../img/Logic.png);
+}
+
+.game_forca_bg{
+    background-image: url(../img/forcaPB.png);
+    background-position: start;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.game_forca_bg .label{
+    position: absolute;
+    bottom: 0%;
+
+}
+
+.text_area{
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0px 6px 6px 1px #6666;
+    border: none;
+    border-radius: 5px;
+}
+.text_area:focus {
+    outline: none;
+}
+
