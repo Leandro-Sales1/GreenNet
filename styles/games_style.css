@@ -27,6 +27,14 @@ body{
     background-color: #E3FFE0;
 }
 
+.navbar{
+    --bs-navbar-padding-y: 0;
+}
+
+.offcanvas{
+    --bs-offcanvas-padding-y: 1.125rem;
+}
+
 header{
     display: flex;
     flex-direction: row;
