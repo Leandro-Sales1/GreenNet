@@ -35,7 +35,6 @@ const _listaPalavraChave = [
     "ecologia",
     "reciclagem",
     "energia renovavel",
-    "desenvolvimento sustentavel",
     "conservaçao",
     "meio ambiente",
     "carbono neutro",
@@ -54,7 +53,6 @@ const _listaPalavraChave = [
     "responsabilidade social",
     "mudanças climaticas",
     "proteçao ambiental",
-    "sistema de transporte sustentavel",
     "consumo consciente",
     "gestao de resíduos",
     "compostagem",
@@ -69,12 +67,12 @@ const _listaPalavraChave = [
     "tecnologias verdes",
     "pegada de carbono",
     "tratamento de agua",
-    "proteçao da vida selvagem",
     "poluiçao do ar",
 ];
 var _restante = 10;
 var _palavraChave = "";
 var _acertos = [];
+var _erros = "Não contém: "
 
 // ----> Tentativas
 document.getElementById("tentativa").addEventListener('keydown', function (event) {
@@ -99,7 +97,7 @@ function iniciar() {
     criaLacunas();
 }
 function selecionaPalavraChave() {
-    _palavraChave = _listaPalavraChave[(Math.floor(Math.random() * _listaPalavraChave.length))];
+    _palavraChave = _listaPalavraChave[(Math.floor(Math.random() * _listaPalavraChave.length))].toLowerCase();
 }
 
 
@@ -111,13 +109,14 @@ function realizaTentativa() {
     validaTentativa();
 }
 function validaTentativa() {
-    let value = document.getElementById("tentativa").value;
+    let value = document.getElementById("tentativa").value.toLowerCase();
 
     if (value.length > 1 && value == _palavraChave) {
         return exibeMensagensForca("Parabens! Voce adivinhou a palavra chave! Tente novamente e some mais pontos.");
     }
     else if (value.length > 1) {
         reduzRestanteTentativas();
+        adicionaListErros(value);
     }
     else if (_palavraChave.includes(value)) {
         for (let i = 0; i < _palavraChave.length; i++) {
@@ -128,6 +127,7 @@ function validaTentativa() {
     }
     else {
         reduzRestanteTentativas();
+        adicionaListErros(value);
     }
     document.getElementById("tentativa").value = '';
 
@@ -137,6 +137,11 @@ function validaTentativa() {
 }
 function reduzRestanteTentativas() {
     document.getElementById("restante").innerHTML = --_restante;
+
+}
+function adicionaListErros(tentativa){
+    _erros += `${tentativa}-`;
+    document.getElementById("erros").innerHTML = _erros;    
 }
 function exibeMensagensForca(message) {
     document.getElementById("text-modal-forca").innerHTML = message;
@@ -147,9 +152,12 @@ function reinicia(){
     _restante = 10;
     _palavraChave = "";
     _acertos = [];
+    _erros = "Não contém: ";
     document.getElementById("restante").innerHTML = "";
     document.getElementById("lacunas").innerHTML = "";
-    let tentativa = document.getElementById("tentativa");
+    document.getElementById("erros").innerHTML = ""
+
+    let tentativa = document.getElementById('tentativa');
     tentativa.value = "";
     tentativa.disabled = true;
     tentativa.placeholder = "";
