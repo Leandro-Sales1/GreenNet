@@ -1,5 +1,5 @@
 import { validaLogin, newGuid } from "../Infrastructure/utils.js";
-import { setPost, getPost } from "../Infrastructure/post.js";
+import { setPost, getPost, deletePost} from "../Infrastructure/post.js";
 import { getImageURL, setImage } from "../Infrastructure/image.js";
 
 
@@ -129,6 +129,10 @@ function criaPost(post, count) {
             </div>`
 }
 
+async function removeAllPosts(){
+    await deletePost();
+    loadFeed();
+}
 
 function itemsAnimation() {
     const estrela = document.querySelectorAll(".bi-star")
@@ -168,7 +172,7 @@ function scrollToTopBtn() {
     });
 }
 
-export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed }
+export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed, removeAllPosts}
 
 
 const postPai = document.querySelector('#comentPai')
