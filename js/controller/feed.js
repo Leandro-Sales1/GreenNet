@@ -165,6 +165,7 @@ function itemsAnimation() {
         )
     })
 }
+
 function scrollToTopBtn() {
     window.scrollTo({
         top: 0,
@@ -172,7 +173,12 @@ function scrollToTopBtn() {
     });
 }
 
-export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed, removeAllPosts}
+function clickBtnSair(){
+    localStorage.removeItem('user');
+    window.location.href = "../index.html";
+}
+
+export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed, removeAllPosts, clickBtnSair }
 
 
 const postPai = document.querySelector('#comentPai')
