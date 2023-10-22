@@ -9,7 +9,6 @@
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/feed_style.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
@@ -18,9 +17,11 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link rel="stylesheet" href="../styles/perfil.css">
         <script type="module">
-            import { loadUser } from "../js/controller/perfil.js";
+            import { loadUser, edit } from "../js/controller/perfil.js";
             loadUser();
+            window.edit = edit;
         </script>
     </head>
 
@@ -29,8 +30,7 @@
         <div style="background-color:#3DCD58;">
             <nav class="navbar bg-body-tertiary container-fluid d-flex flex-align-row justify-content-center align-items-center navbar-expand-xl"
                 style="max-width: 54.375rem;">
-                <div class="container-fluid "
-                    style="background-color:#3DCD58; min-height: 75px;">
+                <div class="container-fluid " style="background-color:#3DCD58; min-height: 75px;">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                         aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                             <h1 style="font-size: 25px; font-weight: 700;">GreenNet</h1>
                         </div>
                     </div>
-                    
+
                     <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header" style="background-color:#3DCD58; border-bottom: 1px solid black;">
@@ -77,29 +77,43 @@
         <div id="background" class="imagem_de_fundo pt-3">
             <div class="d-flex flex-column align-items-center justify-content-center">
                 <div class="mb-1">
-                    <img id="fotoPerfil" src="../img/perfil.png" alt="Foto de perfil"
-                        title="Foto de perfil" class="rounded-circle" alt="imagem do perfil"
+                    <img id="fotoPerfil" src="../img/perfil.png" alt="Foto de perfil" title="Foto de perfil"
+                        class="rounded-circle" alt="imagem do perfil"
                         style="max-width: 100px; border: 1px solid black;">
                 </div>
                 <div>
-                    <h1 class="pb-1 px-1" style="color: white; background-color: rgba(0, 0, 0, 0.281); border-radius: 5px;" id="nome"></h1>
+                    <h1 class="pb-1 px-1"
+                        style="color: white; background-color: rgba(0, 0, 0, 0.281); border-radius: 5px;" id="nome">
+                    </h1>
                 </div>
             </div>
         </div>
-        <main class="px-3  py-3 ">
-            <div><b>Idade: </b><span id="idade"></span></div>
-            <div><b>Pronomes: </b><span id="pronome"></span></div>
-            <div><b>Cidade: </b><span id="cidade"></span></div>
-            <div><b>Função: </b><span id="funcao"></span></div>
-            <div><b>Tempo de Schneider: </b><span id="tempoEmpresa"></span></div>
-            <div>
-                <b>Descrição:</b>
-                <span id="descricao"></span>
+        <main class="py-3 border rounded-bottom">
+            <div class="px-3">
+                <div class="my-1"><b>Idade: </b><label style="color: rgb(84, 84, 84);" id="idade"></input></div>
+                <div class="my-1"><b>Tempo de Schneider: </b><label style="color: rgb(84, 84, 84);" id="tempoEmpresa"></input></div>
+                <div class="my-1"><b>Cidade: </b><input disabled class="input" id="cidade"></input></div>
+                <div class="my-1"><b>Função: </b><input disabled class="input" id="funcao"></input></div>
+                <div class="my-1">
+                    <b>Descrição:</b>
+                    <textarea id="descricao" disabled class="input"></textarea>
+                </div>
+                <button id="btnEditar" onclick="edit(document.getElementById('cidade').hasAttribute('disabled'))" type="button"
+                    class="btn btn-success btn-lg mt-3" style="background-color: var(--cor_botao); border: 0em;">
+                    Editar ✒️
+                </button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <strong class="me-auto">Alterações salvas!</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Agora seu perfil esta atualizado.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="../pages/alterar_perfil_usuario.html">
-                <button type="button" class="btn btn-success btn-lg mt-3"
-                    style="background-color: var(--cor_botao); border: 0em;" onclick="salvar()">Editar ✒️</button>
-            </a>
 
             <div class="mt-4">
                 <ul class="nav nav-tabs d-flex justify-content-evenly" id="myTab" role="tablist">
@@ -468,7 +482,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../js/controller/edicao.js"></script>
     </body>
 
 </html>

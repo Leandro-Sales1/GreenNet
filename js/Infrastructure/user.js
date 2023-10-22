@@ -20,6 +20,15 @@ async function setUser(user){
     await set(uRef,user);
 }
 
+async function editUser(user){
+    let userRef = ref(db, `user/${user.id}`);
+    await update(userRef,{
+        cidade: user.cidade,
+        funcao: user.funcao,
+        descricao: user.descricao
+    })
+}
+
 
 async function alterarSenha(email){
     let novaSenha = newPassword();
@@ -31,4 +40,4 @@ async function alterarSenha(email){
     return novaSenha;
 }
 
-export {getAllUser, alterarSenha, setUser, getUser}
+export {getAllUser, alterarSenha, setUser, getUser, editUser}

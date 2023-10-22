@@ -1,20 +1,21 @@
 import { getPostByUser } from '../Infrastructure/post.js'
-import {getUser} from '../Infrastructure/user.js'
+import {getUser, editUser} from '../Infrastructure/user.js'
 import { validaLogin } from "../Infrastructure/utils.js";
 validaLogin();
+var urlParams = new URLSearchParams(window.location.search);
+var user = await getUser(urlParams.get('key1'));
 
 async function loadUser(){
-    let urlParams = new URLSearchParams(window.location.search);
-    let user = await getUser(urlParams.get('key1'));
+
     document.getElementById('background').style.backgroundImage = `url(${user.backgroundImage})`;
     document.getElementById('fotoPerfil').src = user.profileImg;
     document.getElementById('nome').innerHTML = user.nome;
-    document.getElementById('idade').innerHTML = (new Date().getFullYear() - new Date(user.dataNascimento).getFullYear());
-    document.getElementById('pronome').innerHTML = user.pronome;
-    document.getElementById('cidade').innerHTML = user.cidade;
-    document.getElementById('funcao').innerHTML = user.funcao;
-    document.getElementById('tempoEmpresa').innerHTML = (new Date().getFullYear() - new Date(user.dataContratacao).getFullYear());
-    document.getElementById('descricao').innerHTML = user.descricao;
+
+    document.getElementById('idade').innerHTML = (new Date().getFullYear() - new Date(user.dataNascimento).getFullYear()) + ' anos';
+    document.getElementById('tempoEmpresa').innerHTML = (new Date().getFullYear() - new Date(user.dataContratacao).getFullYear()) + ' anos';
+    document.getElementById('cidade').value = user.cidade;
+    document.getElementById('funcao').value = user.funcao;
+    document.getElementById('descricao').value = user.descricao
 
     let count = 0;
     (await getPostByUser(user.id)).forEach(post => {
@@ -84,4 +85,31 @@ function criaPost(post, count) {
                 </div>
             </div>`
 }
-export { loadUser };
+
+async function edit(disabled){
+    if(disabled){
+        document.getElementById('cidade').removeAttribute('disabled');
+        document.getElementById('funcao').removeAttribute('disabled');
+        document.getElementById('descricao').removeAttribute('disabled');
+        document.getElementById('btnEditar').innerHTML = 'Salvar ✒️'
+    }
+    else{
+        let cidade = document.getElementById('cidade');
+        let funcao = document.getElementById('funcao');
+        let descricao = document.getElementById('descricao');
+
+        await editUser({id: user.id, cidade: cidade.value, funcao: funcao.value, descricao: descricao.value});
+        cidade.setAttribute('disabled', 'true');
+        funcao.setAttribute('disabled', 'true');
+        descricao.setAttribute('disabled', 'true');
+        
+        let btnEditar = document.getElementById('btnEditar');
+        btnEditar.innerHTML = 'Editar ✒️';
+
+        const toastLiveExample = document.getElementById('liveToast')
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastBootstrap.show()
+    }
+    
+}
+export { loadUser, edit};
