@@ -48,11 +48,15 @@
                 </div>
 
                 <div class="navbar-brand">
-                    <div class="d-lg-none">
-                        <a name="profileLink" href="#">
-                            <img src="../img/perfil.png" alt="imagem do perfil" title="Foto de perfil"
-                                class="imagem_perfil">
+                    <div class="dropdown d-lg-none">
+                        <a class="ropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            <img src="../img/perfil.png" alt="imagem do perfil" title="Foto de perfil" class="imagem_perfil">
                         </a>
+                    
+                        <ul class="dropdown-menu">
+                            <li><a name="profileLink" class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="clickBtnSair()">Sair</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar"
@@ -83,7 +87,7 @@
                     </div>
                 </div>
                 <div class="navbar-brand">
-                    <div class="dropdown ">
+                    <div class="dropdown d-none d-lg-block">
                         <a class="ropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
                             <img src="../img/perfil.png" alt="imagem do perfil" title="Foto de perfil" class="imagem_perfil">
                         </a>
