@@ -1,5 +1,6 @@
 import { getDatabase, set, get, query, ref, equalTo, orderByChild, remove} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import app from "./dbConfig.js";
+import { removeImage } from "./image.js"
 
 const db = getDatabase(app);
 
@@ -20,12 +21,16 @@ async function getPostByUser(userId){
 
 async function deletePost(){
     let list = await getPost();
-    for (const item of list) {
-        if(item.id != 'default'){
-            let uRef = ref(db, `post/${item.id}`)
+    for (const post of list) {
+        if (post.id != 'default'){
+            let uRef = ref(db, `post/${post.id}`)
             await remove(uRef);
+            for (let i = 1; i < post.countImg; i++) {
+                await removeImage(post.id, i);
+            }
         }
     }
+
 }
 
 export { getPost, setPost, getPostByUser, deletePost}

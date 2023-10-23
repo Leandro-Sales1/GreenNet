@@ -18,7 +18,12 @@ function alterarFotoPerfil() {
     });
 }
 
-async function submitPost() {
+async function createPost() {
+    document.getElementById("spanEnviar").innerHTML = `
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>`;
+
     let postId = newGuid();
     let editor = document.getElementsByClassName("ql-editor").item(0);
 
@@ -41,17 +46,26 @@ async function submitPost() {
             userId: user.id,
             name: user.nome,
             profileImg: user.profileImg,
+            countImg: count
         });
         editor.innerHTML = "";
         loadFeed();
     }
+
+    document.getElementById("spanEnviar").innerHTML = `
+    <span class="material-symbols-outlined ">
+        send
+    </span>
+    <span class="px-2 d-none d-md-block">
+        Enviar
+    </span>`;
 }
 
 async function loadFeed() {
     document.getElementById("divPosts").innerHTML = "";
     let count = 0;
     (await getPost()).forEach(post => {
-        let nodePost = document.createRange().createContextualFragment(criaPost(post, count));
+        let nodePost = document.createRange().createContextualFragment(montaPost(post, count));
         document.getElementById("divPosts").appendChild(nodePost);
 
         count++;
@@ -59,7 +73,7 @@ async function loadFeed() {
     itemsAnimation();
 }
 
-function criaPost(post, count) {
+function montaPost(post, count) {
     return `<div class="card mx-3 mt-3" style="max-width: 700px;">
                     <div class="card-header" style="background-color:#E3FFE0">
                         <div class="d-flex flex-align-row align-items-center justify-content-start pb-2 mt-2">
@@ -178,7 +192,7 @@ function clickBtnSair(){
     window.location.href = "../index.html";
 }
 
-export { onEnterPage, scrollToTopBtn, itemsAnimation, submitPost, loadFeed, removeAllPosts, clickBtnSair }
+export { onEnterPage, scrollToTopBtn, itemsAnimation, createPost, loadFeed, removeAllPosts, clickBtnSair }
 
 
 const postPai = document.querySelector('#comentPai')

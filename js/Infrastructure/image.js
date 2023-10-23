@@ -1,4 +1,4 @@
-import { getStorage, ref, uploadString, listAll, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
+import { getStorage, ref, uploadString, listAll, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
 import app from "./dbConfig.js";
 
 const storage = getStorage(app);
@@ -27,4 +27,8 @@ async function getImageURL(postId, imgId) {
     return await getDownloadURL(fileRef);
 }
 
-export { setImage, getImage, getImageURL}
+async function removeImage(postId, imgId){
+    await deleteObject(ref(storage, `posts/${postId}/${imgId}`));
+}
+
+export { setImage, getImage, getImageURL, removeImage }
