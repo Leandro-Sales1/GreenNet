@@ -1,5 +1,9 @@
 import {getAllUser} from "../Infrastructure/user.js";
 
+if (localStorage.getItem("user")) {
+    window.location.href = "../pages/feed.html";
+}
+
 async function login() {
     let email = document.getElementById("Email");
     let senha = document.getElementById("Password");
