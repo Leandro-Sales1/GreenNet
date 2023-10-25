@@ -178,7 +178,257 @@ function criaLacunas() {
 
 // --------------------- TERMO -------------------- \\
 var _palavrasEco = [
+    'SAGAZ',
+    'AMAGO',
+    'NEGRO',
+    'TERMO',
+    'EXITO',
+    'MEXER',
+    'NOBRE',
+    'SENSO',
+    'AFETO',
+    'ALGOZ',
+    'ETICA',
+    'PLENA',
+    'MUTUA',
+    'TENUE',
+    'FAZER',
+    'ASSIM',
+    'SUTIL',
+    'VIGOR',
+    'AQUEM',
+    'POREM',
+    'SECAO',
+    'FOSSE',
+    'SANAR',
+    'PODER',
+    'AUDAZ',
+    'IDEIA',
+    'CERNE',
+    'INATO',
+    'MORAL',
+    'SOBRE',
+    'DESDE',
+    'MUITO',
+    'JUSTO',
+    'HONRA',
+    'QUICA',
+    'TORPE',
+    'SONHO',
+    'RAZAO',
+    'FUTIL',
+    'ETNIA',
+    'ICONE',
+    'ANEXO',
+    'AMIGO',
+    'EGIDE',
+    'TANGE',
+    'LAPSO',
+    'HAVER',
+    'EXPOR',
+    'MUTUO',
+    'DENGO',
+    'TEMPO',
+    'CASAL',
+    'ENTAO',
+    'HABIL',
+    'SEARA',
+    'BOCAL',
+    'ARDIL',
+    'AVIDO',
+    'PESAR',
+    'SABER',
+    'CAUSA',
+    'GRACA',
+    'DIZER',
+    'GENRO',
+    'OBICE',
+    'POSSE',
+    'COSER',
+    'PARIA',
+    'DEVER',
+    'BRADO',
+    'TENAZ',
+    'PROLE',
+    'CRIVO',
+    'SENDO',
+    'CORJA',
+    'COMUM',
+    'TEMOR',
+    'DETEM',
+    'AINDA',
+    'ANIMO',
+    'APICE',
+    'ANSIA',
+    'CEDER',
     'ESTAR',
+    'DIGNO',
+    'PAUTA',
+    'ASSAZ',
+    'XIBIU',
+    'CULTO',
+    'MUNDO',
+    'ATROZ',
+    'FUGAZ',
+    'CENSO',
+    'GLEBA',
+    'FORTE',
+    'VICIO',
+    'VULGO',
+    'COZER',
+    'VALHA',
+    'DENSO',
+    'NENEM',
+    'REVES',
+    'PUDOR',
+    'CRIAR',
+    'DOGMA',
+    'SAUDE',
+    'REGRA',
+    'LOUCO',
+    'JEITO',
+    'MESMO',
+    'ATRAS',
+    'CLAVA',
+    'ORDEM',
+    'BANAL',
+    'IMPOR',
+    'MERCE',
+    'PEDIR',
+    'HOMEM',
+    'FELIZ',
+    'TODOS',
+    'APRAZ',
+    'COISA',
+    'USURA',
+    'TENRO',
+    'DESSE',
+    'SABIO',
+    'PIFIO',
+    'JUIZO',
+    'SERVO',
+    'LIMBO',
+    'PROSA',
+    'FORMA',
+    'PRESA',
+    'FALAR',
+    'VIRIL',
+    'ONTEM',
+    'CUNHO',
+    'REACA',
+    'DEVIR',
+    'MANSO',
+    'POSSO',
+    'MEIGA',
+    'CERTO',
+    'VENDO',
+    'HEROI',
+    'VALOR',
+    'FLUIR',
+    'EBRIO',
+    'MAGOA',
+    'AFAGO',
+    'SERIO',
+    'ACASO',
+    'PLATO',
+    'PUDER',
+    'VISAR',
+    'GUISA',
+    'LUGAR',
+    'FALSO',
+    'TEMER',
+    'FACIL',
+    'LEGAL',
+    'GARBO',
+    'IMPIO',
+    'ABRIR',
+    'AFINS',
+    'CISMA',
+    'PLENO',
+    'BRUMA',
+    'OBVIO',
+    'GERAR',
+    'OBTER',
+    'MATIZ',
+    'EXODO',
+    'CRISE',
+    'PRAXE',
+    'BURRO',
+    'LINDA',
+    'FLUXO',
+    'SENIL',
+    'VENIA',
+    'UNIAO',
+    'HAVIA',
+    'TEDIO',
+    'ENFIM',
+    'RITMO',
+    'TOMAR',
+    'VISAO',
+    'AJUDA',
+    'MORTE',
+    'ALIBI',
+    'OLHAR',
+    'BREGA',
+    'PARVO',
+    'LEVAR',
+    'GENIO',
+    'CASTA',
+    'FAVOR',
+    'BRAVO',
+    'PULHA',
+    'PRUMO',
+    'VITAL',
+    'RETER',
+    'VALIA',
+    'RELES',
+    'PARCO',
+    'VIVAZ',
+    'GRATO',
+    'FALTA',
+    'LAICO',
+    'TECER',
+    'POSSA',
+    'SABIA',
+    'AMENO',
+    'CABAL',
+    'OUVIR',
+    'NOCAO',
+    'RANCO',
+    'CARMA',
+    'VIVER',
+    'CALMA',
+    'NICHO',
+    'PASSO',
+    'OBITO',
+    'ACHAR',
+    'PRIME',
+    'FORCA',
+    'NOITE',
+    'OUTRO',
+    'FATOR',
+    'SELAR',
+    'FACAM',
+    'ROGAR',
+    'TENDO',
+    'POBRE',
+    'FARDO',
+    'ANELO',
+    'UNICO',
+    'COESO',
+    'FARSA',
+    'ATIVO',
+    'EPICO',
+    'TERRA',
+    'REVER',
+    'CITAR',
+    'SINTO',
+    'DUBIO',
+    'CISAO',
+    'ADIAR',
+    'SONSO',
+    'CIUME',
+    'TESTE',
     'JOVEM',
     'AGUAS',
     'FLORA',
@@ -196,26 +446,21 @@ var _palavrasEco = [
     'CHUVA',
     'PRAIA',
     'FUNGI',
-    'VITAL',
     'UMIDO',
     'VENTO',
     'SERRA',
     'REUSO',
     'ARIDA',
-    'NOITE',
     'SERES',
     'LIRIO',
-    'VIVER',
     'OASIS',
     'VIVEU',
     'PAZES',
     'FOLIA',
-    'LIDER', 
+    'LIDER',
     'JOIAS',
-    'GRATO',
     'CHAMA',
-    'HEROI',
-    'PRAÇA',
+    'PRACA',
     'DOCES',
     'FESTA',
     'GORDO',
@@ -225,7 +470,46 @@ var _palavrasEco = [
     'KIWIS',
     'LIMAO',
     'CANTO',
+    'PUDIM',
+    'BATAL',
+    'LIGAR',
+    'FUGIR',
+    'SALTO',
+    'RADAR',
+    'LARGO',
+    'CHAVE',
+    'LENDA',
+    'IMPAR',
+    'BONUS',
+    'ALBUM',
+    'ESTIO',
+    'TURBO',
+    'NODOA',
+    'SORTE',
+    'FERRO',
+    'PIQUE',
+    'CHORO',
+    'QUEDA',
+    'MUMIA',
+    'NORTE',
+    'SULCO',
+    'CHUTE',
+    'LAPIS',
+    'ATOMO',
+    'TALAO',
+    'PLANT',
+    'BIODA',
+    'RENOV',
+    'COMPO',
+    'RESIN',
+    'ECOLO',
+    'MELGA',
+    'PARAR',
+    'BICHO',
+    'LUTAR',
+    'BEMOL'
 ];
+
 var _termo = [];
 var _restanteTermo = 6;
 var tentativa01 = document.getElementsByName('tentativa01');
@@ -243,11 +527,11 @@ document.getElementById("form").addEventListener('keydown', function (event) {
 let list = document.getElementById("form").getElementsByTagName("input");
 for (let i = 0; i < list.length; i++) {
     list[i].addEventListener('keyup', function (event) {
-        if(event.key == 'Backspace' && i != 0)
+        if (event.key == 'Backspace' && i != 0)
             list[(i - 1)].focus();
         else if (event.key != "Enter" && event.key != "Tab" && event.key != "Shift" && event.key != "Control" && i != 29)
             list[(i + 1)].focus();
-    }); 
+    });
 }
 
 
@@ -259,8 +543,13 @@ function initTermo() {
 function validaTermo(tentativaAtual) {
     let palavra = tolist(tentativaAtual);
 
-    if (palavra.length < 5){
+    if (palavra.length < 5) {
         exibeMensagensTermo("Aviso!", "Apenas palavras com 5 letras!", '#fa6a64', false);
+        return;
+    }
+
+    if (!_palavrasEco.includes(palavra.join(''))) {
+        exibeMensagensTermo("Aviso!", "Palavra desconhecida!", '#fa6a64', false);
         return;
     }
 
@@ -268,18 +557,15 @@ function validaTermo(tentativaAtual) {
     for (let i = 0; i < 5; i++) {
         if (palavra[i] == _termo[i]) {
             tentativaAtual.item(i).style.backgroundColor = '#E3FFE0';
-            acertos.push(i);
+            acertos;
         }
-    }
-
-    for (let i = 0; i < 5; i++) {
-        if (_termo.includes(palavra[i]) && !acertos.includes(i)) {
+        else if (_termo.includes(palavra[i])) {
             tentativaAtual.item(i).style.backgroundColor = '#ffe9af';
         }
     }
 
-    if(palavra.toString() == _termo.toString()){
-        exibeMensagensTermo("Termo concluído.", "Parabéns! Você ganhou!", '#E3FFE0', true );
+    if (palavra.toString() == _termo.toString()) {
+        exibeMensagensTermo("Termo concluído.", "Parabéns! Você ganhou!", '#E3FFE0', true);
         reiniciaTermo();
         return;
     }
@@ -288,7 +574,7 @@ function validaTermo(tentativaAtual) {
     _restanteTermo--;
     desabilitarTentativas(_restanteTermo, false);
 
-    if (_restanteTermo == 0){
+    if (_restanteTermo == 0) {
         exibeMensagensTermo("Que pena!", "Não foi dessa vez... tente novamente o quanto quiser!", '#ffe9af', true);
         reiniciaTermo();
         return;
@@ -299,7 +585,7 @@ function validaTermo(tentativaAtual) {
 function tolist(nodeList) {
     let list = [];
     for (const item of nodeList) {
-        if(item.value != "")
+        if (item.value != "")
             list.push(item.value.toUpperCase());
     }
     return list;
@@ -313,10 +599,10 @@ function desabilitarTentativas(restantes, desabilitar, limpar) {
             for (const item of tentativa01) {
                 item.disabled = desabilitar;
 
-                if(!desabilitar && item == tentativa01.item(0))
+                if (!desabilitar && item == tentativa01.item(0))
                     item.focus();
 
-                if(limpar){
+                if (limpar) {
                     item.value = "";
                     item.style.backgroundColor = '';
                 }
@@ -341,7 +627,7 @@ function desabilitarTentativas(restantes, desabilitar, limpar) {
 
                 if (!desabilitar && item == tentativa03.item(0))
                     item.focus();
-                
+
                 if (limpar) {
                     item.value = "";
                     item.style.backgroundColor = '';
@@ -409,20 +695,20 @@ function retornaTentativaAtual(restantes) {
             break;
     }
 }
-function reiniciaTermo(){
+function reiniciaTermo() {
     document.getElementById('btnInicarTermo').disabled = false;
     _restanteTermo = 6;
     _termo = [];
-    for (let i = 1; i <= 6; i++) 
+    for (let i = 1; i <= 6; i++)
         desabilitarTentativas(i, true, true);
 }
-function exibeMensagensTermo(titulo, menssagem, color, status){
+function exibeMensagensTermo(titulo, menssagem, color, status) {
     document.getElementById("bodyTermo").innerHTML = menssagem;
     document.getElementById("titleTermo").innerHTML = titulo;
     document.getElementById("liveToast").style.backgroundColor = color;
     if (status)
         document.getElementById("resultTermo").innerHTML = "O termo era: " + _termo.join('');
-    
+
 
     const toastLiveExample = document.getElementById('liveToast')
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
