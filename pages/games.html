@@ -764,34 +764,23 @@
                                                                 type="button" onclick="initTermo()"
                                                                 id="btnInicarTermo">Iniciar</button>
                                                         </div>
-                                                        <button hidden data-bs-toggle="modal" type="button"
-                                                            data-bs-target="#modalTermo" id="btnModalTermo"></button>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="modalTermo" tabindex="-1"
-                                                    aria-labelledby="modalTermoLabel" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="modalTermoLabel">Termo
-                                                                    concluído.</h1>
-                                                                <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body" id="text-modal-termo">
-                                                                .
-                                                            </div>
-                                                            <img id="qr" alt="">
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Fechar</button>
+                                                        <div class="toast-container position-fixed top-0 p-3">
+                                                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                                                <div class="toast-header ">
+                                                                    <strong class="me-auto" id="titleTermo"></strong>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="toast-body" id="bodyTermo">
+                                                        
+                                                                    </div>
+                                                                    <small><span class="toast-body" id="resultTermo"></span></small>
+                                                                </div>
+                                                        
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                </form>
                                             </div>
                                         </div>
                                     </div>

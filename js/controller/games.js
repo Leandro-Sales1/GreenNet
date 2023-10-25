@@ -245,9 +245,9 @@ for (let i = 0; i < list.length; i++) {
     list[i].addEventListener('keyup', function (event) {
         if(event.key == 'Backspace' && i != 0)
             list[(i - 1)].focus();
-        else if (event.key != "Enter")
+        else if (event.key != "Enter" && event.key != "Tab" && event.key != "Shift" && event.key != "Control" && i != 29)
             list[(i + 1)].focus();
-    });
+    }); 
 }
 
 
@@ -257,12 +257,10 @@ function initTermo() {
     desabilitarTentativas(_restanteTermo, false);
 }
 function validaTermo(tentativaAtual) {
-    if (_restanteTermo == 0)
-        exibeMensagensTermo("Não foi dessa vez... tente novamente!");
-
     let palavra = tolist(tentativaAtual);
+
     if (palavra.length < 5){
-        alert("Só palavras com 5 letras");
+        exibeMensagensTermo("Aviso!", "Apenas palavras com 5 letras!", '#fa6a64', false);
         return;
     }
 
@@ -281,13 +279,20 @@ function validaTermo(tentativaAtual) {
     }
 
     if(palavra.toString() == _termo.toString()){
-        exibeMensagensTermo("Parabéns! Você ganhou!");
+        exibeMensagensTermo("Termo concluído.", "Parabéns! Você ganhou!", '#E3FFE0', true );
+        reiniciaTermo();
         return;
     }
 
     desabilitarTentativas(_restanteTermo, true);
     _restanteTermo--;
     desabilitarTentativas(_restanteTermo, false);
+
+    if (_restanteTermo == 0){
+        exibeMensagensTermo("Que pena!", "Não foi dessa vez... tente novamente o quanto quiser!", '#ffe9af', true);
+        reiniciaTermo();
+        return;
+    }
 }
 
 
@@ -411,8 +416,15 @@ function reiniciaTermo(){
     for (let i = 1; i <= 6; i++) 
         desabilitarTentativas(i, true, true);
 }
-function exibeMensagensTermo(menssagem){
-    document.getElementById("text-modal-termo").innerHTML = menssagem;
-    document.getElementById("btnModalTermo").click();
-    reiniciaTermo();
+function exibeMensagensTermo(titulo, menssagem, color, status){
+    document.getElementById("bodyTermo").innerHTML = menssagem;
+    document.getElementById("titleTermo").innerHTML = titulo;
+    document.getElementById("liveToast").style.backgroundColor = color;
+    if (status)
+        document.getElementById("resultTermo").innerHTML = "O termo era: " + _termo.join('');
+    
+
+    const toastLiveExample = document.getElementById('liveToast')
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastBootstrap.show();
 }
