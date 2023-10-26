@@ -128,3 +128,15 @@ main{
     outline: none;
 }
 
+
+/* FORCA */
+.forca {
+    fill: transparent;
+    stroke: black;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.forca-parte {
+    display: none;
+}

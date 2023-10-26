@@ -69,10 +69,10 @@ const _listaPalavraChave = [
     "tratamento de agua",
     "poluiçao do ar",
 ];
-var _restante = 10;
+var _restante = 12;
 var _palavraChave = "";
 var _acertos = [];
-var _erros = "Não contém: "
+var _erros = [];
 
 // ----> Tentativas
 document.getElementById("tentativa").addEventListener('keydown', function (event) {
@@ -87,9 +87,9 @@ function clickBtnSortear() {
 
 // Funções auxiliares Btn Sortear
 function iniciar() {
+    reinicia();
     document.getElementById("tentativa").disabled = false;
     document.getElementById("tentativa").placeholder = "digite suas tentativas..."
-    _restante = 10;
     document.getElementById("restante").innerHTML = _restante;
     selecionaPalavraChave();
     criaLacunas();
@@ -100,10 +100,10 @@ function selecionaPalavraChave() {
 
 // Funções auxiliares Realiza Tentativa
 function realizaTentativa() {
-    if (_restante == 0) {
-        return exibeMensagensForca("Nao foi dessa vez! Voce atingiu o limite de tentativas. Tente Novamente!");
-    }
     validaTentativa();
+    if (_restante == 0) {
+        return exibeMensagensForca("Nao foi dessa vez... Deseja tentar novamente? Clique em Sortear! ");
+    }
 }
 function validaTentativa() {
     let value = document.getElementById("tentativa").value.toLowerCase();
@@ -111,9 +111,12 @@ function validaTentativa() {
     if (value.length > 1 && value == _palavraChave) {
         return exibeMensagensForca("Parabens! Voce adivinhou a palavra chave! Tente novamente e some mais pontos.");
     }
-    else if (value.length > 1) {
-        reduzRestanteTentativas();
+    else if (value.length > 1 && !_erros.includes(value)) {
         adicionaListErros(value);
+        reduzRestanteTentativas();
+        if (_erros.length % 2 == 0) {
+            desenharForca();
+        }
     }
     else if (_palavraChave.includes(value)) {
         for (let i = 0; i < _palavraChave.length; i++) {
@@ -122,9 +125,12 @@ function validaTentativa() {
         }
         criaLacunas(_palavraChave);
     }
-    else {
-        reduzRestanteTentativas();
+    else if (!_erros.includes(value)) {
         adicionaListErros(value);
+        reduzRestanteTentativas();
+        if (_erros.length % 2 == 0) {
+            desenharForca();
+        }
     }
     document.getElementById("tentativa").value = '';
 
@@ -137,19 +143,24 @@ function reduzRestanteTentativas() {
 
 }
 function adicionaListErros(tentativa) {
-    _erros += `${tentativa}-`;
-    document.getElementById("erros").innerHTML = _erros;
+    _erros.push(tentativa);
+
+    let erros = "";
+    _erros.forEach(item =>{
+        erros += `${item}-`
+    })
+    document.getElementById("erros").innerHTML = erros;
 }
 function exibeMensagensForca(message) {
     document.getElementById("text-modal-forca").innerHTML = message;
     document.getElementById("btnModalForca").click();
-    reinicia();
 }
 function reinicia() {
-    _restante = 10;
+    _restante = 12;
     _palavraChave = "";
     _acertos = [];
-    _erros = "Não contém: ";
+    _erros = [];
+
     document.getElementById("restante").innerHTML = "";
     document.getElementById("lacunas").innerHTML = "";
     document.getElementById("erros").innerHTML = ""
@@ -158,6 +169,8 @@ function reinicia() {
     tentativa.value = "";
     tentativa.disabled = true;
     tentativa.placeholder = "";
+
+    limparForca();
 }
 
 // Funções gerais
@@ -173,6 +186,18 @@ function criaLacunas() {
             lacunas += "__ ";
     }
     document.getElementById("lacunas").innerHTML = lacunas;
+}
+function desenharForca() {
+    const partesCorpo = document.querySelectorAll(".forca-parte");
+    for (let i = 0; i < _erros.length/2; i++) {
+        partesCorpo[i].style.display = "block";
+    }
+}
+function limparForca() {
+    const partesCorpo = document.querySelectorAll(".forca-parte");
+    for (let i = 0; i < 12 / 2; i++) {
+        partesCorpo[i].style.display = "none";
+    }
 }
 
 

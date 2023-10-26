@@ -113,7 +113,7 @@
                                                         <h2 class="mb-4 justify-content-start d-flex">Quiz Diário</h2>
                                                         <form id="quiz">
                                                             <div class="row justify-content-center ">
-                                                                <div class="col-12 text-center mb-3 items-main">
+                                                                <div class="col-12 text-center mb-3 ">
                                                                     <h4 class="mb-4 justify-content-start d-flex">1. O
                                                                         que melhor define
                                                                         sustentabilidade?</h4>
@@ -169,7 +169,7 @@
                                                             </div>
 
                                                             <div class="row justify-content-center ">
-                                                                <div class="col-12 text-center mb-3 items-main">
+                                                                <div class="col-12 text-center mb-3 ">
                                                                     <h4 class="mb-4 justify-content-start d-flex">2.
                                                                         Qual das opções não
                                                                         é uma energia renovável?</h4>
@@ -213,7 +213,7 @@
                                                             </div>
 
                                                             <div class="row justify-content-center ">
-                                                                <div class="col-12 text-center mb-3 items-main">
+                                                                <div class="col-12 text-center mb-3 ">
                                                                     <h4 class="mb-4 justify-content-start d-flex">3. O
                                                                         que quer dizer o
                                                                         termo greenwashing?</h4>
@@ -262,7 +262,7 @@
                                                             </div>
 
                                                             <div class="row justify-content-center ">
-                                                                <div class="col-12 text-center mb-3 items-main">
+                                                                <div class="col-12 text-center mb-3 ">
                                                                     <h4 class="mb-4 justify-content-start d-flex">4. O
                                                                         que são os
                                                                         Objetivos de Desenvolvimento Sustentável (ODS)?
@@ -320,7 +320,7 @@
                                                             </div>
 
                                                             <div class="row justify-content-center ">
-                                                                <div class="col-12 text-center mb-3 items-main">
+                                                                <div class="col-12 text-center mb-3 ">
                                                                     <h4 class="mb-4 justify-content-start d-flex">5. De
                                                                         maneira
                                                                         simplificada, do que se trata a logística
@@ -439,45 +439,63 @@
                                         </button>
                                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="panelsStayOpen-headingOne">
-                                            <div class="accordion-body px-4 py-2">
-                                                <div class="card-body items p-5">
-                                                    <form id="forca" onsubmit="return false;">
-                                                        <div class="row justify-content-center ">
-                                                            <div
-                                                                class="col-12 text-center mb-3 items-main game_forca_bg">
-                                                                <div class="label mx-5">
-                                                                    <label id="lacunas"></label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 text-center items-main">
-                                                                <input type="text" id="tentativa" disabled
-                                                                    class="form-text text_area">
-                                                            </div>
-                                                            <div class="col-12 text-center mb-3 items-main">
-                                                                <label class="text-muted">Restante:
-                                                                    <label id="restante"></label>
-                                                                </label>
-                                                                <br>
-                                                                <small><label id="erros"
-                                                                        class="text-danger"></label></small>
-                                                            </div>
-                                                        </div>
+                                            <div class="accordion-body">
+                                                <div class="card-body items m-1 p-1 m-lg-5">
 
-                                                        <div class="text-center">
-                                                            <button class="btn btn-primary btn-block btn-lg"
-                                                                type="button" onclick="clickBtnSortear()"
-                                                                id="btnSortear">Sortear</button>
+                                                    <div class="row ">
+                                                        <svg height="250" width="200" class="forca">
+                                                            <!-- forca -->
+                                                            <line x1="60" y1="20" x2="140" y2="20" />
+                                                            <line x1="140" y1="20" x2="140" y2="50" />
+                                                            <line x1="60" y1="20" x2="60" y2="230" />
+                                                            <line x1="20" y1="230" x2="100" y2="230" />
+                                                        
+                                                            <!-- cabeça -->
+                                                            <circle cx="140" cy="70" r="20" class="forca-parte" />
+                                                            <!-- corpo -->
+                                                            <line x1="140" y1="90" x2="140" y2="150" class="forca-parte" />
+                                                            <!-- braços -->
+                                                            <line x1="140" y1="120" x2="120" y2="100" class="forca-parte" />
+                                                            <line x1="140" y1="120" x2="160" y2="100" class="forca-parte" />
+                                                            <!-- pernas -->
+                                                            <line x1="140" y1="150" x2="120" y2="180" class="forca-parte" />
+                                                            <line x1="140" y1="150" x2="160" y2="180" class="forca-parte" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="row d-flex justify-content-center" style="min-height: 24px;">
+                                                        <div class="col label mx-2 d-flex justify-content-center">
+                                                            <label id="lacunas"></label>
                                                         </div>
-                                                        <h6 class="justify-content-start d-flex my-4">Regras: Clique em
-                                                            Sorterar para inciar. Digite uma
-                                                            letra para verificar se ela
-                                                            existe na palavra chave ou digite uma palavra completa para
-                                                            dar um chute. Cada letra ou
-                                                            chute errado, custa uma
-                                                            tentativa. Boa sorte!
-                                                        </h6>
-                                                        <button hidden data-bs-toggle="modal" type="button"
-                                                            data-bs-target="#modalForca" id="btnModalForca"></button>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 text-center">
+                                                            <input type="text" id="tentativa" disabled class="form-text text_area w-100" style="max-width: 200px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 text-center mb-3 ">
+                                                            <label class="text-muted">Restante:
+                                                                <label id="restante"></label>
+                                                            </label>
+                                                            <br>
+                                                            <small><label id="erros" class="text-danger"></label></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="text-center">
+                                                        <button class="btn btn-primary btn-block btn-lg" type="button"
+                                                            onclick="clickBtnSortear()" id="btnSortear">Sortear</button>
+                                                    </div>
+                                                    <h6 class="justify-content-start d-flex my-4">Regras: Clique em
+                                                        Sorterar para inciar. Digite uma
+                                                        letra para verificar se ela
+                                                        existe na palavra chave ou digite uma palavra completa para
+                                                        dar um chute. Cada letra ou
+                                                        chute errado, custa uma
+                                                        tentativa. Boa sorte!
+                                                    </h6>
+                                                    <button hidden data-bs-toggle="modal" type="button"
+                                                        data-bs-target="#modalForca" id="btnModalForca"></button>
                                                 </div>
 
                                                 <!-- Modal -->
@@ -502,7 +520,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -764,19 +781,23 @@
                                                                 type="button" onclick="initTermo()"
                                                                 id="btnInicarTermo">Iniciar</button>
                                                         </div>
-                                                        <div class="toast-container position-fixed top-0 p-3">
-                                                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                                        <div class="toast-container position-fixed bottom-0 p-3">
+                                                            <div id="liveToast" class="toast" role="alert"
+                                                                aria-live="assertive" aria-atomic="true">
                                                                 <div class="toast-header ">
                                                                     <strong class="me-auto" id="titleTermo"></strong>
-                                                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="toast"
+                                                                        aria-label="Close"></button>
                                                                 </div>
                                                                 <div>
                                                                     <div class="toast-body" id="bodyTermo">
-                                                        
+
                                                                     </div>
-                                                                    <small><span class="toast-body" id="resultTermo"></span></small>
+                                                                    <small><span class="toast-body"
+                                                                            id="resultTermo"></span></small>
                                                                 </div>
-                                                        
+
                                                             </div>
                                                         </div>
                                                     </div>
