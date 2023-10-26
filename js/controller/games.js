@@ -536,7 +536,18 @@ var _palavrasEco = [
     'PARAR',
     'BICHO',
     'LUTAR',
-    'BEMOL'
+    'BEMOL',
+    'CARRO',
+    'AUREA',
+    'MARCA',
+    'CARTA',
+    'CORTA',
+    'TOUCA',
+    'PORCA',
+    'ROUBA',
+    'LOUCA',
+    'MATAR',
+    'COURO',
 ];
 
 var _termo = [];
