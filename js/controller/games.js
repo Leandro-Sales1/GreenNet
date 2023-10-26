@@ -205,6 +205,7 @@ function limparForca() {
 var _palavrasEco = [
     'SAGAZ',
     'AMAGO',
+    'ARROZ',
     'NEGRO',
     'TERMO',
     'EXITO',
@@ -514,11 +515,14 @@ var _palavrasEco = [
     'FERRO',
     'PIQUE',
     'CHORO',
+    'PORTA',
     'QUEDA',
     'MUMIA',
+    'AVISO',
     'NORTE',
     'SULCO',
     'CHUTE',
+    'TORTA',
     'LAPIS',
     'ATOMO',
     'TALAO',
@@ -561,7 +565,7 @@ for (let i = 0; i < list.length; i++) {
 
 
 function initTermo() {
-    document.getElementById('btnInicarTermo').disabled = true;
+    reiniciaTermo();
     selecionaTermo();
     desabilitarTentativas(_restanteTermo, false);
 }
@@ -590,8 +594,7 @@ function validaTermo(tentativaAtual) {
     }
 
     if (palavra.toString() == _termo.toString()) {
-        exibeMensagensTermo("Termo concluído.", "Parabéns! Você ganhou!", '#E3FFE0', true);
-        reiniciaTermo();
+        exibeMensagensTermo("Termo concluído.", "Parabéns! Você ganhou!", '#E3FFE0', false);
         return;
     }
 
@@ -601,7 +604,6 @@ function validaTermo(tentativaAtual) {
 
     if (_restanteTermo == 0) {
         exibeMensagensTermo("Que pena!", "Não foi dessa vez... tente novamente o quanto quiser!", '#ffe9af', true);
-        reiniciaTermo();
         return;
     }
 }
@@ -721,7 +723,6 @@ function retornaTentativaAtual(restantes) {
     }
 }
 function reiniciaTermo() {
-    document.getElementById('btnInicarTermo').disabled = false;
     _restanteTermo = 6;
     _termo = [];
     for (let i = 1; i <= 6; i++)
