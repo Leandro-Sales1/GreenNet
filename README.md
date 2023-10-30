@@ -8,7 +8,7 @@
 * JavaScript
 * FireBase
 
-## Desing thinks:
+## Design thinks:
 * Total focus on responsiveness, with a mobile-first design.
 
 https://green-net-schneider.vercel.app/index.html
